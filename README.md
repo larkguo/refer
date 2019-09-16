@@ -4,6 +4,8 @@
 
 ## Glusterfs
 
+[4.1编译](https://www.jianshu.com/p/cc065d299cf6)
+
 [server-world](https://www.server-world.info/en/note?os=CentOS_7&p=glusterfs&f=1)
 
 [volume修复-迁移-均衡](https://github.com/meetbill/op_practice_book/blob/master/doc/store/glusterfs.md)
