@@ -9,3 +9,7 @@
 [volume修复-迁移-均衡](https://github.com/meetbill/op_practice_book/blob/master/doc/store/glusterfs.md)
 
 [TStor Samba-NFS-iSCSI](https://github.com/maqingqing/TStor/wiki)
+
+[bricks端distributed日志](https://github.com/larkguo/refer/blob/master/glusterfs/debug/var-log-glusterfs/bricks/glusterfs-distributed.log-20190828)
+
+[bricks端replica日志](https://github.com/larkguo/refer/blob/master/glusterfs/debug/var-log-glusterfs/bricks/glusterfs-replica.log-20190903)
