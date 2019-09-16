@@ -10,6 +10,6 @@
 
 [TStor Samba-NFS-iSCSI](https://github.com/maqingqing/TStor/wiki)
 
-[bricks端distributed日志](https://github.com/larkguo/refer/blob/master/glusterfs/debug/var-log-glusterfs/bricks/glusterfs-distributed.log-20190828)
+[server端distributed日志](https://github.com/larkguo/refer/blob/master/glusterfs/debug/var-log-glusterfs/bricks/glusterfs-distributed.log.1566439506)
 
-[bricks端replica日志](https://github.com/larkguo/refer/blob/master/glusterfs/debug/var-log-glusterfs/bricks/glusterfs-replica.log-20190903)
+[server端replica日志](https://github.com/larkguo/refer/blob/master/glusterfs/debug/var-log-glusterfs/bricks/glusterfs-replica.log-20190903)
