@@ -1,0 +1,32 @@
+volume vol_replica-gfproxy-client
+    type protocol/client
+    option send-gids true
+    option transport.socket.keepalive-count 9
+    option transport.socket.keepalive-interval 2
+    option transport.socket.keepalive-time 20
+    option transport.tcp-user-timeout 0
+    option password 16d3f3f4-4404-482d-a958-67fb46c7c134
+    option username b9139ee2-3381-4532-9045-a918fc01b7a5
+    option transport.address-family inet
+    option transport-type tcp
+    option remote-subvolume gfproxyd-vol_replica
+    option ping-timeout 42
+end-volume
+
+volume vol_replica-quiesce
+    type features/quiesce
+    subvolumes vol_replica-gfproxy-client
+end-volume
+
+volume vol_replica-write-behind
+    type performance/write-behind
+    subvolumes vol_replica-quiesce
+end-volume
+
+volume vol_replica
+    type debug/io-stats
+    option count-fop-hits off
+    option latency-measurement off
+    option log-level INFO
+    subvolumes vol_replica-write-behind
+end-volume

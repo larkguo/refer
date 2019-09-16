@@ -1,0 +1,392 @@
+[2019-08-22 02:05:06.946918] I [glusterfsd-mgmt.c:1953:mgmt_getspec_cbk] 0-glusterfs: No change in volfile,continuing
+[2019-08-22 02:43:30.819558] I [glusterfsd-mgmt.c:53:mgmt_cbk_spec] 0-mgmt: Volume file changed
+[2019-08-22 02:43:30.823526] I [glusterfsd-mgmt.c:1953:mgmt_getspec_cbk] 0-glusterfs: No change in volfile,continuing
+[2019-08-22 02:45:16.807501] W [glusterfsd.c:1514:cleanup_and_exit] (-->/lib64/libpthread.so.0(+0x7dd5) [0x7f194230edd5] -->/usr/sbin/glusterfsd(glusterfs_sigwaiter+0xe5) [0x7f19439c1d65] -->/usr/sbin/glusterfsd(cleanup_and_exit+0x6b) [0x7f19439c1b8b] ) 0-: received signum (15), shutting down
+[2019-08-22 03:07:27.909130] I [MSGID: 100030] [glusterfsd.c:2741:main] 0-/usr/sbin/glusterfsd: Started running /usr/sbin/glusterfsd version 4.1.7 (args: /usr/sbin/glusterfsd -s 192.168.209.129 --volfile-id vol_distributed.192.168.209.129.glusterfs-distributed -p /var/run/gluster/vols/vol_distributed/192.168.209.129-glusterfs-distributed.pid -S /var/run/gluster/8c8bd79f59c8a2f2.socket --brick-name /glusterfs/distributed -l /var/log/glusterfs/bricks/glusterfs-distributed.log --xlator-option *-posix.glusterd-uuid=d2e24852-6793-4cf2-8800-b2673935ff78 --process-name brick --brick-port 49152 --xlator-option vol_distributed-server.listen-port=49152)
+[2019-08-22 03:07:27.916381] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 03:07:27.920151] I [rpcsvc.c:2494:rpcsvc_set_outstanding_rpc_limit] 0-rpc-service: Configured rpc.outstanding-rpc-limit with value 64
+[2019-08-22 03:07:27.920374] I [rpcsvc.c:2052:rpcsvc_spawn_threads] 0-rpc-service: spawned 1 threads for program 'GlusterFS 3.3'; total count:1
+[2019-08-22 03:07:27.920403] I [rpcsvc.c:2052:rpcsvc_spawn_threads] 0-rpc-service: spawned 1 threads for program 'GlusterFS 4.x v1'; total count:1
+[2019-08-22 03:07:27.922125] I [MSGID: 121050] [ctr-helper.c:258:extract_ctr_options] 0-gfdbdatastore: CTR Xlator is disabled.
+[2019-08-22 03:07:27.922269] I [trash.c:2526:init] 0-vol_distributed-trash: no option specified for 'eliminate', using NULL
+Final graph:
++------------------------------------------------------------------------------+
+  1: volume vol_distributed-posix
+  2:     type storage/posix
+  3:     option glusterd-uuid d2e24852-6793-4cf2-8800-b2673935ff78
+  4:     option directory /glusterfs/distributed
+  5:     option volume-id 57f7d7ba-bfb7-49bd-9fb7-b276bd7cc887
+  6:     option shared-brick-count 1
+  7: end-volume
+  8:  
+  9: volume vol_distributed-trash
+ 10:     type features/trash
+ 11:     option trash-dir .trashcan
+ 12:     option brick-path /glusterfs/distributed
+ 13:     option trash-internal-op off
+ 14:     subvolumes vol_distributed-posix
+ 15: end-volume
+ 16:  
+ 17: volume vol_distributed-changetimerecorder
+ 18:     type features/changetimerecorder
+ 19:     option db-type sqlite3
+ 20:     option hot-brick off
+ 21:     option db-name distributed.db
+ 22:     option db-path /glusterfs/distributed/.glusterfs/
+ 23:     option record-exit off
+ 24:     option ctr_link_consistency off
+ 25:     option ctr_lookupheal_link_timeout 300
+ 26:     option ctr_lookupheal_inode_timeout 300
+ 27:     option record-entry on
+ 28:     option ctr-enabled off
+ 29:     option record-counters off
+ 30:     option ctr-record-metadata-heat off
+ 31:     option sql-db-cachesize 12500
+ 32:     option sql-db-wal-autocheckpoint 25000
+ 33:     subvolumes vol_distributed-trash
+ 34: end-volume
+ 35:  
+ 36: volume vol_distributed-changelog
+ 37:     type features/changelog
+ 38:     option changelog-brick /glusterfs/distributed
+ 39:     option changelog-dir /glusterfs/distributed/.glusterfs/changelogs
+ 40:     option changelog-barrier-timeout 120
+ 41:     subvolumes vol_distributed-changetimerecorder
+ 42: end-volume
+ 43:  
+ 44: volume vol_distributed-bitrot-stub
+ 45:     type features/bitrot-stub
+ 46:     option export /glusterfs/distributed
+ 47:     option bitrot disable
+ 48:     subvolumes vol_distributed-changelog
+ 49: end-volume
+ 50:  
+ 51: volume vol_distributed-access-control
+ 52:     type features/access-control
+ 53:     subvolumes vol_distributed-bitrot-stub
+ 54: end-volume
+ 55:  
+ 56: volume vol_distributed-locks
+ 57:     type features/locks
+ 58:     subvolumes vol_distributed-access-control
+ 59: end-volume
+ 60:  
+ 61: volume vol_distributed-worm
+ 62:     type features/worm
+ 63:     option worm off
+ 64:     option worm-file-level off
+ 65:     option worm-files-deletable on
+ 66:     subvolumes vol_distributed-locks
+ 67: end-volume
+ 68:  
+ 69: volume vol_distributed-read-only
+ 70:     type features/read-only
+ 71:     option read-only off
+ 72:     subvolumes vol_distributed-worm
+ 73: end-volume
+ 74:  
+ 75: volume vol_distributed-leases
+ 76:     type features/leases
+ 77:     option leases off
+ 78:     subvolumes vol_distributed-read-only
+ 79: end-volume
+ 80:  
+ 81: volume vol_distributed-upcall
+ 82:     type features/upcall
+ 83:     option cache-invalidation off
+ 84:     subvolumes vol_distributed-leases
+ 85: end-volume
+ 86:  
+ 87: volume vol_distributed-io-threads
+ 88:     type performance/io-threads
+ 89:     subvolumes vol_distributed-upcall
+ 90: end-volume
+ 91:  
+ 92: volume vol_distributed-selinux
+ 93:     type features/selinux
+ 94:     option selinux on
+ 95:     subvolumes vol_distributed-io-threads
+ 96: end-volume
+ 97:  
+ 98: volume vol_distributed-marker
+ 99:     type features/marker
+100:     option volume-uuid 57f7d7ba-bfb7-49bd-9fb7-b276bd7cc887
+101:     option timestamp-file /var/lib/glusterd/vols/vol_distributed/marker.tstamp
+102:     option quota-version 0
+103:     option xtime off
+104:     option gsync-force-xtime off
+105:     option quota off
+106:     option inode-quota off
+107:     subvolumes vol_distributed-selinux
+108: end-volume
+109:  
+110: volume vol_distributed-barrier
+111:     type features/barrier
+112:     option barrier disable
+113:     option barrier-timeout 120
+114:     subvolumes vol_distributed-marker
+115: end-volume
+116:  
+117: volume vol_distributed-index
+118:     type features/index
+119:     option index-base /glusterfs/distributed/.glusterfs/indices
+120:     option xattrop-dirty-watchlist trusted.afr.dirty
+121:     option xattrop-pending-watchlist trusted.afr.vol_distributed-
+122:     subvolumes vol_distributed-barrier
+123: end-volume
+124:  
+125: volume vol_distributed-quota
+126:     type features/quota
+127:     option volume-uuid vol_distributed
+128:     option server-quota off
+129:     option deem-statfs off
+130:     subvolumes vol_distributed-index
+131: end-volume
+132:  
+133: volume vol_distributed-io-stats
+134:     type debug/io-stats
+135:     option unique-id /glusterfs/distributed
+136:     option log-level INFO
+137:     option latency-measurement off
+138:     option count-fop-hits off
+139:     subvolumes vol_distributed-quota
+140: end-volume
+141:  
+142: volume /glusterfs/distributed
+143:     type performance/decompounder
+144:     option auth.addr./glusterfs/distributed.allow *
+145:     option auth-path /glusterfs/distributed
+146:     option auth.login.0fc788d9-6e42-4504-9689-18fee0b86087.password 1749b471-5ec5-4fad-be1b-f91dff069624
+147:     option auth.login./glusterfs/distributed.allow 0fc788d9-6e42-4504-9689-18fee0b86087
+148:     subvolumes vol_distributed-io-stats
+149: end-volume
+150:  
+151: volume vol_distributed-server
+152:     type protocol/server
+153:     option transport.socket.listen-port 49152
+154:     option rpc-auth.auth-glusterfs on
+155:     option rpc-auth.auth-unix on
+156:     option rpc-auth.auth-null on
+157:     option rpc-auth-allow-insecure on
+158:     option transport-type tcp
+159:     option transport.address-family inet
+160:     option auth.login./glusterfs/distributed.allow 0fc788d9-6e42-4504-9689-18fee0b86087
+161:     option auth.login.0fc788d9-6e42-4504-9689-18fee0b86087.password 1749b471-5ec5-4fad-be1b-f91dff069624
+162:     option auth-path /glusterfs/distributed
+163:     option auth.addr./glusterfs/distributed.allow *
+164:     option transport.socket.keepalive 1
+165:     option transport.tcp-user-timeout 0
+166:     option transport.socket.keepalive-time 20
+167:     option transport.socket.keepalive-interval 2
+168:     option transport.socket.keepalive-count 9
+169:     option transport.listen-backlog 1024
+170:     subvolumes /glusterfs/distributed
+171: end-volume
+172:  
++------------------------------------------------------------------------------+
+[2019-08-22 03:07:28.164544] I [addr.c:55:compare_addr_and_update] 0-/glusterfs/distributed: allowed = "*", received addr = "192.168.209.129"
+[2019-08-22 03:07:28.164566] I [login.c:111:gf_auth] 0-auth/login: allowed user names: 0fc788d9-6e42-4504-9689-18fee0b86087
+[2019-08-22 03:07:28.164575] I [MSGID: 115029] [server-handshake.c:495:server_setvolume] 0-vol_distributed-server: accepted client from CTX_ID:9335cac6-72a9-4203-abe9-9d0cd14d0102-GRAPH_ID:0-PID:837-HOST:node129-PC_NAME:vol_distributed-client-0-RECON_NO:-1 (version: 4.1.7)
+[2019-08-22 09:03:01.386651] I [MSGID: 115036] [server.c:483:server_rpc_notify] 0-vol_distributed-server: disconnecting connection from CTX_ID:9335cac6-72a9-4203-abe9-9d0cd14d0102-GRAPH_ID:0-PID:837-HOST:node129-PC_NAME:vol_distributed-client-0-RECON_NO:-1
+[2019-08-22 09:03:01.386773] I [MSGID: 101055] [client_t.c:444:gf_client_unref] 0-vol_distributed-server: Shutting down connection CTX_ID:9335cac6-72a9-4203-abe9-9d0cd14d0102-GRAPH_ID:0-PID:837-HOST:node129-PC_NAME:vol_distributed-client-0-RECON_NO:-1
+[2019-08-22 09:03:44.245205] I [addr.c:55:compare_addr_and_update] 0-/glusterfs/distributed: allowed = "*", received addr = "192.168.209.129"
+[2019-08-22 09:03:44.245234] I [login.c:111:gf_auth] 0-auth/login: allowed user names: 0fc788d9-6e42-4504-9689-18fee0b86087
+[2019-08-22 09:03:44.245250] I [MSGID: 115029] [server-handshake.c:495:server_setvolume] 0-vol_distributed-server: accepted client from CTX_ID:25faf891-e80f-4c40-a66c-f0fbe8e648a2-GRAPH_ID:0-PID:4169-HOST:node129-PC_NAME:vol_distributed-client-0-RECON_NO:-0 (version: 4.1.7)
+[2019-08-22 09:03:58.480642] I [MSGID: 115036] [server.c:483:server_rpc_notify] 0-vol_distributed-server: disconnecting connection from CTX_ID:25faf891-e80f-4c40-a66c-f0fbe8e648a2-GRAPH_ID:0-PID:4169-HOST:node129-PC_NAME:vol_distributed-client-0-RECON_NO:-0
+[2019-08-22 09:03:58.480786] I [MSGID: 101055] [client_t.c:444:gf_client_unref] 0-vol_distributed-server: Shutting down connection CTX_ID:25faf891-e80f-4c40-a66c-f0fbe8e648a2-GRAPH_ID:0-PID:4169-HOST:node129-PC_NAME:vol_distributed-client-0-RECON_NO:-0
+[2019-08-22 09:04:15.055029] I [addr.c:55:compare_addr_and_update] 0-/glusterfs/distributed: allowed = "*", received addr = "192.168.209.129"
+[2019-08-22 09:04:15.055057] I [login.c:111:gf_auth] 0-auth/login: allowed user names: 0fc788d9-6e42-4504-9689-18fee0b86087
+[2019-08-22 09:04:15.055066] I [MSGID: 115029] [server-handshake.c:495:server_setvolume] 0-vol_distributed-server: accepted client from CTX_ID:07097c73-0ff9-4afb-8e8f-0d74cb78e72a-GRAPH_ID:0-PID:4258-HOST:node129-PC_NAME:vol_distributed-client-0-RECON_NO:-0 (version: 4.1.7)
+[2019-08-22 10:04:09.448243] I [MSGID: 115036] [server.c:483:server_rpc_notify] 0-vol_distributed-server: disconnecting connection from CTX_ID:07097c73-0ff9-4afb-8e8f-0d74cb78e72a-GRAPH_ID:0-PID:4258-HOST:node129-PC_NAME:vol_distributed-client-0-RECON_NO:-0
+[2019-08-22 10:04:09.448377] I [MSGID: 101055] [client_t.c:444:gf_client_unref] 0-vol_distributed-server: Shutting down connection CTX_ID:07097c73-0ff9-4afb-8e8f-0d74cb78e72a-GRAPH_ID:0-PID:4258-HOST:node129-PC_NAME:vol_distributed-client-0-RECON_NO:-0
+[2019-08-22 10:05:19.555123] I [addr.c:55:compare_addr_and_update] 0-/glusterfs/distributed: allowed = "*", received addr = "192.168.209.129"
+[2019-08-22 10:05:19.555143] I [login.c:111:gf_auth] 0-auth/login: allowed user names: 0fc788d9-6e42-4504-9689-18fee0b86087
+[2019-08-22 10:05:19.555151] I [MSGID: 115029] [server-handshake.c:495:server_setvolume] 0-vol_distributed-server: accepted client from CTX_ID:238fce1b-e26d-4edc-989b-3bb5b906ddfc-GRAPH_ID:0-PID:4730-HOST:node129-PC_NAME:vol_distributed-client-0-RECON_NO:-0 (version: 4.1.7)
+[2019-08-22 10:21:40.823467] I [addr.c:55:compare_addr_and_update] 0-/glusterfs/distributed: allowed = "*", received addr = "192.168.209.130"
+[2019-08-22 10:21:40.823497] I [login.c:111:gf_auth] 0-auth/login: allowed user names: 0fc788d9-6e42-4504-9689-18fee0b86087
+[2019-08-22 10:21:40.823516] I [MSGID: 115029] [server-handshake.c:495:server_setvolume] 0-vol_distributed-server: accepted client from CTX_ID:33b243dc-df44-4503-8566-0d73339ec8e8-GRAPH_ID:0-PID:3729-HOST:node130-PC_NAME:vol_distributed-client-0-RECON_NO:-0 (version: 4.1.7)
+[2019-08-22 10:29:37.865472] I [MSGID: 115036] [server.c:483:server_rpc_notify] 0-vol_distributed-server: disconnecting connection from CTX_ID:33b243dc-df44-4503-8566-0d73339ec8e8-GRAPH_ID:0-PID:3729-HOST:node130-PC_NAME:vol_distributed-client-0-RECON_NO:-0
+[2019-08-22 10:29:37.865709] I [MSGID: 101055] [client_t.c:444:gf_client_unref] 0-vol_distributed-server: Shutting down connection CTX_ID:33b243dc-df44-4503-8566-0d73339ec8e8-GRAPH_ID:0-PID:3729-HOST:node130-PC_NAME:vol_distributed-client-0-RECON_NO:-0
+[2019-08-28 01:02:48.737853] I [MSGID: 100030] [glusterfsd.c:2741:main] 0-/usr/sbin/glusterfsd: Started running /usr/sbin/glusterfsd version 4.1.7 (args: /usr/sbin/glusterfsd -s 192.168.209.129 --volfile-id vol_distributed.192.168.209.129.glusterfs-distributed -p /var/run/gluster/vols/vol_distributed/192.168.209.129-glusterfs-distributed.pid -S /var/run/gluster/8c8bd79f59c8a2f2.socket --brick-name /glusterfs/distributed -l /var/log/glusterfs/bricks/glusterfs-distributed.log --xlator-option *-posix.glusterd-uuid=d2e24852-6793-4cf2-8800-b2673935ff78 --process-name brick --brick-port 49152 --xlator-option vol_distributed-server.listen-port=49152)
+[2019-08-28 01:02:48.759322] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-28 01:02:49.683309] I [rpcsvc.c:2494:rpcsvc_set_outstanding_rpc_limit] 0-rpc-service: Configured rpc.outstanding-rpc-limit with value 64
+[2019-08-28 01:02:49.683785] I [rpcsvc.c:2052:rpcsvc_spawn_threads] 0-rpc-service: spawned 1 threads for program 'GlusterFS 3.3'; total count:1
+[2019-08-28 01:02:49.684181] I [rpcsvc.c:2052:rpcsvc_spawn_threads] 0-rpc-service: spawned 1 threads for program 'GlusterFS 4.x v1'; total count:1
+[2019-08-28 01:02:49.822736] I [MSGID: 121050] [ctr-helper.c:258:extract_ctr_options] 0-gfdbdatastore: CTR Xlator is disabled.
+[2019-08-28 01:02:49.856292] I [trash.c:2526:init] 0-vol_distributed-trash: no option specified for 'eliminate', using NULL
+Final graph:
++------------------------------------------------------------------------------+
+  1: volume vol_distributed-posix
+  2:     type storage/posix
+  3:     option glusterd-uuid d2e24852-6793-4cf2-8800-b2673935ff78
+  4:     option directory /glusterfs/distributed
+  5:     option volume-id 57f7d7ba-bfb7-49bd-9fb7-b276bd7cc887
+  6:     option shared-brick-count 1
+  7: end-volume
+  8:  
+  9: volume vol_distributed-trash
+ 10:     type features/trash
+ 11:     option trash-dir .trashcan
+ 12:     option brick-path /glusterfs/distributed
+ 13:     option trash-internal-op off
+ 14:     subvolumes vol_distributed-posix
+ 15: end-volume
+ 16:  
+ 17: volume vol_distributed-changetimerecorder
+ 18:     type features/changetimerecorder
+ 19:     option db-type sqlite3
+ 20:     option hot-brick off
+ 21:     option db-name distributed.db
+ 22:     option db-path /glusterfs/distributed/.glusterfs/
+ 23:     option record-exit off
+ 24:     option ctr_link_consistency off
+ 25:     option ctr_lookupheal_link_timeout 300
+ 26:     option ctr_lookupheal_inode_timeout 300
+ 27:     option record-entry on
+ 28:     option ctr-enabled off
+ 29:     option record-counters off
+ 30:     option ctr-record-metadata-heat off
+ 31:     option sql-db-cachesize 12500
+ 32:     option sql-db-wal-autocheckpoint 25000
+ 33:     subvolumes vol_distributed-trash
+ 34: end-volume
+ 35:  
+ 36: volume vol_distributed-changelog
+ 37:     type features/changelog
+ 38:     option changelog-brick /glusterfs/distributed
+ 39:     option changelog-dir /glusterfs/distributed/.glusterfs/changelogs
+ 40:     option changelog-barrier-timeout 120
+ 41:     subvolumes vol_distributed-changetimerecorder
+ 42: end-volume
+ 43:  
+ 44: volume vol_distributed-bitrot-stub
+ 45:     type features/bitrot-stub
+ 46:     option export /glusterfs/distributed
+ 47:     option bitrot disable
+ 48:     subvolumes vol_distributed-changelog
+ 49: end-volume
+ 50:  
+ 51: volume vol_distributed-access-control
+ 52:     type features/access-control
+ 53:     subvolumes vol_distributed-bitrot-stub
+ 54: end-volume
+ 55:  
+ 56: volume vol_distributed-locks
+ 57:     type features/locks
+ 58:     subvolumes vol_distributed-access-control
+ 59: end-volume
+ 60:  
+ 61: volume vol_distributed-worm
+ 62:     type features/worm
+ 63:     option worm off
+ 64:     option worm-file-level off
+ 65:     option worm-files-deletable on
+ 66:     subvolumes vol_distributed-locks
+ 67: end-volume
+ 68:  
+ 69: volume vol_distributed-read-only
+ 70:     type features/read-only
+ 71:     option read-only off
+ 72:     subvolumes vol_distributed-worm
+ 73: end-volume
+ 74:  
+ 75: volume vol_distributed-leases
+ 76:     type features/leases
+ 77:     option leases off
+ 78:     subvolumes vol_distributed-read-only
+ 79: end-volume
+ 80:  
+ 81: volume vol_distributed-upcall
+ 82:     type features/upcall
+ 83:     option cache-invalidation off
+ 84:     subvolumes vol_distributed-leases
+ 85: end-volume
+ 86:  
+ 87: volume vol_distributed-io-threads
+ 88:     type performance/io-threads
+ 89:     subvolumes vol_distributed-upcall
+ 90: end-volume
+ 91:  
+ 92: volume vol_distributed-selinux
+ 93:     type features/selinux
+ 94:     option selinux on
+ 95:     subvolumes vol_distributed-io-threads
+ 96: end-volume
+ 97:  
+ 98: volume vol_distributed-marker
+ 99:     type features/marker
+100:     option volume-uuid 57f7d7ba-bfb7-49bd-9fb7-b276bd7cc887
+101:     option timestamp-file /var/lib/glusterd/vols/vol_distributed/marker.tstamp
+102:     option quota-version 0
+103:     option xtime off
+104:     option gsync-force-xtime off
+105:     option quota off
+106:     option inode-quota off
+107:     subvolumes vol_distributed-selinux
+108: end-volume
+109:  
+110: volume vol_distributed-barrier
+111:     type features/barrier
+112:     option barrier disable
+113:     option barrier-timeout 120
+114:     subvolumes vol_distributed-marker
+115: end-volume
+116:  
+117: volume vol_distributed-index
+118:     type features/index
+119:     option index-base /glusterfs/distributed/.glusterfs/indices
+120:     option xattrop-dirty-watchlist trusted.afr.dirty
+121:     option xattrop-pending-watchlist trusted.afr.vol_distributed-
+122:     subvolumes vol_distributed-barrier
+123: end-volume
+124:  
+125: volume vol_distributed-quota
+126:     type features/quota
+127:     option volume-uuid vol_distributed
+128:     option server-quota off
+129:     option deem-statfs off
+130:     subvolumes vol_distributed-index
+131: end-volume
+132:  
+133: volume vol_distributed-io-stats
+134:     type debug/io-stats
+135:     option unique-id /glusterfs/distributed
+136:     option log-level INFO
+137:     option latency-measurement off
+138:     option count-fop-hits off
+139:     subvolumes vol_distributed-quota
+140: end-volume
+141:  
+142: volume /glusterfs/distributed
+143:     type performance/decompounder
+144:     option auth.addr./glusterfs/distributed.allow *
+145:     option auth-path /glusterfs/distributed
+146:     option auth.login.0fc788d9-6e42-4504-9689-18fee0b86087.password 1749b471-5ec5-4fad-be1b-f91dff069624
+147:     option auth.login./glusterfs/distributed.allow 0fc788d9-6e42-4504-9689-18fee0b86087
+148:     subvolumes vol_distributed-io-stats
+149: end-volume
+150:  
+151: volume vol_distributed-server
+152:     type protocol/server
+153:     option transport.socket.listen-port 49152
+154:     option rpc-auth.auth-glusterfs on
+155:     option rpc-auth.auth-unix on
+156:     option rpc-auth.auth-null on
+157:     option rpc-auth-allow-insecure on
+158:     option transport-type tcp
+159:     option transport.address-family inet
+160:     option auth.login./glusterfs/distributed.allow 0fc788d9-6e42-4504-9689-18fee0b86087
+161:     option auth.login.0fc788d9-6e42-4504-9689-18fee0b86087.password 1749b471-5ec5-4fad-be1b-f91dff069624
+162:     option auth-path /glusterfs/distributed
+163:     option auth.addr./glusterfs/distributed.allow *
+164:     option transport.socket.keepalive 1
+165:     option transport.tcp-user-timeout 0
+166:     option transport.socket.keepalive-time 20
+167:     option transport.socket.keepalive-interval 2
+168:     option transport.socket.keepalive-count 9
+169:     option transport.listen-backlog 1024
+170:     subvolumes /glusterfs/distributed
+171: end-volume
+172:  
++------------------------------------------------------------------------------+
+[2019-08-28 02:34:02.327031] I [MSGID: 100011] [glusterfsd.c:1599:reincarnate] 0-glusterfsd: Fetching the volume file from server...

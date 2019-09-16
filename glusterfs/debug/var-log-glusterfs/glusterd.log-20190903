@@ -1,0 +1,92 @@
+[2019-08-28 08:01:46.606216] E [socket.c:3458:socket_connect] 0-management: connection attempt on 192.168.209.131:24007 failed, (Network is unreachable)
+[2019-08-28 10:05:09.617120] W [socket.c:599:__socket_rwv] 0-management: readv on 192.168.209.130:24007 failed (Connection timed out)
+[2019-08-28 10:05:09.617201] I [MSGID: 106004] [glusterd-handler.c:6382:__glusterd_peer_rpc_notify] 0-management: Peer <node130> (<8af3a522-3d77-49ea-8b18-db0f5f7cbf51>), in state <Peer in Cluster>, has disconnected from glusterd.
+[2019-08-28 10:05:09.617512] W [glusterd-locks.c:845:glusterd_mgmt_v3_unlock] (-->/usr/lib64/glusterfs/4.1.7/xlator/mgmt/glusterd.so(+0x2431a) [0x7fe0b903231a] -->/usr/lib64/glusterfs/4.1.7/xlator/mgmt/glusterd.so(+0x2e550) [0x7fe0b903c550] -->/usr/lib64/glusterfs/4.1.7/xlator/mgmt/glusterd.so(+0xe86b3) [0x7fe0b90f66b3] ) 0-management: Lock for vol vol_distributed not held
+[2019-08-28 10:05:09.617532] W [MSGID: 106117] [glusterd-handler.c:6407:__glusterd_peer_rpc_notify] 0-management: Lock not released for vol_distributed
+[2019-08-28 10:05:09.617559] W [glusterd-locks.c:845:glusterd_mgmt_v3_unlock] (-->/usr/lib64/glusterfs/4.1.7/xlator/mgmt/glusterd.so(+0x2431a) [0x7fe0b903231a] -->/usr/lib64/glusterfs/4.1.7/xlator/mgmt/glusterd.so(+0x2e550) [0x7fe0b903c550] -->/usr/lib64/glusterfs/4.1.7/xlator/mgmt/glusterd.so(+0xe86b3) [0x7fe0b90f66b3] ) 0-management: Lock for vol vol_replica not held
+[2019-08-28 10:05:09.617566] W [MSGID: 106117] [glusterd-handler.c:6407:__glusterd_peer_rpc_notify] 0-management: Lock not released for vol_replica
+[2019-08-28 10:05:20.507432] E [socket.c:2524:socket_connect_finish] 0-management: connection to 192.168.209.130:24007 failed (No route to host); disconnecting socket
+[2019-09-03 05:39:39.180135] I [MSGID: 100030] [glusterfsd.c:2741:main] 0-/usr/sbin/glusterd: Started running /usr/sbin/glusterd version 4.1.7 (args: /usr/sbin/glusterd -p /var/run/glusterd.pid --log-level INFO)
+[2019-09-03 05:39:40.050630] I [MSGID: 106478] [glusterd.c:1423:init] 0-management: Maximum allowed open file descriptors set to 65536
+[2019-09-03 05:39:40.050772] I [MSGID: 106479] [glusterd.c:1481:init] 0-management: Using /var/lib/glusterd as working directory
+[2019-09-03 05:39:40.050791] I [MSGID: 106479] [glusterd.c:1486:init] 0-management: Using /var/run/gluster as pid file working directory
+[2019-09-03 05:39:40.624413] W [MSGID: 103071] [rdma.c:4629:__gf_rdma_ctx_create] 0-rpc-transport/rdma: rdma_cm event channel creation failed [No such device]
+[2019-09-03 05:39:40.624507] W [MSGID: 103055] [rdma.c:4938:init] 0-rdma.management: Failed to initialize IB Device
+[2019-09-03 05:39:40.624515] W [rpc-transport.c:351:rpc_transport_load] 0-rpc-transport: 'rdma' initialization failed
+[2019-09-03 05:39:40.624672] W [rpcsvc.c:1781:rpcsvc_create_listener] 0-rpc-service: cannot create listener, initing the transport failed
+[2019-09-03 05:39:40.624682] E [MSGID: 106244] [glusterd.c:1764:init] 0-management: creation of 1 listeners failed, continuing with succeeded transport
+[2019-09-03 05:39:44.840873] I [MSGID: 106513] [glusterd-store.c:2240:glusterd_restore_op_version] 0-glusterd: retrieved op-version: 40100
+[2019-09-03 05:39:44.994564] I [MSGID: 106544] [glusterd.c:158:glusterd_uuid_init] 0-management: retrieved UUID: d2e24852-6793-4cf2-8800-b2673935ff78
+[2019-09-03 05:39:45.063952] I [MSGID: 106498] [glusterd-handler.c:3614:glusterd_friend_add_from_peerinfo] 0-management: connect returned 0
+[2019-09-03 05:39:45.111586] I [MSGID: 106498] [glusterd-handler.c:3614:glusterd_friend_add_from_peerinfo] 0-management: connect returned 0
+[2019-09-03 05:39:45.111736] W [MSGID: 106061] [glusterd-handler.c:3408:glusterd_transport_inet_options_build] 0-glusterd: Failed to get tcp-user-timeout
+[2019-09-03 05:39:45.111827] I [rpc-clnt.c:1059:rpc_clnt_connection_init] 0-management: setting frame-timeout to 600
+[2019-09-03 05:39:45.146257] I [rpc-clnt.c:1059:rpc_clnt_connection_init] 0-management: setting frame-timeout to 600
+Final graph:
++------------------------------------------------------------------------------+
+  1: volume management
+  2:     type mgmt/glusterd
+  3:     option rpc-auth.auth-glusterfs on
+  4:     option rpc-auth.auth-unix on
+  5:     option rpc-auth.auth-null on
+  6:     option rpc-auth-allow-insecure on
+  7:     option transport.listen-backlog 10
+  8:     option event-threads 1
+  9:     option ping-timeout 0
+ 10:     option transport.socket.read-fail-log off
+ 11:     option transport.socket.keepalive-interval 2
+ 12:     option transport.socket.keepalive-time 10
+ 13:     option transport-type rdma
+ 14:     option working-directory /var/lib/glusterd
+ 15: end-volume
+ 16:  
++------------------------------------------------------------------------------+
+[2019-09-03 05:39:45.146244] W [MSGID: 106061] [glusterd-handler.c:3408:glusterd_transport_inet_options_build] 0-glusterd: Failed to get tcp-user-timeout
+[2019-09-03 05:39:45.150262] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-09-03 05:39:45.150329] E [socket.c:2524:socket_connect_finish] 0-management: connection to 192.168.209.130:24007 failed (No route to host); disconnecting socket
+[2019-09-03 05:39:45.150445] I [MSGID: 106004] [glusterd-handler.c:6382:__glusterd_peer_rpc_notify] 0-management: Peer <node130> (<8af3a522-3d77-49ea-8b18-db0f5f7cbf51>), in state <Peer in Cluster>, has disconnected from glusterd.
+[2019-09-03 05:39:45.177654] E [socket.c:2524:socket_connect_finish] 0-management: connection to 192.168.209.131:24007 failed (Connection refused); disconnecting socket
+[2019-09-03 05:39:45.177711] I [MSGID: 106004] [glusterd-handler.c:6382:__glusterd_peer_rpc_notify] 0-management: Peer <node131> (<39227bf4-714f-47fd-953e-21bd802a320e>), in state <Peer in Cluster>, has disconnected from glusterd.
+[2019-09-03 05:39:50.227250] I [MSGID: 106163] [glusterd-handshake.c:1379:__glusterd_mgmt_hndsk_versions_ack] 0-management: using the op-version 40100
+[2019-09-03 05:39:50.231459] I [MSGID: 106490] [glusterd-handler.c:2548:__glusterd_handle_incoming_friend_req] 0-glusterd: Received probe from uuid: 39227bf4-714f-47fd-953e-21bd802a320e
+[2019-09-03 05:39:50.233122] I [MSGID: 106493] [glusterd-handler.c:3811:glusterd_xfer_friend_add_resp] 0-glusterd: Responded to node131 (0), ret: 0, op_ret: 0
+[2019-09-03 05:39:50.237587] I [rpc-clnt.c:1059:rpc_clnt_connection_init] 0-nfs: setting frame-timeout to 600
+[2019-09-03 05:39:50.237717] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: nfs already stopped
+[2019-09-03 05:39:50.237733] I [MSGID: 106568] [glusterd-svc-mgmt.c:235:glusterd_svc_stop] 0-management: nfs service is stopped
+[2019-09-03 05:39:50.237747] I [MSGID: 106599] [glusterd-nfs-svc.c:82:glusterd_nfssvc_manager] 0-management: nfs/server.so xlator is not installed
+[2019-09-03 05:39:50.237770] I [rpc-clnt.c:1059:rpc_clnt_connection_init] 0-glustershd: setting frame-timeout to 600
+[2019-09-03 05:39:50.238628] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: glustershd already stopped
+[2019-09-03 05:39:50.238646] I [MSGID: 106568] [glusterd-svc-mgmt.c:235:glusterd_svc_stop] 0-management: glustershd service is stopped
+[2019-09-03 05:39:50.238664] I [MSGID: 106567] [glusterd-svc-mgmt.c:203:glusterd_svc_start] 0-management: Starting glustershd service
+[2019-09-03 05:39:51.243059] I [rpc-clnt.c:1059:rpc_clnt_connection_init] 0-quotad: setting frame-timeout to 600
+[2019-09-03 05:39:51.243256] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: quotad already stopped
+[2019-09-03 05:39:51.243270] I [MSGID: 106568] [glusterd-svc-mgmt.c:235:glusterd_svc_stop] 0-management: quotad service is stopped
+[2019-09-03 05:39:51.243291] I [rpc-clnt.c:1059:rpc_clnt_connection_init] 0-bitd: setting frame-timeout to 600
+[2019-09-03 05:39:51.243486] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: bitd already stopped
+[2019-09-03 05:39:51.243498] I [MSGID: 106568] [glusterd-svc-mgmt.c:235:glusterd_svc_stop] 0-management: bitd service is stopped
+[2019-09-03 05:39:51.243517] I [rpc-clnt.c:1059:rpc_clnt_connection_init] 0-scrub: setting frame-timeout to 600
+[2019-09-03 05:39:51.243675] I [MSGID: 106131] [glusterd-proc-mgmt.c:83:glusterd_proc_stop] 0-management: scrub already stopped
+[2019-09-03 05:39:51.243685] I [MSGID: 106568] [glusterd-svc-mgmt.c:235:glusterd_svc_stop] 0-management: scrub service is stopped
+[2019-09-03 05:39:51.243709] I [glusterd-utils.c:6090:glusterd_brick_start] 0-management: starting a fresh brick process for brick /glusterfs/distributed
+[2019-09-03 05:39:51.245572] I [rpc-clnt.c:1059:rpc_clnt_connection_init] 0-management: setting frame-timeout to 600
+[2019-09-03 05:39:51.254712] I [glusterd-utils.c:6090:glusterd_brick_start] 0-management: starting a fresh brick process for brick /glusterfs/replica
+[2019-09-03 05:39:51.259122] I [rpc-clnt.c:1059:rpc_clnt_connection_init] 0-management: setting frame-timeout to 600
+[2019-09-03 05:39:51.316093] I [rpc-clnt.c:1059:rpc_clnt_connection_init] 0-snapd: setting frame-timeout to 600
+[2019-09-03 05:39:51.316236] I [rpc-clnt.c:1059:rpc_clnt_connection_init] 0-snapd: setting frame-timeout to 600
+[2019-09-03 05:39:51.316506] I [rpc-clnt.c:1059:rpc_clnt_connection_init] 0-gfproxyd: setting frame-timeout to 600
+[2019-09-03 05:39:51.317123] I [rpc-clnt.c:1059:rpc_clnt_connection_init] 0-gfproxyd: setting frame-timeout to 600
+[2019-09-03 05:39:51.318384] I [MSGID: 106493] [glusterd-rpc-ops.c:486:__glusterd_friend_add_cbk] 0-glusterd: Received ACC from uuid: 39227bf4-714f-47fd-953e-21bd802a320e, host: node131, port: 0
+[2019-09-03 05:39:51.319899] I [MSGID: 106492] [glusterd-handler.c:2726:__glusterd_handle_friend_update] 0-glusterd: Received friend update from uuid: 39227bf4-714f-47fd-953e-21bd802a320e
+[2019-09-03 05:39:51.321216] I [MSGID: 106502] [glusterd-handler.c:2771:__glusterd_handle_friend_update] 0-management: Received my uuid as Friend
+[2019-09-03 05:39:51.322484] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-09-03 05:39:51.322976] I [MSGID: 106005] [glusterd-handler.c:6131:__glusterd_brick_rpc_notify] 0-management: Brick 192.168.209.129:/glusterfs/distributed has disconnected from glusterd.
+[2019-09-03 05:39:51.323052] E [MSGID: 101012] [common-utils.c:4010:gf_is_service_running] 0-: Unable to read pidfile: /var/run/gluster/vols/vol_distributed/192.168.209.129-glusterfs-distributed.pid
+[2019-09-03 05:39:51.323533] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-09-03 05:39:51.323925] I [MSGID: 106005] [glusterd-handler.c:6131:__glusterd_brick_rpc_notify] 0-management: Brick 192.168.209.129:/glusterfs/replica has disconnected from glusterd.
+[2019-09-03 05:39:51.323979] E [MSGID: 101012] [common-utils.c:4010:gf_is_service_running] 0-: Unable to read pidfile: /var/run/gluster/vols/vol_replica/192.168.209.129-glusterfs-replica.pid
+[2019-09-03 05:39:51.324036] I [MSGID: 106493] [glusterd-rpc-ops.c:702:__glusterd_friend_update_cbk] 0-management: Received ACC from uuid: 39227bf4-714f-47fd-953e-21bd802a320e
+[2019-09-03 05:39:51.324057] I [MSGID: 106492] [glusterd-handler.c:2726:__glusterd_handle_friend_update] 0-glusterd: Received friend update from uuid: 39227bf4-714f-47fd-953e-21bd802a320e
+[2019-09-03 05:39:51.325191] I [MSGID: 106502] [glusterd-handler.c:2771:__glusterd_handle_friend_update] 0-management: Received my uuid as Friend
+[2019-09-03 05:39:51.508086] I [MSGID: 106493] [glusterd-rpc-ops.c:702:__glusterd_friend_update_cbk] 0-management: Received ACC from uuid: 39227bf4-714f-47fd-953e-21bd802a320e
+[2019-09-03 05:39:53.520443] I [MSGID: 106142] [glusterd-pmap.c:297:pmap_registry_bind] 0-pmap: adding brick /glusterfs/distributed on port 49152
+[2019-09-03 05:39:53.587086] I [MSGID: 106142] [glusterd-pmap.c:297:pmap_registry_bind] 0-pmap: adding brick /glusterfs/replica on port 49153

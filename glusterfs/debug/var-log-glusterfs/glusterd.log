@@ -1,0 +1,45 @@
+[2019-09-06 10:20:37.588648] I [MSGID: 100030] [glusterfsd.c:2741:main] 0-/usr/sbin/glusterd: Started running /usr/sbin/glusterd version 4.1.7 (args: /usr/sbin/glusterd -p /var/run/glusterd.pid --log-level INFO)
+[2019-09-06 10:20:38.473029] I [MSGID: 106478] [glusterd.c:1423:init] 0-management: Maximum allowed open file descriptors set to 65536
+[2019-09-06 10:20:38.473114] I [MSGID: 106479] [glusterd.c:1481:init] 0-management: Using /var/lib/glusterd as working directory
+[2019-09-06 10:20:38.473121] I [MSGID: 106479] [glusterd.c:1486:init] 0-management: Using /var/run/gluster as pid file working directory
+[2019-09-06 10:20:40.088216] W [MSGID: 103071] [rdma.c:4629:__gf_rdma_ctx_create] 0-rpc-transport/rdma: rdma_cm event channel creation failed [No such device]
+[2019-09-06 10:20:40.088318] W [MSGID: 103055] [rdma.c:4938:init] 0-rdma.management: Failed to initialize IB Device
+[2019-09-06 10:20:40.088329] W [rpc-transport.c:351:rpc_transport_load] 0-rpc-transport: 'rdma' initialization failed
+[2019-09-06 10:20:40.088527] W [rpcsvc.c:1781:rpcsvc_create_listener] 0-rpc-service: cannot create listener, initing the transport failed
+[2019-09-06 10:20:40.088540] E [MSGID: 106244] [glusterd.c:1764:init] 0-management: creation of 1 listeners failed, continuing with succeeded transport
+[2019-09-06 10:20:46.240640] I [MSGID: 106513] [glusterd-store.c:2240:glusterd_restore_op_version] 0-glusterd: retrieved op-version: 40100
+[2019-09-06 10:20:46.305580] I [MSGID: 106544] [glusterd.c:158:glusterd_uuid_init] 0-management: retrieved UUID: d2e24852-6793-4cf2-8800-b2673935ff78
+[2019-09-06 10:20:46.332170] I [MSGID: 106498] [glusterd-handler.c:3614:glusterd_friend_add_from_peerinfo] 0-management: connect returned 0
+[2019-09-06 10:20:46.341728] I [MSGID: 106498] [glusterd-handler.c:3614:glusterd_friend_add_from_peerinfo] 0-management: connect returned 0
+[2019-09-06 10:20:46.341878] W [MSGID: 106061] [glusterd-handler.c:3408:glusterd_transport_inet_options_build] 0-glusterd: Failed to get tcp-user-timeout
+[2019-09-06 10:20:46.341934] I [rpc-clnt.c:1059:rpc_clnt_connection_init] 0-management: setting frame-timeout to 600
+[2019-09-06 10:20:46.360440] I [rpc-clnt.c:1059:rpc_clnt_connection_init] 0-management: setting frame-timeout to 600
+Final graph:
++------------------------------------------------------------------------------+
+  1: volume management
+  2:     type mgmt/glusterd
+  3:     option rpc-auth.auth-glusterfs on
+  4:     option rpc-auth.auth-unix on
+  5:     option rpc-auth.auth-null on
+  6:     option rpc-auth-allow-insecure on
+  7:     option transport.listen-backlog 10
+  8:     option event-threads 1
+  9:     option ping-timeout 0
+ 10:     option transport.socket.read-fail-log off
+ 11:     option transport.socket.keepalive-interval 2
+ 12:     option transport.socket.keepalive-time 10
+ 13:     option transport-type rdma
+ 14:     option working-directory /var/lib/glusterd
+ 15: end-volume
+ 16:  
++------------------------------------------------------------------------------+
+[2019-09-06 10:20:46.360426] W [MSGID: 106061] [glusterd-handler.c:3408:glusterd_transport_inet_options_build] 0-glusterd: Failed to get tcp-user-timeout
+[2019-09-06 10:20:46.363746] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-09-06 10:20:49.367876] E [socket.c:2524:socket_connect_finish] 0-management: connection to 192.168.209.130:24007 failed (No route to host); disconnecting socket
+[2019-09-06 10:20:49.367998] I [MSGID: 106004] [glusterd-handler.c:6382:__glusterd_peer_rpc_notify] 0-management: Peer <node130> (<8af3a522-3d77-49ea-8b18-db0f5f7cbf51>), in state <Peer in Cluster>, has disconnected from glusterd.
+[2019-09-06 10:20:49.368288] E [socket.c:2524:socket_connect_finish] 0-management: connection to 192.168.209.131:24007 failed (No route to host); disconnecting socket
+[2019-09-06 10:20:49.368304] I [MSGID: 106004] [glusterd-handler.c:6382:__glusterd_peer_rpc_notify] 0-management: Peer <node131> (<39227bf4-714f-47fd-953e-21bd802a320e>), in state <Peer in Cluster>, has disconnected from glusterd.
+[2019-09-09 00:48:51.086905] E [socket.c:3458:socket_connect] 0-management: connection attempt on 192.168.209.130:24007 failed, (Network is unreachable)
+[2019-09-09 00:48:51.090637] E [socket.c:3458:socket_connect] 0-management: connection attempt on 192.168.209.131:24007 failed, (Network is unreachable)
+[2019-09-09 00:48:54.115990] E [socket.c:3458:socket_connect] 0-management: connection attempt on 192.168.209.130:24007 failed, (Network is unreachable)
+[2019-09-09 00:48:54.120130] E [socket.c:3458:socket_connect] 0-management: connection attempt on 192.168.209.131:24007 failed, (Network is unreachable)

@@ -1,0 +1,346 @@
+[2019-08-22 01:09:52.063300] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 01:09:52.148862] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 01:09:52.148933] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 01:09:52.149028] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 01:09:52.149745] I [cli-rpc-ops.c:875:gf_cli_get_volume_cbk] 0-cli: Received resp to get vol: 0
+[2019-08-22 01:09:52.149868] I [input.c:31:cli_batch] 0-: Exiting with: 0
+[2019-08-22 01:13:16.288375] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 01:13:16.340564] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 01:13:16.340636] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 01:13:16.340735] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 01:13:16.341251] I [cli-rpc-ops.c:875:gf_cli_get_volume_cbk] 0-cli: Received resp to get vol: 0
+[2019-08-22 01:13:16.341369] I [input.c:31:cli_batch] 0-: Exiting with: 0
+[2019-08-22 01:13:48.547909] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 01:13:48.589491] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 01:13:48.589564] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 01:13:48.589610] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 01:13:48.590367] I [input.c:31:cli_batch] 0-: Exiting with: 0
+[2019-08-22 01:58:08.303280] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 01:58:08.346495] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 01:58:08.346604] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 01:58:08.346649] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 01:58:08.347119] I [cli-rpc-ops.c:875:gf_cli_get_volume_cbk] 0-cli: Received resp to get vol: 0
+[2019-08-22 01:58:08.347260] I [input.c:31:cli_batch] 0-: Exiting with: 0
+[2019-08-22 01:58:29.843476] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 01:58:29.883465] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 01:58:29.883521] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 01:58:29.883664] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 01:58:30.957523] I [cli-rpc-ops.c:1169:gf_cli_create_volume_cbk] 0-cli: Received resp to create volume
+[2019-08-22 01:58:30.957703] I [input.c:31:cli_batch] 0-: Exiting with: 0
+[2019-08-22 01:58:56.668195] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 01:58:56.714573] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 01:58:56.714645] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 01:58:56.714749] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 01:58:56.715302] I [cli-rpc-ops.c:875:gf_cli_get_volume_cbk] 0-cli: Received resp to get vol: 0
+[2019-08-22 01:58:56.715465] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 01:58:56.715931] I [cli-rpc-ops.c:875:gf_cli_get_volume_cbk] 0-cli: Received resp to get vol: 0
+[2019-08-22 01:58:56.716073] I [input.c:31:cli_batch] 0-: Exiting with: 0
+[2019-08-22 01:59:32.501564] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 01:59:32.567906] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 01:59:32.567975] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 01:59:32.568078] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 01:59:33.722924] I [cli-rpc-ops.c:1472:gf_cli_start_volume_cbk] 0-cli: Received resp to start volume
+[2019-08-22 01:59:33.723108] I [input.c:31:cli_batch] 0-: Exiting with: 0
+[2019-08-22 02:01:41.210431] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 02:01:41.266145] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 02:01:41.266227] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:01:41.266323] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 02:01:41.266887] I [cli-rpc-ops.c:875:gf_cli_get_volume_cbk] 0-cli: Received resp to get vol: 0
+[2019-08-22 02:01:41.267062] I [input.c:31:cli_batch] 0-: Exiting with: 0
+[2019-08-22 02:01:45.161785] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 02:01:45.208570] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 02:01:45.208642] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:01:45.208916] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 02:01:45.209418] I [cli-rpc-ops.c:875:gf_cli_get_volume_cbk] 0-cli: Received resp to get vol: -1
+[2019-08-22 02:01:45.209514] I [input.c:31:cli_batch] 0-: Exiting with: -1
+[2019-08-22 02:03:31.211739] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 02:03:31.295083] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 02:03:31.295319] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:03:34.219333] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:03:37.220286] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:03:40.221268] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:03:43.223151] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:03:46.224058] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:03:49.225920] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:03:52.227803] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:03:55.229192] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:03:58.231081] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:04:01.232767] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:04:04.234036] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:04:07.235214] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:04:10.237861] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:04:13.239845] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:04:16.240921] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:04:19.241856] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:04:19.611941] W [cli-rl.c:101:cli_rl_process_line] 0-glusterfs: failed to process line
+[2019-08-22 02:04:22.243516] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:04:25.244790] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:04:28.245774] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:04:31.247437] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:04:34.248770] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:04:37.249705] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:04:40.252599] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:04:43.254309] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:04:46.255304] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:04:49.256585] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:04:52.258565] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:04:54.812011] W [cli-rl.c:101:cli_rl_process_line] 0-glusterfs: failed to process line
+[2019-08-22 02:04:55.260265] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:04:58.261535] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:05:01.262525] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:05:04.263496] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:05:06.935510] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 02:05:07.265924] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:05:10.267545] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:05:13.269395] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:05:16.271378] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:05:19.272275] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:05:20.867523] W [cli-rl.c:101:cli_rl_process_line] 0-glusterfs: failed to process line
+[2019-08-22 02:05:22.273276] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:05:23.534034] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 02:05:23.541678] W [cli-rl.c:101:cli_rl_process_line] 0-glusterfs: failed to process line
+[2019-08-22 02:05:25.274290] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:05:28.275194] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:05:31.276971] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:05:34.278122] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:05:37.279157] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:05:40.280109] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:05:43.281093] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:05:46.283016] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:05:49.285041] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:05:52.287010] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:05:55.288800] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:05:58.290880] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:06:01.291833] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:06:04.292810] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:06:07.293785] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:06:10.294815] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:06:13.295684] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:06:16.297703] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:06:19.299339] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:06:22.301698] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:06:25.302625] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:06:28.303587] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:06:31.304584] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:06:34.305527] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:06:37.307582] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:06:40.308497] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:06:43.309445] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:06:46.310434] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:06:49.311470] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:06:52.313405] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:06:55.314344] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:06:58.316378] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:07:01.317275] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:07:04.318926] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:07:07.319938] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:07:10.321222] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:07:13.323187] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:07:16.324104] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:07:19.325815] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:07:22.327029] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:07:25.327998] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:07:28.329757] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:07:31.331998] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:07:34.332933] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:07:37.334573] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:07:40.335877] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:07:43.336877] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:07:46.337868] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:07:49.340835] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:07:52.341804] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:07:55.343508] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:07:58.344719] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:08:01.345717] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:08:04.346734] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:08:07.347775] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:08:10.349818] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:08:13.351683] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:08:16.353656] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:08:19.354651] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:08:22.356480] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:08:25.357506] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:08:28.359269] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:08:31.362032] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:08:34.363385] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:08:37.364381] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:08:40.366311] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:08:43.368281] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:08:46.369252] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:08:49.371861] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:08:52.373032] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:08:55.375281] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:15:11.006837] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 02:15:11.089158] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 02:15:11.089238] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:15:11.089298] E [cli-cmd-parser.c:781:cli_cmd_volume_create_parse] 0-cli: Unable to parse create volume CLI
+[2019-08-22 02:15:11.089314] I [input.c:31:cli_batch] 0-: Exiting with: -1
+[2019-08-22 02:16:10.961068] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 02:16:11.008073] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 02:16:11.008145] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:16:11.008384] E [cli-cmd-parser.c:781:cli_cmd_volume_create_parse] 0-cli: Unable to parse create volume CLI
+[2019-08-22 02:16:11.008398] I [input.c:31:cli_batch] 0-: Exiting with: -1
+[2019-08-22 02:16:34.962592] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 02:16:35.006839] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 02:16:35.006909] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:16:35.007110] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 02:16:35.007831] I [input.c:31:cli_batch] 0-: Exiting with: 0
+[2019-08-22 02:16:56.943438] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 02:16:56.985594] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 02:16:56.985667] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:16:56.985762] E [cli-cmd-parser.c:781:cli_cmd_volume_create_parse] 0-cli: Unable to parse create volume CLI
+[2019-08-22 02:16:56.985777] I [input.c:31:cli_batch] 0-: Exiting with: -1
+[2019-08-22 02:32:10.440844] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 02:32:10.486088] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 02:32:10.486161] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:32:10.486284] E [cli-cmd-parser.c:781:cli_cmd_volume_create_parse] 0-cli: Unable to parse create volume CLI
+[2019-08-22 02:32:10.486302] I [input.c:31:cli_batch] 0-: Exiting with: -1
+[2019-08-22 02:38:22.987174] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 02:38:23.027810] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 02:38:23.027881] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:38:23.028076] E [cli-cmd-parser.c:781:cli_cmd_volume_create_parse] 0-cli: Unable to parse create volume CLI
+[2019-08-22 02:38:23.028091] I [input.c:31:cli_batch] 0-: Exiting with: -1
+[2019-08-22 02:39:41.151302] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 02:39:41.204588] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 02:39:41.204659] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:39:41.204786] E [cli-cmd-parser.c:781:cli_cmd_volume_create_parse] 0-cli: Unable to parse create volume CLI
+[2019-08-22 02:39:41.204801] I [input.c:31:cli_batch] 0-: Exiting with: -1
+[2019-08-22 02:41:07.116225] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 02:41:07.166923] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 02:41:07.166995] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:41:07.167117] E [cli-cmd-parser.c:567:cli_cmd_volume_create_parse] 0-cli: Volume create cancelled, exiting
+[2019-08-22 02:41:07.167128] E [cli-cmd-parser.c:781:cli_cmd_volume_create_parse] 0-cli: Unable to parse create volume CLI
+[2019-08-22 02:41:07.167141] I [input.c:31:cli_batch] 0-: Exiting with: -1
+[2019-08-22 02:43:30.701480] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 02:43:30.743637] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 02:43:30.743707] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:43:30.743834] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 02:43:31.228395] I [cli-rpc-ops.c:1169:gf_cli_create_volume_cbk] 0-cli: Received resp to create volume
+[2019-08-22 02:43:31.228560] I [input.c:31:cli_batch] 0-: Exiting with: 0
+[2019-08-22 02:45:16.668361] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 02:45:16.715316] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 02:45:16.715387] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:45:16.715569] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 02:45:18.929098] I [cli-rpc-ops.c:1550:gf_cli_stop_volume_cbk] 0-cli: Received resp to stop volume
+[2019-08-22 02:45:18.929297] I [input.c:31:cli_batch] 0-: Exiting with: 0
+[2019-08-22 02:45:28.505994] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 02:45:28.559473] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 02:45:28.559545] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:45:28.559663] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 02:45:28.655230] I [cli-rpc-ops.c:1550:gf_cli_stop_volume_cbk] 0-cli: Received resp to stop volume
+[2019-08-22 02:45:28.655416] I [input.c:31:cli_batch] 0-: Exiting with: 0
+[2019-08-22 02:45:41.951235] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 02:45:41.994951] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 02:45:41.995022] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:45:41.995147] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 02:45:41.995705] I [cli-rpc-ops.c:1169:gf_cli_create_volume_cbk] 0-cli: Received resp to create volume
+[2019-08-22 02:45:41.995808] I [input.c:31:cli_batch] 0-: Exiting with: -1
+[2019-08-22 02:46:07.734904] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 02:46:07.778099] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 02:46:07.778181] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:46:07.778319] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 02:46:07.900318] I [cli-rpc-ops.c:1251:gf_cli_delete_volume_cbk] 0-cli: Received resp to delete volume
+[2019-08-22 02:46:07.900420] I [input.c:31:cli_batch] 0-: Exiting with: 0
+[2019-08-22 02:46:07.918627] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 02:46:07.983412] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 02:46:07.983490] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:46:07.983685] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 02:46:07.984470] I [cli-rpc-ops.c:7075:gf_cli_getwd_cbk] 0-cli: Received resp to getwd
+[2019-08-22 02:46:07.984732] I [input.c:31:cli_batch] 0-: Exiting with: 0
+[2019-08-22 02:46:20.089933] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 02:46:20.131547] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 02:46:20.131618] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:46:20.131737] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 02:46:20.222791] I [cli-rpc-ops.c:1169:gf_cli_create_volume_cbk] 0-cli: Received resp to create volume
+[2019-08-22 02:46:20.222983] I [input.c:31:cli_batch] 0-: Exiting with: 0
+[2019-08-22 02:47:08.015837] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 02:47:08.058688] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 02:47:08.058761] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:47:08.058879] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 02:47:08.155058] I [cli-rpc-ops.c:1550:gf_cli_stop_volume_cbk] 0-cli: Received resp to stop volume
+[2019-08-22 02:47:08.155244] I [input.c:31:cli_batch] 0-: Exiting with: 0
+[2019-08-22 02:47:29.918480] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 02:47:29.964058] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 02:47:29.964131] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:47:29.964283] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 02:47:30.023471] I [cli-rpc-ops.c:1251:gf_cli_delete_volume_cbk] 0-cli: Received resp to delete volume
+[2019-08-22 02:47:30.023613] I [input.c:31:cli_batch] 0-: Exiting with: 0
+[2019-08-22 02:47:30.060424] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 02:47:30.134749] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 02:47:30.134847] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:47:30.134912] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 02:47:30.135565] I [cli-rpc-ops.c:7075:gf_cli_getwd_cbk] 0-cli: Received resp to getwd
+[2019-08-22 02:47:30.135647] I [input.c:31:cli_batch] 0-: Exiting with: 0
+[2019-08-22 02:48:11.673470] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 02:48:11.724158] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 02:48:11.724243] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:48:11.724382] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 02:48:11.793712] I [cli-rpc-ops.c:1169:gf_cli_create_volume_cbk] 0-cli: Received resp to create volume
+[2019-08-22 02:48:11.793897] I [input.c:31:cli_batch] 0-: Exiting with: 0
+[2019-08-22 02:49:39.647558] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 02:49:39.693131] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 02:49:39.693211] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 02:49:39.693352] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 02:49:39.694046] I [cli-rpc-ops.c:875:gf_cli_get_volume_cbk] 0-cli: Received resp to get vol: 0
+[2019-08-22 02:49:39.694393] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 02:49:39.694824] I [cli-rpc-ops.c:875:gf_cli_get_volume_cbk] 0-cli: Received resp to get vol: 0
+[2019-08-22 02:49:39.695074] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 02:49:39.695534] I [cli-rpc-ops.c:875:gf_cli_get_volume_cbk] 0-cli: Received resp to get vol: 0
+[2019-08-22 02:49:39.695581] I [input.c:31:cli_batch] 0-: Exiting with: 0
+[2019-08-22 03:07:27.850366] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 03:07:27.900575] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 03:07:27.900709] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 03:07:27.900752] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 03:07:28.054628] I [cli-rpc-ops.c:1472:gf_cli_start_volume_cbk] 0-cli: Received resp to start volume
+[2019-08-22 03:07:28.054761] I [input.c:31:cli_batch] 0-: Exiting with: 0
+[2019-08-22 03:07:31.572789] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 03:07:31.614469] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 03:07:31.614546] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 03:07:31.614618] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 03:07:31.615157] I [cli-rpc-ops.c:875:gf_cli_get_volume_cbk] 0-cli: Received resp to get vol: 0
+[2019-08-22 03:07:31.615284] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 03:07:31.615628] I [cli-rpc-ops.c:875:gf_cli_get_volume_cbk] 0-cli: Received resp to get vol: 0
+[2019-08-22 03:07:31.615719] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 03:07:31.616206] I [cli-rpc-ops.c:875:gf_cli_get_volume_cbk] 0-cli: Received resp to get vol: 0
+[2019-08-22 03:07:31.616239] I [input.c:31:cli_batch] 0-: Exiting with: 0
+[2019-08-22 07:19:42.656735] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 07:19:42.707017] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 07:19:42.707087] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 07:19:42.707204] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 07:19:45.334503] I [cli-rpc-ops.c:1472:gf_cli_start_volume_cbk] 0-cli: Received resp to start volume
+[2019-08-22 07:19:45.334614] I [input.c:31:cli_batch] 0-: Exiting with: 0
+[2019-08-22 10:21:02.008831] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-22 10:21:02.058672] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-22 10:21:02.058760] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-22 10:21:02.058922] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 10:21:02.059695] I [cli-rpc-ops.c:875:gf_cli_get_volume_cbk] 0-cli: Received resp to get vol: 0
+[2019-08-22 10:21:02.059859] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 10:21:02.060436] I [cli-rpc-ops.c:875:gf_cli_get_volume_cbk] 0-cli: Received resp to get vol: 0
+[2019-08-22 10:21:02.060574] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-22 10:21:02.061093] I [cli-rpc-ops.c:875:gf_cli_get_volume_cbk] 0-cli: Received resp to get vol: 0
+[2019-08-22 10:21:02.061258] I [input.c:31:cli_batch] 0-: Exiting with: 0
+[2019-08-23 01:33:26.816821] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-23 01:33:26.859781] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-23 01:33:26.859852] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-23 01:33:26.859945] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-23 01:33:26.860609] I [input.c:31:cli_batch] 0-: Exiting with: 0
+[2019-08-23 02:18:32.307850] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-23 02:18:32.356127] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-23 02:18:32.356236] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-23 02:18:32.356347] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-23 02:18:32.357173] I [input.c:31:cli_batch] 0-: Exiting with: 0
+[2019-08-23 02:18:47.421725] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-23 02:18:47.469269] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-23 02:18:47.469340] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-23 02:18:47.469429] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-23 02:18:47.469985] I [input.c:31:cli_batch] 0-: Exiting with: 0
+[2019-08-23 02:18:52.231359] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-23 02:18:52.273484] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-23 02:18:52.273615] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-23 02:18:52.273672] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-23 02:18:52.274291] I [input.c:31:cli_batch] 0-: Exiting with: 0
+[2019-08-23 02:22:17.633681] I [cli.c:773:main] 0-cli: Started running gluster with version 4.1.7
+[2019-08-23 02:22:17.676163] I [MSGID: 101190] [event-epoll.c:617:event_dispatch_epoll_worker] 0-epoll: Started thread with index 1
+[2019-08-23 02:22:17.676246] I [socket.c:2632:socket_event_handler] 0-transport: EPOLLERR - disconnecting now
+[2019-08-23 02:22:17.676324] W [rpc-clnt.c:1753:rpc_clnt_submit] 0-glusterfs: error returned while attempting to connect to host:(null), port:0
+[2019-08-23 02:22:17.677018] I [input.c:31:cli_batch] 0-: Exiting with: 0

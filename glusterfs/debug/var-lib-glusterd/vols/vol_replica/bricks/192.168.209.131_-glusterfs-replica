@@ -1,0 +1,11 @@
+uuid=39227bf4-714f-47fd-953e-21bd802a320e
+hostname=192.168.209.131
+path=/glusterfs/replica
+real_path=/glusterfs/replica
+listen-port=0
+rdma.listen-port=0
+decommissioned=0
+brick-id=vol_replica-client-1
+mount_dir=/replica
+snap-status=0
+brick-fsid=0
