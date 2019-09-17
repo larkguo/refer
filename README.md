@@ -25,4 +25,6 @@
 
 [Golang标准库文档](https://studygolang.com/pkgdoc)
 
+[Go语言中文网——Go语言标准库](https://books.studygolang.com/The-Golang-Standard-Library-by-Example/)
+
 [100行http(s)代理](https://studygolang.com/articles/11967)
