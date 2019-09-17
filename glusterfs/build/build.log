@@ -1,4 +1,4 @@
-[command]
+[编译命令汇总]
 yum install -y wget
 wget https://mirrors.ustc.edu.cn/epel//7/x86_64/Packages/e/epel-release-7-11.noarch.rpm
 rpm -ivh epel-release-7-11.noarch.rpm
@@ -14,7 +14,7 @@ make
 make install
 /usr/local/sbin/glusterd -p /var/run/glusterd.pid --log-level INFO
 
-[logs]
+[编译过程日志,基于docker gluster/gluster-centos]
 sh-4.2# uname -a
 Linux node130 3.10.0-514.el7.x86_64 #1 SMP Tue Nov 22 16:42:41 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
 sh-4.2# cat /etc/redhat-release 
