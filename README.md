@@ -4,7 +4,7 @@
 
 ## Glusterfs
 
-[4.1编译](https://www.jianshu.com/p/cc065d299cf6)
+[4.1.10编译](https://github.com/larkguo/refer/blob/master/glusterfs/build/build.log)
 
 [server-world](https://www.server-world.info/en/note?os=CentOS_7&p=glusterfs&f=1)
 
