@@ -15,3 +15,12 @@
 [server端distributed日志](https://github.com/larkguo/refer/blob/master/glusterfs/debug/var-log-glusterfs/bricks/glusterfs-distributed.log.1566439506)
 
 [server端replica日志](https://github.com/larkguo/refer/blob/master/glusterfs/debug/var-log-glusterfs/bricks/glusterfs-replica.log-20190903)
+
+
+## Zfs
+
+[Quick Start Guide](https://www.freebsd.org/doc/handbook/zfs-quickstart.html)
+
+## Golang
+
+[100行http(s)代理](https://studygolang.com/articles/11967)
