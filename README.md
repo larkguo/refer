@@ -23,4 +23,6 @@
 
 ## Golang
 
+[Golang标准库文档](https://studygolang.com/pkgdoc)
+
 [100行http(s)代理](https://studygolang.com/articles/11967)
