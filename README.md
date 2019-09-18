@@ -30,3 +30,5 @@
 [Go语言中文网——Go语言标准库](https://books.studygolang.com/The-Golang-Standard-Library-by-Example/)
 
 [100行http(s)代理](https://studygolang.com/articles/11967)
+
+[io库分析-rot13Reader-copyBuffer](https://pmlpml.github.io/ServiceComputingOnCloud/oo-thinking-abstract.html)
