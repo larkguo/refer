@@ -20,6 +20,8 @@
 
 [TStor Samba-NFS-iSCSI](https://github.com/maqingqing/TStor/wiki)
 
+[gluster cli命令执行工具日志](https://github.com/larkguo/refer/blob/master/glusterfs/debug/var-log-glusterfs/cli.log-20190828)
+
 [glusterd管理模块日志](https://github.com/larkguo/refer/blob/master/glusterfs/debug/var-log-glusterfs/glusterd.log)
 
 [glusterfs客户端模块distributed日志](https://github.com/larkguo/refer/blob/master/glusterfs/debug/var-log-glusterfs/glusterfs-mnt.log-20190828)
