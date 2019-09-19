@@ -14,7 +14,9 @@
 
 [几个translator中继功能](https://www.tuicool.com/articles/neIVJf)
 
-[4.1.10编译](https://github.com/larkguo/refer/blob/master/glusterfs/build/build.log)
+[glusterfs编译](https://github.com/gluster/glusterdocs/blob/master/docs/Developer-guide/Building-GlusterFS.md)
+
+[4.1.10编译日志](https://github.com/larkguo/refer/blob/master/glusterfs/build/build.log)
 
 [server-world安装使用](https://www.server-world.info/en/note?os=CentOS_7&p=glusterfs&f=1)
 
