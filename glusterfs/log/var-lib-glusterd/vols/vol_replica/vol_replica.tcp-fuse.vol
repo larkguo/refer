@@ -1,0 +1,87 @@
+volume vol_replica-client-0
+    type protocol/client
+    option send-gids true
+    option transport.socket.keepalive-count 9
+    option transport.socket.keepalive-interval 2
+    option transport.socket.keepalive-time 20
+    option transport.tcp-user-timeout 0
+    option transport.address-family inet
+    option transport-type tcp
+    option remote-subvolume /glusterfs/replica
+    option remote-host 192.168.209.129
+    option ping-timeout 42
+end-volume
+
+volume vol_replica-client-1
+    type protocol/client
+    option send-gids true
+    option transport.socket.keepalive-count 9
+    option transport.socket.keepalive-interval 2
+    option transport.socket.keepalive-time 20
+    option transport.tcp-user-timeout 0
+    option transport.address-family inet
+    option transport-type tcp
+    option remote-subvolume /glusterfs/replica
+    option remote-host 192.168.209.131
+    option ping-timeout 42
+end-volume
+
+volume vol_replica-replicate-0
+    type cluster/replicate
+    option use-compound-fops off
+    option afr-pending-xattr vol_replica-client-0,vol_replica-client-1
+    subvolumes vol_replica-client-0 vol_replica-client-1
+end-volume
+
+volume vol_replica-dht
+    type cluster/distribute
+    option force-migration off
+    option lock-migration off
+    subvolumes vol_replica-replicate-0
+end-volume
+
+volume vol_replica-write-behind
+    type performance/write-behind
+    subvolumes vol_replica-dht
+end-volume
+
+volume vol_replica-read-ahead
+    type performance/read-ahead
+    subvolumes vol_replica-write-behind
+end-volume
+
+volume vol_replica-readdir-ahead
+    type performance/readdir-ahead
+    option rda-cache-limit 10MB
+    option rda-request-size 131072
+    option parallel-readdir off
+    subvolumes vol_replica-read-ahead
+end-volume
+
+volume vol_replica-io-cache
+    type performance/io-cache
+    subvolumes vol_replica-readdir-ahead
+end-volume
+
+volume vol_replica-quick-read
+    type performance/quick-read
+    subvolumes vol_replica-io-cache
+end-volume
+
+volume vol_replica-open-behind
+    type performance/open-behind
+    subvolumes vol_replica-quick-read
+end-volume
+
+volume vol_replica-md-cache
+    type performance/md-cache
+    subvolumes vol_replica-open-behind
+end-volume
+
+volume vol_replica
+    type debug/io-stats
+    option count-fop-hits off
+    option latency-measurement off
+    option log-level INFO
+    subvolumes vol_replica-md-cache
+end-volume

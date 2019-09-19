@@ -1,0 +1,11 @@
+uuid=8af3a522-3d77-49ea-8b18-db0f5f7cbf51
+hostname=192.168.209.130
+path=/glusterfs/distributed
+real_path=/glusterfs/distributed
+listen-port=0
+rdma.listen-port=0
+decommissioned=0
+brick-id=vol_distributed-client-1
+mount_dir=/distributed
+snap-status=0
+brick-fsid=0

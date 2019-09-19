@@ -1,0 +1,32 @@
+volume vol_distributed-gfproxy-client
+    type protocol/client
+    option send-gids true
+    option transport.socket.keepalive-count 9
+    option transport.socket.keepalive-interval 2
+    option transport.socket.keepalive-time 20
+    option transport.tcp-user-timeout 0
+    option password 1749b471-5ec5-4fad-be1b-f91dff069624
+    option username 0fc788d9-6e42-4504-9689-18fee0b86087
+    option transport.address-family inet
+    option transport-type tcp
+    option remote-subvolume gfproxyd-vol_distributed
+    option ping-timeout 42
+end-volume
+
+volume vol_distributed-quiesce
+    type features/quiesce
+    subvolumes vol_distributed-gfproxy-client
+end-volume
+
+volume vol_distributed-write-behind
+    type performance/write-behind
+    subvolumes vol_distributed-quiesce
+end-volume
+
+volume vol_distributed
+    type debug/io-stats
+    option count-fop-hits off
+    option latency-measurement off
+    option log-level INFO
+    subvolumes vol_distributed-write-behind
+end-volume

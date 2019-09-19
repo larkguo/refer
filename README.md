@@ -12,6 +12,8 @@
 
 [gluster glusterfs glusterd glusterfsd区别](https://www.jianshu.com/p/a33ff57f32df)
 
+[几个translator中继功能](https://www.tuicool.com/articles/neIVJf)
+
 [4.1.10编译](https://github.com/larkguo/refer/blob/master/glusterfs/build/build.log)
 
 [server-world安装使用](https://www.server-world.info/en/note?os=CentOS_7&p=glusterfs&f=1)
@@ -20,19 +22,19 @@
 
 [TStor Samba-NFS-iSCSI](https://github.com/maqingqing/TStor/wiki)
 
-[gluster cli命令执行工具日志](https://github.com/larkguo/refer/blob/master/glusterfs/debug/var-log-glusterfs/cli.log-20190828)
+[gluster命令行日志](https://github.com/larkguo/refer/blob/master/glusterfs/log/var-log-glusterfs/cli.log-20190828)
 
-[glusterd管理模块日志](https://github.com/larkguo/refer/blob/master/glusterfs/debug/var-log-glusterfs/glusterd.log)
+[glusterd管理模块日志](https://github.com/larkguo/refer/blob/master/glusterfs/log/var-log-glusterfs/glusterd.log)
 
-[glusterfs客户端模块distributed日志](https://github.com/larkguo/refer/blob/master/glusterfs/debug/var-log-glusterfs/glusterfs-mnt.log-20190828)
+[glusterfs客户端distributed日志](https://github.com/larkguo/refer/blob/master/glusterfs/log/var-log-glusterfs/glusterfs-mnt.log-20190828)
 
-[glusterfs客户端模块replica日志](https://raw.githubusercontent.com/larkguo/refer/master/glusterfs/debug/var-log-glusterfs/glusterfs-replica.log-20190828)
+[glusterfs客户端replica日志](https://raw.githubusercontent.com/larkguo/refer/master/glusterfs/log/var-log-glusterfs/glusterfs-replica.log-20190828)
 
-[glusterfsd服务端模块distributed日志](https://github.com/larkguo/refer/blob/master/glusterfs/debug/var-log-glusterfs/bricks/glusterfs-distributed.log.1566439506)
+[glusterfsd服务端distributed日志](https://github.com/larkguo/refer/blob/master/glusterfs/log/var-log-glusterfs/bricks/glusterfs-distributed.log.1566439506)
 
-[glusterfsd服务端模块replica日志](https://github.com/larkguo/refer/blob/master/glusterfs/debug/var-log-glusterfs/bricks/glusterfs-replica.log-20190903)
+[glusterfsd服务端replica日志](https://github.com/larkguo/refer/blob/master/glusterfs/log/var-log-glusterfs/bricks/glusterfs-replica.log-20190903)
 
-[几个translator中继功能](https://www.tuicool.com/articles/neIVJf)
+
 
 ## Zfs
 
