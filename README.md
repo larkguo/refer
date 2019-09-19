@@ -36,7 +36,11 @@
 
 [glusterfsd服务端replica日志](https://github.com/larkguo/refer/blob/master/glusterfs/log/var-log-glusterfs/bricks/glusterfs-replica.log-20190903)
 
+[架构图](https://github.com/gluster/glusterdocs/tree/master/docs/images)
 
+[故障处理](https://github.com/gluster/glusterdocs/tree/master/docs/Troubleshooting)
+
+[故障处理-zh](https://gluster-cn.readthedocs.io/zh_CN/latest/Administrator%20Guide/Troubleshooting/)
 
 ## Zfs
 
