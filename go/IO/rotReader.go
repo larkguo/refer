@@ -6,6 +6,10 @@ import (
 	"strings"
 )
 
+/*
+
+装饰模式（Decorator pattern）:一个 io.Reader 包装另一个 io.Reader，然后通过某种方式修改其数据流。
+*/
 type rotReader struct {
 	r io.Reader
 }

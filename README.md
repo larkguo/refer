@@ -34,4 +34,8 @@
 
 [100行http(s)代理](https://studygolang.com/articles/11967)
 
+[IO模型图](https://mojotv.cn/tutorial/golang-interface-reader-writer)
+
 [io库分析-rot13Reader-copyBuffer](https://pmlpml.github.io/ServiceComputingOnCloud/oo-thinking-abstract.html)
+
+[自己实现Reader和Writer](https://www.jianshu.com/p/6bda40d003b4)
