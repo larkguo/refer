@@ -10,6 +10,8 @@
 
 ## Glusterfs
 
+[版本](https://github.com/gluster/glusterdocs/blob/master/docs/release-notes/index.md)
+
 [gluster glusterfs glusterd glusterfsd区别](https://www.jianshu.com/p/a33ff57f32df)
 
 [几个translator中继功能](https://www.tuicool.com/articles/neIVJf)
