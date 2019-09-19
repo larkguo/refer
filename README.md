@@ -16,10 +16,15 @@
 
 [TStor Samba-NFS-iSCSI](https://github.com/maqingqing/TStor/wiki)
 
-[server端distributed日志](https://github.com/larkguo/refer/blob/master/glusterfs/debug/var-log-glusterfs/bricks/glusterfs-distributed.log.1566439506)
+[Client端distributed日志](https://github.com/larkguo/refer/blob/master/glusterfs/debug/var-log-glusterfs/glusterfs-mnt.log-20190828)
 
-[server端replica日志](https://github.com/larkguo/refer/blob/master/glusterfs/debug/var-log-glusterfs/bricks/glusterfs-replica.log-20190903)
+[Client端replica日志](https://raw.githubusercontent.com/larkguo/refer/master/glusterfs/debug/var-log-glusterfs/glusterfs-replica.log-20190828)
 
+[Server端distributed日志](https://github.com/larkguo/refer/blob/master/glusterfs/debug/var-log-glusterfs/bricks/glusterfs-distributed.log.1566439506)
+
+[Server端replica日志](https://github.com/larkguo/refer/blob/master/glusterfs/debug/var-log-glusterfs/bricks/glusterfs-replica.log-20190903)
+
+[几个translator中继功能](https://www.tuicool.com/articles/neIVJf)
 
 ## Zfs
 
