@@ -5,8 +5,12 @@
 
 ## iSCSI
 
+[使用iSCSI服务部署网络存储](https://www.w3cschool.cn/linuxprobe/linuxprobe-t8nm3259.html)
+
 
 ## Glusterfs
+
+[gluster glusterfs glusterd glusterfsd区别](http://www.voidcn.com/article/p-vcscblzj-mt.html)
 
 [4.1.10编译](https://github.com/larkguo/refer/blob/master/glusterfs/build/build.log)
 
@@ -30,6 +34,7 @@
 
 [Quick Start Guide](https://www.freebsd.org/doc/handbook/zfs-quickstart.html)
 
+[zfs-0.7-release源码](https://github.com/zfsonlinux/zfs/tree/zfs-0.7-release)
 
 ## Golang
 
