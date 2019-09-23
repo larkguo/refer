@@ -52,6 +52,8 @@
 
 [故障处理-zh](https://gluster-cn.readthedocs.io/zh_CN/latest/Administrator%20Guide/Troubleshooting/)
 
+[go调用libglusterfs](https://github.com/gluster/gogfapi)
+
 
 ## Zfs
 
