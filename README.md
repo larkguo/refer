@@ -59,6 +59,8 @@
 
 [x-Archive智能云归档](http://www.taocloudx.com/index.php?a=shows&catid=4&id=112)
 
+[glusterfs资源](https://blog.csdn.net/liuaigui/article/details/17331557)
+
 
 ## Zfs
 
