@@ -57,6 +57,8 @@
 
 [go调用libglusterfs](https://github.com/gluster/gogfapi)
 
+[x-Archive智能云归档](http://www.taocloudx.com/index.php?a=shows&catid=4&id=112)
+
 
 ## Zfs
 
