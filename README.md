@@ -82,6 +82,10 @@
 
 ## Docker
 
-[server-world安装](https://www.server-world.info/en/note?os=CentOS_7&p=docker&f=1)
+[官方安装,清空容器使用命令 rm -rf /var/lib/docker](https://docs.docker.com/install/linux/docker-ce/centos/)
+
+[linux下如何使用docker二进制文件安装](https://www.linuxprobe.com/linux-docker-biner.html)
+
+[server-world rpm安装默认版本](https://www.server-world.info/en/note?os=CentOS_7&p=docker&f=1)
 
 [Centos7 安装指定版本的 Docker](https://blog.51cto.com/michaelkang/2391894)
