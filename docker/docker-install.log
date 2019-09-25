@@ -1,0 +1,221 @@
+[root@localhost ~]# uname -a
+Linux localhost 3.10.0-514.el7.x86_64 #1 SMP Tue Nov 22 16:42:41 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
+[root@localhost ~]# cat /etc/redhat-release 
+CentOS Linux release 7.3.1611 (Core) 
+[root@localhost ~]# 
+[root@localhost ~]# echo "net.ipv4.ip_forward=1" >> /etc/sysctl.conf
+[root@localhost ~]# systemctl restart network
+[root@localhost ~]# cat <<EOF > /etc/systemd/system/docker.service.d/clear_mount_propagation_flags.conf
+> [Service]
+> MountFlags=shared
+> EOF
+[root@localhost ~]# cat /etc/systemd/system/docker.service.d/clear_mount_propagation_flags.conf
+[Service]
+MountFlags=shared
+[root@localhost ~]# 
+[root@localhost ~]# sudo yum remove docker-ce
+Loaded plugins: aliases, changelog, fastestmirror, langpacks, tmprepo, verify, versionlock
+Repository base is listed more than once in the configuration
+Resolving Dependencies
+--> Running transaction check
+---> Package docker-ce.x86_64 3:18.09.5-3.el7 will be erased
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+===============================================================================================================================================================================================
+ Package                                    Arch                                    Version                                           Repository                                          Size
+===============================================================================================================================================================================================
+Removing:
+ docker-ce                                  x86_64                                  3:18.09.5-3.el7                                   @docker-ce-stable                                   81 M
+
+Transaction Summary
+===============================================================================================================================================================================================
+Remove  1 Package
+
+Installed size: 81 M
+Is this ok [y/N]: y
+Downloading packages:
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+/usr/bin/dockerd has not been configured as an alternative for dockerd
+  Erasing    : 3:docker-ce-18.09.5-3.el7.x86_64                                                                                                                                            1/1 
+  Verifying  : 3:docker-ce-18.09.5-3.el7.x86_64                                                                                                                                            1/1 
+
+Removed:
+  docker-ce.x86_64 3:18.09.5-3.el7                                                                                                                                                             
+
+Complete!
+[root@localhost ~]#  sudo rm -rf /var/lib/docker
+[root@localhost ~]# sudo yum remove docker \
+>                   docker-client \
+>                   docker-client-latest \
+>                   docker-common \
+>                   docker-latest \
+>                   docker-latest-logrotate \
+>                   docker-logrotate \
+>                   docker-engine
+Loaded plugins: aliases, changelog, fastestmirror, langpacks, tmprepo, verify, versionlock
+Repository base is listed more than once in the configuration
+No Match for argument: docker
+No Match for argument: docker-client
+No Match for argument: docker-client-latest
+No Match for argument: docker-common
+No Match for argument: docker-latest
+No Match for argument: docker-latest-logrotate
+No Match for argument: docker-logrotate
+No Match for argument: docker-engine
+No Packages marked for removal
+[root@localhost ~]# sudo yum install -y yum-utils \
+>   device-mapper-persistent-data \
+>   lvm2
+Loaded plugins: aliases, changelog, fastestmirror, langpacks, tmprepo, verify, versionlock
+Repository base is listed more than once in the configuration
+Loading mirror speeds from cached hostfile
+ * base: mirrors.tuna.tsinghua.edu.cn
+ * epel: mirrors.tuna.tsinghua.edu.cn
+ * extras: mirrors.huaweicloud.com
+ * updates: mirror.jdcloud.com
+Package yum-utils-1.1.31-52.el7.noarch already installed and latest version
+Package device-mapper-persistent-data-0.8.5-1.el7.x86_64 already installed and latest version
+Package 7:lvm2-2.02.185-2.el7.x86_64 already installed and latest version
+Nothing to do
+[root@localhost ~]# sudo yum-config-manager \
+>     --add-repo \
+>     https://download.docker.com/linux/centos/docker-ce.repo
+Loaded plugins: fastestmirror, langpacks, versionlock
+Repository base is listed more than once in the configuration
+adding repo from: https://download.docker.com/linux/centos/docker-ce.repo
+grabbing file https://download.docker.com/linux/centos/docker-ce.repo to /etc/yum.repos.d/docker-ce.repo
+repo saved to /etc/yum.repos.d/docker-ce.repo
+
+[root@localhost ~]# yum list docker-ce --showduplicates | sort -r
+Repository base is listed more than once in the configuration
+              : versionlock
+ * updates: mirror.jdcloud.com
+Loading mirror speeds from cached hostfile
+Loaded plugins: aliases, changelog, fastestmirror, langpacks, tmprepo, verify,
+ * extras: mirrors.huaweicloud.com
+ * epel: mirrors.tuna.tsinghua.edu.cn
+docker-ce.x86_64            3:19.03.2-3.el7                     docker-ce-stable
+docker-ce.x86_64            3:19.03.1-3.el7                     docker-ce-stable
+docker-ce.x86_64            3:19.03.0-3.el7                     docker-ce-stable
+docker-ce.x86_64            3:18.09.9-3.el7                     docker-ce-stable
+docker-ce.x86_64            3:18.09.8-3.el7                     docker-ce-stable
+docker-ce.x86_64            3:18.09.7-3.el7                     docker-ce-stable
+docker-ce.x86_64            3:18.09.6-3.el7                     docker-ce-stable
+docker-ce.x86_64            3:18.09.5-3.el7                     docker-ce-stable
+docker-ce.x86_64            3:18.09.4-3.el7                     docker-ce-stable
+docker-ce.x86_64            3:18.09.3-3.el7                     docker-ce-stable
+docker-ce.x86_64            3:18.09.2-3.el7                     docker-ce-stable
+docker-ce.x86_64            3:18.09.1-3.el7                     docker-ce-stable
+docker-ce.x86_64            3:18.09.0-3.el7                     docker-ce-stable
+docker-ce.x86_64            18.06.3.ce-3.el7                    docker-ce-stable
+docker-ce.x86_64            18.06.2.ce-3.el7                    docker-ce-stable
+docker-ce.x86_64            18.06.1.ce-3.el7                    docker-ce-stable
+docker-ce.x86_64            18.06.0.ce-3.el7                    docker-ce-stable
+docker-ce.x86_64            18.03.1.ce-1.el7.centos             docker-ce-stable
+docker-ce.x86_64            18.03.0.ce-1.el7.centos             docker-ce-stable
+docker-ce.x86_64            17.12.1.ce-1.el7.centos             docker-ce-stable
+docker-ce.x86_64            17.12.0.ce-1.el7.centos             docker-ce-stable
+docker-ce.x86_64            17.09.1.ce-1.el7.centos             docker-ce-stable
+docker-ce.x86_64            17.09.0.ce-1.el7.centos             docker-ce-stable
+docker-ce.x86_64            17.06.2.ce-1.el7.centos             docker-ce-stable
+docker-ce.x86_64            17.06.1.ce-1.el7.centos             docker-ce-stable
+docker-ce.x86_64            17.06.0.ce-1.el7.centos             docker-ce-stable
+docker-ce.x86_64            17.03.3.ce-1.el7                    docker-ce-stable
+docker-ce.x86_64            17.03.2.ce-1.el7.centos             docker-ce-stable
+docker-ce.x86_64            17.03.1.ce-1.el7.centos             docker-ce-stable
+docker-ce.x86_64            17.03.0.ce-1.el7.centos             docker-ce-stable
+ * base: mirrors.tuna.tsinghua.edu.cn
+Available Packages
+[root@localhost ~]# sudo yum install docker-ce-18.09.5-3.el7 docker-ce-cli-18.09.5-3.el7 containerd.io
+Loaded plugins: aliases, changelog, fastestmirror, langpacks, tmprepo, verify, versionlock
+Repository base is listed more than once in the configuration
+docker-ce-stable                                                                                                                                                        | 3.5 kB  00:00:00     
+Loading mirror speeds from cached hostfile
+ * base: mirrors.tuna.tsinghua.edu.cn
+ * epel: mirrors.tuna.tsinghua.edu.cn
+ * extras: mirrors.huaweicloud.com
+ * updates: mirror.jdcloud.com
+Package 1:docker-ce-cli-18.09.5-3.el7.x86_64 already installed and latest version
+Package containerd.io-1.2.6-3.3.el7.x86_64 already installed and latest version
+Resolving Dependencies
+--> Running transaction check
+---> Package docker-ce.x86_64 3:18.09.5-3.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+===============================================================================================================================================================================================
+ Package                                    Arch                                    Version                                            Repository                                         Size
+===============================================================================================================================================================================================
+Installing:
+ docker-ce                                  x86_64                                  3:18.09.5-3.el7                                    docker-ce-stable                                   19 M
+
+Transaction Summary
+===============================================================================================================================================================================================
+Install  1 Package
+
+Total size: 19 M
+Installed size: 81 M
+Is this ok [y/d/N]: y
+Downloading packages:
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : 3:docker-ce-18.09.5-3.el7.x86_64                                                                                                                                            1/1 
+  Verifying  : 3:docker-ce-18.09.5-3.el7.x86_64                                                                                                                                            1/1 
+
+Installed:
+  docker-ce.x86_64 3:18.09.5-3.el7                                                                                                                                                             
+
+Complete!
+[root@localhost ~]# sudo systemctl start docker
+[root@localhost ~]# sudo systemctl status docker
+¡ñ docker.service - Docker Application Container Engine
+   Loaded: loaded (/usr/lib/systemd/system/docker.service; disabled; vendor preset: disabled)
+  Drop-In: /etc/systemd/system/docker.service.d
+           ©¸©¤clear_mount_propagation_flags.conf
+   Active: active (running) since Wed 2019-09-25 11:06:55 CST; 5s ago
+     Docs: https://docs.docker.com
+ Main PID: 24624 (dockerd)
+    Tasks: 18
+   Memory: 35.5M
+   CGroup: /system.slice/docker.service
+           ©¸©¤24624 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+
+Sep 25 11:06:54 localhost dockerd[24624]: time="2019-09-25T11:06:54.879242475+08:00" level=info msg="pickfirstBalancer: HandleSubConnStateChange: 0xc420a8a140, READY" module=grpc
+Sep 25 11:06:54 localhost dockerd[24624]: time="2019-09-25T11:06:54.883928865+08:00" level=info msg="Graph migration to content-addressability took 0.00 seconds"
+Sep 25 11:06:54 localhost dockerd[24624]: time="2019-09-25T11:06:54.884742178+08:00" level=info msg="Loading containers: start."
+Sep 25 11:06:54 localhost dockerd[24624]: time="2019-09-25T11:06:54.957181814+08:00" level=info msg="Default bridge (docker0) is assigned with an IP address 172.17.0.0/16. Daem... IP address"
+Sep 25 11:06:55 localhost dockerd[24624]: time="2019-09-25T11:06:55.017383556+08:00" level=info msg="Loading containers: done."
+Sep 25 11:06:55 localhost dockerd[24624]: time="2019-09-25T11:06:55.044968096+08:00" level=warning msg="Not using native diff for overlay2, this may cause degraded performance ...ver=overlay2
+Sep 25 11:06:55 localhost dockerd[24624]: time="2019-09-25T11:06:55.045213963+08:00" level=info msg="Docker daemon" commit=e8ff056 graphdriver(s)=overlay2 version=18.09.5
+Sep 25 11:06:55 localhost dockerd[24624]: time="2019-09-25T11:06:55.045327502+08:00" level=info msg="Daemon has completed initialization"
+Sep 25 11:06:55 localhost dockerd[24624]: time="2019-09-25T11:06:55.056779588+08:00" level=info msg="API listen on /var/run/docker.sock"
+Sep 25 11:06:55 localhost systemd[1]: Started Docker Application Container Engine.
+Hint: Some lines were ellipsized, use -l to show in full.
+[root@localhost ~]# docker version
+Client:
+ Version:           18.09.5
+ API version:       1.39
+ Go version:        go1.10.8
+ Git commit:        e8ff056
+ Built:             Thu Apr 11 04:43:34 2019
+ OS/Arch:           linux/amd64
+ Experimental:      false
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          18.09.5
+  API version:      1.39 (minimum version 1.12)
+  Go version:       go1.10.8
+  Git commit:       e8ff056
+  Built:            Thu Apr 11 04:13:40 2019
+  OS/Arch:          linux/amd64
+  Experimental:     false
+[root@localhost ~]#
