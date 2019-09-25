@@ -43,7 +43,7 @@
 
 [glusterfs客户端distributed日志](https://github.com/larkguo/refer/blob/master/glusterfs/log/var-log-glusterfs/glusterfs-mnt.log-20190828)
 
-[glusterfs客户端replica日志](https://raw.githubusercontent.com/larkguo/refer/master/glusterfs/log/var-log-glusterfs/glusterfs-replica.log-20190828)
+[glusterfs客户端replica日志](https://github.com/larkguo/refer/blob/master/glusterfs/log/var-log-glusterfs/glusterfs-replica.log-20190828)
 
 [glusterfsd服务端distributed日志](https://github.com/larkguo/refer/blob/master/glusterfs/log/var-log-glusterfs/bricks/glusterfs-distributed.log.1566439506)
 
@@ -89,3 +89,5 @@
 [server-world rpm安装默认版本](https://www.server-world.info/en/note?os=CentOS_7&p=docker&f=1)
 
 [Centos7 安装指定版本的 Docker](https://blog.51cto.com/michaelkang/2391894)
+
+[docker安装日志](https://github.com/larkguo/refer/blob/master/docker/docker-install.log)
