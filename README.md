@@ -78,3 +78,10 @@
 ## iSCSI
 
 [使用iSCSI服务部署网络存储](https://www.w3cschool.cn/linuxprobe/linuxprobe-t8nm3259.html)
+
+
+## Docker
+
+[server-world安装](https://www.server-world.info/en/note?os=CentOS_7&p=docker&f=1)
+
+[Centos7 安装指定版本的 Docker](https://blog.51cto.com/michaelkang/2391894)
