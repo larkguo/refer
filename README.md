@@ -91,3 +91,13 @@
 [Centos7 安装指定版本的 Docker](https://blog.51cto.com/michaelkang/2391894)
 
 [docker安装日志](https://github.com/larkguo/refer/blob/master/docker/docker-install.log)
+
+
+## S3
+
+[MinIO文档库](https://docs.min.io/cn/minio-docker-quickstart-guide.html)
+
+[S3存储类型](https://docs.aws.amazon.com/zh_cn/AmazonS3/latest/dev/storage-class-intro.html)
+
+[S3客户端]()
+
