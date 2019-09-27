@@ -92,6 +92,8 @@
 
 [docker安装日志](https://github.com/larkguo/refer/blob/master/docker/docker-install.log)
 
+[daocloud的docker一键安装](http://get.daocloud.io/)
+
 
 ## 对象存储
 
