@@ -93,7 +93,7 @@
 [docker安装日志](https://github.com/larkguo/refer/blob/master/docker/docker-install.log)
 
 
-## S3
+## 对象存储
 
 [MinIO文档库](https://docs.min.io/cn/minio-docker-quickstart-guide.html)
 
@@ -101,3 +101,8 @@
 
 [S3客户端源码及报文](https://github.com/larkguo/refer/blob/master/s3/client/)
 
+[对象生命周期管理](https://docs.aws.amazon.com/zh_cn/AmazonS3/latest/dev/object-lifecycle-mgmt.html)
+
+[Amazon S3 Glacier 入门](https://docs.aws.amazon.com/zh_cn/amazonglacier/latest/dev/amazon-glacier-getting-started.html)
+
+[适用于 Go 的 AWS 开发工具包](https://aws.amazon.com/sdk-for-go/)
