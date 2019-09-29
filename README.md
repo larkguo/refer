@@ -5,11 +5,14 @@
 
 [Go语言中文网——Go语言标准库](https://books.studygolang.com/The-Golang-Standard-Library-by-Example/)
 
+
 [Go by Example 中文](https://books.studygolang.com/gobyexample/)
 
 [Go by Example 图解数组](https://zhuanlan.zhihu.com/p/82209614)
 
+
 [100行http(s)代理](https://studygolang.com/articles/11967)
+
 
 [IO模型图](https://mojotv.cn/tutorial/golang-interface-reader-writer)
 
@@ -19,19 +22,24 @@
 
 [自己实现Reader和Writer](https://www.jianshu.com/p/6bda40d003b4)
 
+
 [Go文件操作大全](https://colobu.com/2016/10/12/go-file-operations/)
+
+
+[全面总结:Golang调用C/C++,例子式教程. Go三种方式调用C](https://cloud.tencent.com/developer/article/1343141)
 
 [Golang调C的so动态库和a静态库](https://jermine.vdo.pub/go/golang%E4%B8%8Ec%E4%BA%92%E7%9B%B8%E8%B0%83%E7%94%A8%E4%BB%A5%E5%8F%8A%E8%B0%83%E7%94%A8c%E7%9A%84so%E5%8A%A8%E6%80%81%E5%BA%93%E5%92%8Ca%E9%9D%99%E6%80%81%E5%BA%93/)
 
+
 [cpu等系统信息库](https://github.com/shirou/gopsutil)
 
-[全面总结:Golang调用C/C++,例子式教程. Go三种方式调用C](https://cloud.tencent.com/developer/article/1343141)
 
 [使用 Go 协程和通道实现一个工作池 ](https://books.studygolang.com/gobyexample/worker-pools/)
 
 [Go并发调度器解析之实现一个高性能协程池, 含Goroutine Pool模型图](https://zhuanlan.zhihu.com/p/37754274)
 
 [How to Install Go on CentOS 7](https://linuxize.com/post/how-to-install-go-on-centos-7/)
+
 
 
 ## Glusterfs
@@ -46,11 +54,13 @@
 
 [4.1.10编译日志](https://github.com/larkguo/refer/blob/master/glusterfs/build/build.log)
 
+
 [server-world安装使用](https://www.server-world.info/en/note?os=CentOS_7&p=glusterfs&f=1)
 
 [volume修复-迁移-均衡](https://github.com/meetbill/op_practice_book/blob/master/doc/store/glusterfs.md)
 
 [TStor Samba-NFS-iSCSI](https://github.com/maqingqing/TStor/wiki)
+
 
 [gluster命令行日志](https://github.com/larkguo/refer/blob/master/glusterfs/log/var-log-glusterfs/cli.log-20190828)
 
@@ -64,13 +74,21 @@
 
 [glusterfsd服务端replica日志](https://github.com/larkguo/refer/blob/master/glusterfs/log/var-log-glusterfs/bricks/glusterfs-replica.log-20190903)
 
+
 [架构图](https://github.com/gluster/glusterdocs/tree/master/docs/images)
+
 
 [故障处理](https://github.com/gluster/glusterdocs/tree/master/docs/Troubleshooting)
 
 [故障处理-zh](https://gluster-cn.readthedocs.io/zh_CN/latest/Administrator%20Guide/Troubleshooting/)
 
-[go调用libglusterfs](https://github.com/gluster/gogfapi)
+
+[gogfapi源码](https://github.com/gluster/gogfapi)
+
+[gogfapi编译及实例](https://github.com/larkguo/refer/blob/master/glusterfs/build/build.log)
+
+[Gluster libgfapi接口和应用实例](https://blog.csdn.net/liuaigui/article/details/38443357)
+
 
 [x-Archive智能云归档](http://www.taocloudx.com/index.php?a=shows&catid=4&id=112)
 
@@ -90,9 +108,11 @@
 [raid0热插拔](https://github.com/meetbill/op_practice_book/wiki/megacli02)
 
 
+
 ## iSCSI
 
 [使用iSCSI服务部署网络存储](https://www.w3cschool.cn/linuxprobe/linuxprobe-t8nm3259.html)
+
 
 
 ## Docker
