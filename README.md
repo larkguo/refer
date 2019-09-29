@@ -82,6 +82,8 @@
 
 [故障处理-zh](https://gluster-cn.readthedocs.io/zh_CN/latest/Administrator%20Guide/Troubleshooting/)
 
+[Peer Rejected (Connected)故障处理](https://gluster-documentations.readthedocs.io/en/master/Administrator%20Guide/Resolving%20Peer%20Rejected/)
+
 
 [gogfapi源码](https://github.com/gluster/gogfapi)
 
