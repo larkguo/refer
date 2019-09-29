@@ -1,6 +1,7 @@
 [编译命令汇总]
+
 yum install -y wget
-wget https://mirrors.ustc.edu.cn/epel//7/x86_64/Packages/e/epel-release-7-11.noarch.rpm
+wget https://mirrors.ustc.edu.cn/epel//7/x86_64/Packages/e/epel-release-7-11.noarch.rpm --no-check-certificate
 rpm -ivh epel-release-7-11.noarch.rpm
 yum clean all
 yum update
@@ -14,7 +15,9 @@ make
 make install
 /usr/local/sbin/glusterd -p /var/run/glusterd.pid --log-level INFO
 
+
 [编译过程日志,基于docker gluster/gluster-centos]
+
 sh-4.2# uname -a
 Linux node130 3.10.0-514.el7.x86_64 #1 SMP Tue Nov 22 16:42:41 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
 sh-4.2# cat /etc/redhat-release 
@@ -108,21 +111,6 @@ updates                                                                         
 (3/8): extras/7/x86_64/primary_db                                                                                                                                       | 215 kB  00:00:00     
 (4/8): updates/7/x86_64/primary_db                                                                                                                                      | 7.4 MB  00:00:00     
 (5/8): epel/x86_64/updateinfo                                                                                                                                           | 1.0 MB  00:00:02     
-epel/x86_64/primary_db         FAILED                                            67% [================================================                       ] 2.6 MB/s |  15 MB  00:00:02 ETA 
-https://mirror.hoster.kz/fedora/epel/7/x86_64/repodata/2ddb9d9c2c0f9ac8d5af1f933484982aa5c7ad2d2c6bf07032f659774ddb02c9-primary.sqlite.bz2: [Errno 14] HTTPS Error 404 - Not Found00:00:02 ETA 
-Trying other mirror.
-To address this issue please refer to the below wiki article 
-
-https://wiki.centos.org/yum-errors
-
-If above article doesn't help to resolve this issue please use https://bugs.centos.org/.
-
-epel/x86_64/primary_db         FAILED                                            68% [================================================                       ] 1.7 MB/s |  15 MB  00:00:04 ETA 
-https://mirror.ps.kz/epel/7/x86_64/repodata/2ddb9d9c2c0f9ac8d5af1f933484982aa5c7ad2d2c6bf07032f659774ddb02c9-primary.sqlite.bz2: [Errno 14] HTTPS Error 404 - Not Found |  15 MB  00:00:04 ETA 
-Trying other mirror.
-epel/x86_64/primary_db         FAILED                                            68% [================================================-                      ] 860 kB/s |  15 MB  00:00:08 ETA 
-http://epel.scopesky.iq/7/x86_64/repodata/2ddb9d9c2c0f9ac8d5af1f933484982aa5c7ad2d2c6bf07032f659774ddb02c9-primary.sqlite.bz2: [Errno 14] HTTP Error 404 - Not FoundB/s |  15 MB  00:00:08 ETA 
-Trying other mirror.
 (6/8): centos-gluster41/7/x86_64/primary_db                                                                                                                             | 136 kB  00:00:08     
 (7/8): epel/x86_64/group_gz                                                                                                                                             |  88 kB  00:00:10     
 (8/8): epel/x86_64/primary_db                                                                                                                                           | 6.8 MB  00:00:06     
