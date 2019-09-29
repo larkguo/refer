@@ -1,5 +1,5 @@
 [编译命令汇总]
-
+ 
 yum install -y wget
 wget https://mirrors.ustc.edu.cn/epel//7/x86_64/Packages/e/epel-release-7-11.noarch.rpm --no-check-certificate
 rpm -ivh epel-release-7-11.noarch.rpm
@@ -15,9 +15,45 @@ make
 make install
 /usr/local/sbin/glusterd -p /var/run/glusterd.pid --log-level INFO
 
+yum install -y golang
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig/
+go get -u github.com/gluster/gogfapi/gfapi
+gluster volume info
+
+cat <<EOF > test.go
+package main
+import (
+ "fmt"
+ "github.com/gluster/gogfapi/gfapi"
+)
+func main() {
+	vol := &gfapi.Volume{}
+	if err := vol.Init("vol_distributed", "localhost"); err != nil {
+		fmt.Println("Init err:",err)
+		return
+	}
+	if err := vol.Mount(); err != nil {
+		fmt.Println("Mount err:",err)
+		return
+	}
+	defer vol.Unmount()
+	f, err := vol.Create("testfile")
+	if err != nil {
+		fmt.Println("Create err:",err)
+		return
+	}
+	defer f.Close()
+	if _, err := f.Write([]byte("hello")); err != nil {
+		fmt.Println("Write err:",err)
+	}
+	return
+}
+EOF
+
+go run test.go
 
 [编译过程日志,基于docker gluster/gluster-centos]
-
+======================================Install Gluster======================================
 sh-4.2# uname -a
 Linux node130 3.10.0-514.el7.x86_64 #1 SMP Tue Nov 22 16:42:41 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
 sh-4.2# cat /etc/redhat-release 
@@ -7832,3 +7868,116 @@ drwxr-xr-x. 2 root root 31 Aug  8 23:04 snaps
 drwxr-xr-x. 2 root root  6 Feb  6  2019 ss_brick
 drwxr-xr-x. 3 root root 29 Aug  6 19:08 vols
 
+======================================Install Golang======================================
+sh-4.2# yum install -y golang
+Loaded plugins: fastestmirror, ovl
+Loading mirror speeds from cached hostfile
+ * base: mirrors.huaweicloud.com
+ * epel: mirrors.yun-idc.com
+ * extras: mirrors.aliyun.com
+ * updates: mirrors.tuna.tsinghua.edu.cn
+base                                                                                                                                                                    | 3.6 kB  00:00:00     
+extras                                                                                                                                                                  | 2.9 kB  00:00:00     
+updates                                                                                                                                                                 | 2.9 kB  00:00:00     
+Package golang-1.11.5-1.el7.x86_64 already installed and latest version
+Nothing to do
+sh-4.2# cat /usr/local/lib/pkgconfig/glusterfs-api.pc
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: glusterfs-api
+Description: GlusterFS API
+/* This is the API version, NOT package version */
+Version: 7.4.1.10
+Requires: uuid
+Libs: -L${libdir} -lacl -lgfapi -lglusterfs -lgfrpc -lgfxdr
+Cflags: -I${includedir} -D_FILE_OFFSET_BITS=64 -D__USE_FILE_OFFSET64 -DUSE_POSIX_ACLS=1
+sh-4.2# 
+sh-4.2# ls -l /usr/local/lib/glusterfs/4.1.10/
+total 0
+drwxr-xr-x.  2 root root  68 Aug  8 23:49 auth
+drwxr-xr-x.  2 root root  70 Aug  8 23:47 rpc-transport
+drwxr-xr-x. 13 root root 202 Aug  8 23:54 xlator
+sh-4.2# ls -l /usr/local/include/
+total 4
+drwxr-xr-x. 7 root root 4096 Aug  8 23:49 glusterfs
+sh-4.2# 
+sh-4.2# go get -u github.com/gluster/gogfapi/gfapi
+# pkg-config --cflags  -- glusterfs-api glusterfs-api glusterfs-api
+Package glusterfs-api was not found in the pkg-config search path.
+Perhaps you should add the directory containing `glusterfs-api.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'glusterfs-api' found
+Package glusterfs-api was not found in the pkg-config search path.
+Perhaps you should add the directory containing `glusterfs-api.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'glusterfs-api' found
+Package glusterfs-api was not found in the pkg-config search path.
+Perhaps you should add the directory containing `glusterfs-api.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'glusterfs-api' found
+pkg-config: exit status 1
+sh-4.2# 
+sh-4.2# export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig/
+sh-4.2# go get -u github.com/gluster/gogfapi/gfapi
+sh-4.2# 
+sh-4.2# gluster volume info
+ 
+Volume Name: vol_distributed
+Type: Distribute
+Volume ID: a4b01ecd-2c8d-414c-8e51-c51bcf9f0b25
+Status: Started
+Snapshot Count: 0
+Number of Bricks: 3
+Transport-type: tcp
+Bricks:
+Brick1: node129:/glusterfs/distributed
+Brick2: node130:/glusterfs/distributed
+Brick3: node131:/glusterfs/distributed
+Options Reconfigured:
+nfs.disable: on
+transport.address-family: inet
+sh-4.2# 
+sh-4.2# ls -l /root/go/src/github.com/gluster/gogfapi/
+total 16
+-rw-r--r--. 1 root root 1324 Aug  8 23:26 LICENSE
+-rw-r--r--. 1 root root 1539 Aug  8 23:26 README.md
+-rw-r--r--. 1 root root  244 Aug  8 23:26 TODO.md
+drwxr-xr-x. 2 root root  195 Aug  8 23:26 gfapi
+-rwxr-xr-x. 1 root root  718 Aug  8 23:26 test_setup.sh
+sh-4.2# 
+sh-4.2# cat <<EOF > test.go
+package main
+import (
+ "fmt"
+ "github.com/gluster/gogfapi/gfapi"
+)
+func main() {
+	vol := &gfapi.Volume{}
+	if err := vol.Init("vol_distributed", "localhost"); err != nil {
+		fmt.Println("Init err:",err)
+		return
+	}
+	if err := vol.Mount(); err != nil {
+		fmt.Println("Mount err:",err)
+		return
+	}
+	defer vol.Unmount()
+	f, err := vol.Create("testfile")
+	if err != nil {
+		fmt.Println("Create err:",err)
+		return
+	}
+	defer f.Close()
+	if _, err := f.Write([]byte("hello")); err != nil {
+		fmt.Println("Write err:",err)
+	}
+	return
+}
+EOF
+sh-4.2# 
+sh-4.2# go run test.go
+Create err: create testfile: input/output error
+sh-4.2# 

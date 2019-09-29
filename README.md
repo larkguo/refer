@@ -31,6 +31,7 @@
 
 [Go并发调度器解析之实现一个高性能协程池, 含Goroutine Pool模型图](https://zhuanlan.zhihu.com/p/37754274)
 
+[How to Install Go on CentOS 7](https://linuxize.com/post/how-to-install-go-on-centos-7/)
 
 
 ## Glusterfs
