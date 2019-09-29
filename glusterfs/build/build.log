@@ -6,7 +6,7 @@ rpm -ivh epel-release-7-11.noarch.rpm
 yum clean all
 yum update
 yum install -y autoconf automake make flex bison libacl-devel libaio-devel libattr-devel libcurl-devel libxml2-devel libibverbs-devel librdmacm-devel libtirpc-devel libtool libxml2-devel lvm2-devel openssl-devel userspace-rcu-devel pkgconfig pyliblzma python-devel python-eventlet python-netifaces python-paste-deploy python-simplejson python-sphinx python-webob pyxattr readline-devel rpm-build sqlite-devel systemtap-sdt-devel tar  cmockery2-devel dos2unix fuse-devel glib2-devel
-wget https://download.gluster.org/pub/gluster/glusterfs/4.1/LATEST/glusterfs-4.1.10.tar.gz
+wget https://download.gluster.org/pub/gluster/glusterfs/4.1/LATEST/glusterfs-4.1.10.tar.gz --no-check-certificate
 tar zxvf glusterfs-4.1.10.tar.gz 
 cd glusterfs-4.1.10
 ./autogen.sh
