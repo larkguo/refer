@@ -16,6 +16,7 @@ make install
 /usr/local/sbin/glusterd -p /var/run/glusterd.pid --log-level INFO
 
 yum install -y golang
+yum install -y git
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig/
 go get -u github.com/gluster/gogfapi/gfapi
 gluster volume info
@@ -7905,6 +7906,19 @@ total 4
 drwxr-xr-x. 7 root root 4096 Aug  8 23:49 glusterfs
 sh-4.2# 
 sh-4.2# go get -u github.com/gluster/gogfapi/gfapi
+go: missing Git command. See https://golang.org/s/gogetcmd
+package github.com/gluster/gogfapi/gfapi: exec: "git": executable file not found in $PATH
+sh-4.2# 
+sh-4.2# yum install -y git
+Loaded plugins: fastestmirror, ovl
+Loading mirror speeds from cached hostfile
+ * base: mirrors.aliyun.com
+ * extras: mirror.jdcloud.com
+ * updates: mirror.jdcloud.com
+Package git-1.8.3.1-20.el7.x86_64 already installed and latest version
+Nothing to do
+sh-4.2# 
+sh-4.2# go get -u github.com/gluster/gogfapi/gfapi
 # pkg-config --cflags  -- glusterfs-api glusterfs-api glusterfs-api
 Package glusterfs-api was not found in the pkg-config search path.
 Perhaps you should add the directory containing `glusterfs-api.pc'
@@ -7973,11 +7987,13 @@ func main() {
 	defer f.Close()
 	if _, err := f.Write([]byte("hello")); err != nil {
 		fmt.Println("Write err:",err)
+		return
 	}
+	fmt.Println("Write ok!")
 	return
 }
 EOF
 sh-4.2# 
-sh-4.2# go run test.go
-Create err: create testfile: input/output error
-sh-4.2# 
+sh-4.2# go run test.go 
+Write ok!
+sh-4.2#
