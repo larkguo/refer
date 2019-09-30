@@ -90,7 +90,7 @@
 
 [Gluster libgfapi接口和应用实例](https://blog.csdn.net/liuaigui/article/details/38443357)
 
-[gogfapi的一个封装](https://github.com/wangjiert/bitfan/tree/master/processors/output-glusterfs)
+[gogfapi的一个封装](https://github.com/prashanthpai/antbird)
 
 
 [x-Archive智能云归档](http://www.taocloudx.com/index.php?a=shows&catid=4&id=112)
