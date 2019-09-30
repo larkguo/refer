@@ -21,39 +21,65 @@ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig/
 go get -u github.com/gluster/gogfapi/gfapi
 gluster volume info
 
-cat <<EOF > test.go
+cat <<EOF > GlusterClient.go
 package main
+
 import (
- "fmt"
- "github.com/gluster/gogfapi/gfapi"
+	"flag"
+	"fmt"
+
+	"github.com/gluster/gogfapi/gfapi"
 )
+
 func main() {
+	var host, volume, writeFile string
+
+	/* paramParse */
+	flag.Bool("?|h", false, "./GlusterClient -h localhost -v vol_distributed -w write_file ")
+	flag.StringVar(&host, "h", "localhost", "Host")
+	flag.StringVar(&volume, "v", "", "Volume")
+	flag.StringVar(&writeFile, "w", "writefile", "WriteFileName")
+
+	flag.Parse()
+	parsed := flag.Parsed()
+	if parsed {
+		if volume == "" {
+			flag.Usage()
+			return
+		}
+	}
+
+	fmt.Println("\nGlusterClient: ")
+	fmt.Printf(" -h\tHost: '%s'\n", host)
+	fmt.Printf(" -v\tVolume: '%s'\n", volume)
+	fmt.Printf(" -w\tWriteFileName: '%s'\n", writeFile)
+
 	vol := &gfapi.Volume{}
-	if err := vol.Init("vol_distributed", "localhost"); err != nil {
-		fmt.Println("Init err:",err)
+	if err := vol.Init(volume, host); err != nil {
+		fmt.Println("Init err:", err)
 		return
 	}
 	if err := vol.Mount(); err != nil {
-		fmt.Println("Mount err:",err)
+		fmt.Println("Mount err:", err)
 		return
 	}
 	defer vol.Unmount()
-	f, err := vol.Create("testfile")
+	f, err := vol.Create(writeFile)
 	if err != nil {
-		fmt.Println("Create err:",err)
+		fmt.Println("Create err:", err)
 		return
 	}
 	defer f.Close()
 	if _, err := f.Write([]byte("hello")); err != nil {
-		fmt.Println("Write err:",err)
+		fmt.Println("Write err:", err)
 		return
 	}
-	fmt.Println("Write ok!")
+	fmt.Printf("write to host[%s] volume[%s] file[%s] ok!\n", host, volume, writeFile)
 	return
 }
 EOF
 
-go run test.go
+go run GlusterClient.go -h localhost -v vol_distributed -w test_file 
 
 [编译过程日志,基于docker gluster/gluster-centos]
 ======================================Install Gluster======================================
@@ -7996,6 +8022,11 @@ func main() {
 }
 EOF
 sh-4.2# 
-sh-4.2# go run test.go 
-Write ok!
-sh-4.2#
+sh-4.2# go run GlusterClient.go -h localhost -v vol_distributed -w test_file 
+
+GlusterClient: 
+ -h     Host: 'localhost'
+ -v     Volume: 'vol_distributed'
+ -w     WriteFileName: 'test_file'
+write to host[localhost] volume[vol_distributed] file[test_file] ok!
+sh-4.2# 
