@@ -106,6 +106,7 @@
 
 [zfs-0.7-release源码](https://github.com/zfsonlinux/zfs/tree/zfs-0.7-release)
 
+[Oracle Solaris管理:ZFS文件系统-管理ZFS存储池属性](https://docs.oracle.com/cd/E26926_01/html/E25826/gfifk.html)
 
 
 ## MegaCli 管理工具
