@@ -122,7 +122,12 @@
 
 ## Docker
 
-[官方安装,清空容器使用命令 rm -rf /var/lib/docker](https://docs.docker.com/install/linux/docker-ce/centos/)
+[官方二进制安装 Install Docker Engine - Community from binaries](https://docs.docker.com/install/linux/docker-ce/binaries/)
+
+[docker 18.09.0二进制安装](https://www.cnblogs.com/xiaochina/p/10469715.html)
+
+
+[官方yum安装,清空容器使用命令 rm -rf /var/lib/docker](https://docs.docker.com/install/linux/docker-ce/centos/)
 
 [linux下如何使用docker二进制文件安装](https://www.linuxprobe.com/linux-docker-biner.html)
 
