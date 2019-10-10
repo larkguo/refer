@@ -108,7 +108,8 @@
 
 [Oracle Solaris管理:ZFS文件系统-管理ZFS存储池属性](https://docs.oracle.com/cd/E26926_01/html/E25826/gfifk.html)
 
-[升级到zfs-0.7.4发行版时,建议用户手动重置zfs systemd预设,否则,可能导致重新引导系统时池无法自动导入. systemctl preset zfs-import-cache zfs-import-scan zfs-import.target zfs-mount zfs-share zfs-zed zfs.target](https://github.com/Greek64/zfs/wiki/RHEL-and-CentOS)
+  systemctl preset zfs-import-cache zfs-import-scan zfs-import.target zfs-mount zfs-share zfs-zed zfs.target 
+[升级到zfs-0.7.4发行版时,建议用户手动重置zfs systemd预设,否则,可能导致重新引导系统时池无法自动导入.](https://github.com/Greek64/zfs/wiki/RHEL-and-CentOS)
 
 
 ## MegaCli 管理工具
