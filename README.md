@@ -145,6 +145,10 @@
 
 [docker源码](https://github.com/docker/engine/releases)
 
+[docker daemon故障处理 Configure and troubleshoot the Docker daemon](https://docs.docker.com/config/daemon/)
+
+[Docker中文资源](http://www.docker.org.cn/page/resources.html)
+
 
 ## 对象存储
 
