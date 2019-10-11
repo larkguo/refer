@@ -130,6 +130,8 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 ## Docker
 
+[docker release notes](https://docs.docker.com/engine/release-notes/)
+
 [官方二进制安装 Install Docker Engine - Community from binaries](https://docs.docker.com/install/linux/docker-ce/binaries/)
 
 [docker 18.09.0二进制安装](https://www.cnblogs.com/xiaochina/p/10469715.html)
