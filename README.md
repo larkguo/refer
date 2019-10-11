@@ -127,6 +127,10 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 [使用iSCSI服务部署网络存储](https://www.w3cschool.cn/linuxprobe/linuxprobe-t8nm3259.html)
 
 
+## NFS
+
+[鸟哥的Linux私房菜-NFS服务器](http://cn.linux.vbird.org/linux_server/0330nfs.php)
+
 
 ## Docker
 
