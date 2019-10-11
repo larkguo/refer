@@ -126,10 +126,36 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [使用iSCSI服务部署网络存储](https://www.w3cschool.cn/linuxprobe/linuxprobe-t8nm3259.html)
 
+[server-world的iSCSI](https://www.server-world.info/en/note?os=CentOS_7&p=iscsi&f=1)
+
 
 ## NFS
 
 [鸟哥的Linux私房菜-NFS服务器](http://cn.linux.vbird.org/linux_server/0330nfs.php)
+
+[server-world的NFS](https://www.server-world.info/en/note?os=CentOS_7&p=nfs&f=1)
+
+
+## SMB
+
+[鸟哥的Linux私房菜-SAMBA服务器](http://linux.vbird.org/linux_server/0370samba.php)
+
+[server-world的samba](https://www.server-world.info/en/note?os=CentOS_7&p=samba&f=1)
+
+
+## Centos
+
+[server-world的CentOS7](https://www.server-world.info/en/note?os=CentOS_7&p=install)
+
+[清除CentOS 6或CentOS 7上的磁盘空间](https://segmentfault.com/a/1190000019242684)
+
+[Linux运维日志-Linux日志切割工具Logrotate配置详解](https://www.centos.bz/2019/07/linux%e6%97%a5%e5%bf%97%e5%88%87%e5%89%b2%e5%b7%a5%e5%85%b7logrotate%e9%85%8d%e7%bd%ae%e8%af%a6%e8%a7%a3/)
+
+
+## Nginx
+
+[server-world的Nginx](https://www.server-world.info/en/note?os=CentOS_7&p=nginx&f=1)
+
 
 
 ## Docker
@@ -158,6 +184,10 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 [docker源码](https://github.com/docker/engine/releases)
 
 [docker daemon故障处理 Configure and troubleshoot the Docker daemon](https://docs.docker.com/config/daemon/)
+
+[Docker daemon 的配置和排错](https://docs-cn.docker.octowhale.com/engine/admin/)
+
+[docker 容器日志清理方案](https://www.jianshu.com/p/28f1acb11f6b)
 
 [Docker中文资源](http://www.docker.org.cn/page/resources.html)
 
