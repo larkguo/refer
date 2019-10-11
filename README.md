@@ -149,6 +149,10 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [Linux 命令大全](https://www.runoob.com/linux/linux-command-manual.html)
 
+[Linux错误码](https://www.bookstack.cn/read/SwooleDoc/170.md)
+
+[Linux C API参考手册](https://www.kancloud.cn/wizardforcel/linux-c-api-ref/98327)
+
 [server-world的CentOS7](https://www.server-world.info/en/note?os=CentOS_7&p=install)
 
 [清除CentOS 6或CentOS 7上的磁盘空间](https://segmentfault.com/a/1190000019242684)
