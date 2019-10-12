@@ -157,6 +157,10 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [server-world的CentOS7](https://www.server-world.info/en/note?os=CentOS_7&p=install)
 
+[鸟哥的Linux私房菜-基础学习篇目录](http://cn.linux.vbird.org/linux_basic/linux_basic.php)
+
+[鸟哥的Linux私房菜-服务器架设篇目录](http://cn.linux.vbird.org/linux_server/)
+
 [清除CentOS 6或CentOS 7上的磁盘空间](https://segmentfault.com/a/1190000019242684)
 
 [Linux运维日志-Linux日志切割工具Logrotate配置详解](https://www.centos.bz/2019/07/linux%e6%97%a5%e5%bf%97%e5%88%87%e5%89%b2%e5%b7%a5%e5%85%b7logrotate%e9%85%8d%e7%bd%ae%e8%af%a6%e8%a7%a3/)
