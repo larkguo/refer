@@ -13,6 +13,10 @@
 
 [100行http(s)代理](https://studygolang.com/articles/11967)
 
+[go https服务器和客户端](https://github.com/flyingtime/go-https)
+
+[TLS完全指南（三）：用Go语言写HTTPS程序](https://zhuanlan.zhihu.com/p/26684081)
+
 
 [IO模型图](https://mojotv.cn/tutorial/golang-interface-reader-writer)
 
