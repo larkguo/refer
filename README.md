@@ -163,7 +163,7 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [清除CentOS 6或CentOS 7上的磁盘空间](https://segmentfault.com/a/1190000019242684)
 
-[Linux运维日志-Linux日志切割工具Logrotate配置详解](https://www.centos.bz/2019/07/linux%e6%97%a5%e5%bf%97%e5%88%87%e5%89%b2%e5%b7%a5%e5%85%b7logrotate%e9%85%8d%e7%bd%ae%e8%af%a6%e8%a7%a3/)
+[配置logrotate日志轮转(个数和大小)的终极指导](https://linux.cn/article-8227-1.html)
 
 
 
