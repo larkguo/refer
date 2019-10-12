@@ -126,6 +126,8 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [使用iSCSI服务部署网络存储](https://www.w3cschool.cn/linuxprobe/linuxprobe-t8nm3259.html)
 
+[鸟哥的Linux私房菜-iSCSI 服务器](http://cn.linux.vbird.org/linux_server/0460iscsi.php)
+
 [server-world的iSCSI](https://www.server-world.info/en/note?os=CentOS_7&p=iscsi&f=1)
 
 
@@ -138,7 +140,7 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 ## SMB
 
-[鸟哥的Linux私房菜-SAMBA服务器](http://linux.vbird.org/linux_server/0370samba.php)
+[鸟哥的Linux私房菜-SAMBA服务器](http://cn.linux.vbird.org/linux_server/0370samba.php)
 
 [server-world的samba](https://www.server-world.info/en/note?os=CentOS_7&p=samba&f=1)
 
