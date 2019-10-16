@@ -15,13 +15,13 @@ import (
 )
 
 type LicenseVerifyConfig struct {
-	User    string `json:"User,omitempty"`
-	Version string `json:"Version,omitempty"`
-	UUID    string `json:"UUID,omitempty"` // 用户设备标识
-	Expire  string `json:"Expire,omitempty"`
-	Message string `json:"Message,omitempty"`
+	User    string `json:"User"`
+	Version string `json:"Version"`
+	UUID    string `json:"UUID"` // 用户设备标识
+	Expire  string `json:"Expire"`
+	Message string `json:"Message"`
 
-	Base64Signature string `json:"Signature,omitempty"` // 与用以上字段生成Base64Signature比较
+	Base64Signature string `json:"Signature"` // 与用以上字段生成Base64Signature比较
 }
 
 type LicenseVerify struct {
@@ -67,6 +67,7 @@ func (l *LicenseVerify) SignatureVerify(sourceMsg string) error {
 	}
 
 	// TODO: UUID 用户设备验证
+	// TODO: Expire 超时检查
 
 	// 验证签名
 	return rsa.VerifyPKCS1v15(pub, crypto.SHA256, hashed[:], signature)
@@ -86,12 +87,12 @@ func main() {
 	var config LicenseVerifyConfig
 	err = json.Unmarshal(data, &config)
 	if err != nil {
-		fmt.Println("Verify License error:", err.Error())
+		fmt.Println("Verify 'License' error:", err.Error())
 		return
 	}
 	license := NewLicenseVerify(config, publicKeyFile)
 	if license == nil {
-		fmt.Println("Init Verify License error!")
+		fmt.Println("Init Verify 'License' error!")
 		return
 	}
 
@@ -99,8 +100,8 @@ func main() {
 	sourceMsg := strings.Join([]string{config.User, config.Version, config.UUID, config.Expire, config.Message}, ",")
 	err = license.SignatureVerify(sourceMsg)
 	if err != nil {
-		fmt.Println("Verify License error:", err.Error())
+		fmt.Println("Verify 'License' error:", err.Error())
 	} else {
-		fmt.Println("Verify License OK!")
+		fmt.Println("Verify 'License' OK!")
 	}
 }

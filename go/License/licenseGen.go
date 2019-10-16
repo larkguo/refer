@@ -16,13 +16,13 @@ import (
 )
 
 type LicenseGenConfig struct {
-	User    string `json:"User,omitempty"`
-	Version string `json:"Version,omitempty"`
-	UUID    string `json:"UUID,omitempty"` // 用户设备标识
-	Expire  string `json:"Expire,omitempty"`
-	Message string `json:"Message,omitempty"`
+	User    string `json:"User"`
+	Version string `json:"Version"`
+	UUID    string `json:"UUID"` // 用户设备标识
+	Expire  string `json:"Expire"`
+	Message string `json:"Message"`
 
-	Base64Signature string `json:"Signature,omitempty"` // 用以上字段生成
+	Base64Signature string `json:"Signature"` // 用以上字段生成
 }
 
 type LicenseGen struct {
@@ -32,7 +32,7 @@ type LicenseGen struct {
 	PrivateKey     []byte
 }
 
-func NewLicenseSign(config LicenseGenConfig, privateKeyFile string) *LicenseSign {
+func NewLicenseSign(config LicenseGenConfig, privateKeyFile string) *LicenseGen {
 
 	// 读取私钥
 	privateKey, err := ioutil.ReadFile(privateKeyFile)
@@ -40,12 +40,12 @@ func NewLicenseSign(config LicenseGenConfig, privateKeyFile string) *LicenseSign
 		return nil
 	}
 
-	// LicenseSign构造
-	return &LicenseSign{Config: config, PrivateKeyFile: privateKeyFile, PrivateKey: privateKey}
+	// LicenseGen构造
+	return &LicenseGen{Config: config, PrivateKeyFile: privateKeyFile, PrivateKey: privateKey}
 }
 
 /* 私钥签名 */
-func (l *LicenseSign) Signature(sourceMsg string) error {
+func (l *LicenseGen) Signature(sourceMsg string) error {
 	data := []byte(sourceMsg)
 	h := sha256.New()
 	h.Write(data)
@@ -107,7 +107,8 @@ func main() {
 	fmt.Println("Signature:", config.Base64Signature)
 
 	// Licence 生成
-	licenseJson, err := json.Marshal(config)
+	//licenseJson, err := json.Marshal(config)
+	licenseJson, err := json.MarshalIndent(config, "", "    ")
 	if err != nil {
 		fmt.Println("LicenseGen error:", err.Error())
 		return

@@ -1,7 +1,8 @@
 {
-    "User": "hualu",
-    "Version": "HlstoreNAS-1.0.0",
+    "User": "user1",
+    "Version": "NAS-1.0.0",
     "UUID": "70:10:6f:b9:32:7f",
     "Expire": "2030-10-18",
-    "Signature": ""
+    "Message": "hello",
+    "Signature": "u1Pv2PDeG7J7iXKicixSlslnXkyzE4a2H/P2wqPQJSgbATQG00SdWvWsSh8CDVCystI5ClUGvl5tnIofLZcZhNQXgoTQGWJF/iscYLW4rZCg1vjzBFbgvPhHITn6aVzZxtHWS/fwlSL/P4v1C95AX0YA0ru4BbVYWb/0+KpQqwo="
 }
