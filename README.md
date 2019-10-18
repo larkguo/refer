@@ -171,6 +171,7 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [配置logrotate日志轮转(个数和大小)的终极指导](https://linux.cn/article-8227-1.html)
 
+[《SED 单行脚本快速参考》的 awk 实现](https://linuxtoy.org/archives/sed-awk.html)
 
 
 ## Nginx
