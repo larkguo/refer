@@ -126,6 +126,11 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [raid0热插拔](https://github.com/meetbill/op_practice_book/wiki/megacli02)
 
+[LSI SAS3108 RAID卡基于MegaRAID架构,使用storcli64 ](https://support.huawei.com/enterprise/zh/doc/EDOC1000004345/a728791a)
+
+[LSI SAS3008IT RAID卡支持SAS数据通道和SATA数据通道,使用sas3ircu](https://support.huawei.com/enterprise/zh/doc/EDOC1000004345/cef38350)
+
+[Linux系统硬盘盘符与物理槽位对应关系查看案例](https://support.huawei.com/enterprise/zh/knowledge/EKB1000090841)
 
 
 ## iSCSI
