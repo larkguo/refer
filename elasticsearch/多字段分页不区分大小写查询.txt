@@ -1,0 +1,142 @@
+
+搜索条件:
+1.搜索日期范围介于 "2017-12-25T01:00:00.000Z"和"2019-12-25T02:10:00.000Z";
+2.查询结果倒序排列;
+3.搜索日志级别为"INFO WARN ERROR FATAL"中任意一种;
+4.搜索关键词为"Failed",不区分大小写,query关键词为或的关系;
+5.查找logs索引的"message","host", "module"三个字段;
+6.查询结果分页返回,每页返回两条,查询结果1分钟内分页有效.
+
+参考:
+https://www.elastic.co/guide/cn/elasticsearch/guide/current/multi-match-query.html
+
+==============================分页查询日志==============================
+[root@host237 ~]# curl 'localhost:9200/logs/_search?pretty&scroll=1m' -H 'Content-Type: application/json' -d '
+{
+    "size": 2,
+    "sort": [{"@timestamp": "desc"}],
+    "query": { 
+	    "bool": {
+		    "must": [
+		        {"range": {"@timestamp": { "gte": "2017-12-25T01:00:00.000Z","lte": "2019-12-25T02:10:00.000Z"}}},
+		        {"match": {"level": "INFO WARN ERROR FATAL"}},
+				    {"multi_match": {
+				        "query":                "Failed",
+				        "fields":               [ "message","host", "module"]
+				    }}
+		    ] 
+	    }
+    }
+}'
+
+{
+  "_scroll_id" : "DnF1ZXJ5VGhlbkZldGNoBQAAAAAAQWFjFnJ1RzIzSTNrUzdtRTlGb1UzTDR2SmcAAAAAAEFhZBZydUcyM0kza1M3bUU5Rm9VM0w0dkpnAAAAAABBYWYWcnVHMjNJM2tTN21FOUZvVTNMNHZKZwAAAAAAQWFlFnJ1RzIzSTNrUzdtRTlGb1UzTDR2SmcAAAAAAEFhZxZydUcyM0kza1M3bUU5Rm9VM0w0dkpn",
+  "took" : 1,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 5,
+    "successful" : 5,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 180,
+    "max_score" : null,
+    "hits" : [
+      {
+        "_index" : "logs",
+        "_type" : "doc",
+        "_id" : "BvSM7W0B0skAraopu5Ad",
+        "_score" : null,
+        "_source" : {
+          "@timestamp" : "2019-10-21T09:01:26.172Z",
+          "host" : "host237",
+          "module" : "Lake",
+          "level" : "ERROR",
+          "message" : "failed to calc transit total size from lakefs_lch_kkll, error not found",
+          "confirm" : "FALSE"
+        },
+        "sort" : [
+          1571648486172
+        ]
+      },
+      {
+        "_index" : "logs",
+        "_type" : "doc",
+        "_id" : "v6AJ3m0BfZuXD2bJQVdc",
+        "_score" : null,
+        "_source" : {
+          "@timestamp" : "2019-10-18T08:43:31.548Z",
+          "host" : "host237",
+          "module" : "lakefs.lch_otcompelete",
+          "level" : "WARN",
+          "message" : "failed to find transition not found\n",
+          "confirm" : "FALSE"
+        },
+        "sort" : [
+          1571388211548
+        ]
+      }
+    ]
+  }
+}
+
+
+
+==============================根据scroll_id请求下一页==============================
+[root@host237 ~]# curl 'localhost:9200/_search/scroll?pretty' -H 'Content-Type: application/json' -d ' {"scroll":"1m","scroll_id": "DnF1ZXJ5VGhlbkZldGNoBQAAAAAAQWFjFnJ1RzIzSTNrUzdtRTlGb1UzTDR2SmcAAAAAAEFhZBZydUcyM0kza1M3bUU5Rm9VM0w0dkpnAAAAAABBYWYWcnVHMjNJM2tTN21FOUZvVTNMNHZKZwAAAAAAQWFlFnJ1RzIzSTNrUzdtRTlGb1UzTDR2SmcAAAAAAEFhZxZydUcyM0kza1M3bUU5Rm9VM0w0dkpn"}'
+
+{
+  "_scroll_id" : "DnF1ZXJ5VGhlbkZldGNoBQAAAAAAQWFjFnJ1RzIzSTNrUzdtRTlGb1UzTDR2SmcAAAAAAEFhZBZydUcyM0kza1M3bUU5Rm9VM0w0dkpnAAAAAABBYWYWcnVHMjNJM2tTN21FOUZvVTNMNHZKZwAAAAAAQWFlFnJ1RzIzSTNrUzdtRTlGb1UzTDR2SmcAAAAAAEFhZxZydUcyM0kza1M3bUU5Rm9VM0w0dkpn",
+  "took" : 2,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 5,
+    "successful" : 5,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 180,
+    "max_score" : null,
+    "hits" : [
+      {
+        "_index" : "logs",
+        "_type" : "doc",
+        "_id" : "c6AA3m0BfZuXD2bJAlXg",
+        "_score" : null,
+        "_source" : {
+          "@timestamp" : "2019-10-18T08:33:25.728Z",
+          "host" : "host237",
+          "module" : "Lake",
+          "level" : "ERROR",
+          "message" : "failed to calc transit total size from lakefs_transited_size_dasdD, error not found",
+          "confirm" : "FALSE"
+        },
+        "sort" : [
+          1571387605728
+        ]
+      },
+      {
+        "_index" : "logs",
+        "_type" : "doc",
+        "_id" : "bqD_3W0BfZuXD2bJuFVQ",
+        "_score" : null,
+        "_source" : {
+          "@timestamp" : "2019-10-18T08:33:06.639Z",
+          "host" : "host237",
+          "module" : "Lake",
+          "level" : "ERROR",
+          "message" : "failed to calc transit total size from lakefs_lch_kkll, error not found",
+          "confirm" : "FALSE"
+        },
+        "sort" : [
+          1571387586639
+        ]
+      }
+    ]
+  }
+}
+
+[root@host237 ~]# 
+
