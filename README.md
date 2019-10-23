@@ -46,6 +46,8 @@
 
 [Golang代码搜集-基于RSA的公钥加密私钥解密-私钥签名公钥验证](https://blog.csdn.net/lhtzbj12/article/details/79427235)
 
+[MD5加密,通过翻阅源码可以看到他并不是对data进行校验计算，而是对hash.Hash对象内部存储的内容进行校验和计算然后将其追加到data的后面形成一个新的byte切片](https://studygolang.com/articles/10787)
+
 
 ## Glusterfs
 
