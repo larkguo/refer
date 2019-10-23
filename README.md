@@ -185,6 +185,9 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [server-world的Nginx](https://www.server-world.info/en/note?os=CentOS_7&p=nginx&f=1)
 
+## ElasticSearch
+
+[多字段,分页,不区分大小写的组合查询](https://github.com/larkguo/refer/blob/master/elasticsearch/%E5%A4%9A%E5%AD%97%E6%AE%B5%E5%88%86%E9%A1%B5%E4%B8%8D%E5%8C%BA%E5%88%86%E5%A4%A7%E5%B0%8F%E5%86%99%E6%9F%A5%E8%AF%A2.txt)
 
 
 ## Docker
