@@ -3,8 +3,8 @@
 1.搜索日期范围介于 "2017-12-25T01:00:00.000Z"和"2019-12-25T02:10:00.000Z";
 2.查询结果倒序排列;
 3.搜索日志级别为"INFO WARN ERROR FATAL"中任意一种;
-4.搜索关键词为"Failed",不区分大小写,query关键词为或的关系;
-5.查找logs索引的"message","host", "module"三个字段;
+4.搜索关键词为"Failed to",不区分大小写,query关键词是与的关系;
+5.查找logs索引的"message", "module"2个字段;
 6.查询结果分页返回,每页返回两条,查询结果1分钟内分页有效.
 
 参考:
@@ -21,8 +21,9 @@ https://www.elastic.co/guide/cn/elasticsearch/guide/current/multi-match-query.ht
 		        {"range": {"@timestamp": { "gte": "2017-12-25T01:00:00.000Z","lte": "2019-12-25T02:10:00.000Z"}}},
 		        {"match": {"level": "INFO WARN ERROR FATAL"}},
 				    {"multi_match": {
-				        "query":                "Failed",
-				        "fields":               [ "message","host", "module"]
+				        "query":                "Failed to",
+				        "operator":             "and",
+				        "fields":               [ "message", "module"]
 				    }}
 		    ] 
 	    }
