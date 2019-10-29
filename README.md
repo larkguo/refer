@@ -120,7 +120,7 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [Oracle Solaris管理:ZFS文件系统-管理ZFS存储池属性](https://docs.oracle.com/cd/E26926_01/html/E25826/gfifk.html)
 
-  systemctl preset zfs-import-cache zfs-import-scan zfs-import.target zfs-mount zfs-share zfs-zed zfs.target 
+  systemctl preset zfs-import-cache zfs-import-scan zfs-import.target zfs-mount zfs-share zfs-zed zfs.target
 [升级到zfs-0.7.4发行版时,建议用户手动重置zfs systemd预设,否则,可能导致重新引导系统时池无法自动导入.](https://github.com/Greek64/zfs/wiki/RHEL-and-CentOS)
 
 [zfs日常管理以及替换损坏磁盘](https://blog.csdn.net/dazuiba008/article/details/70808588)
@@ -158,6 +158,10 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 [鸟哥的Linux私房菜-SAMBA服务器](http://cn.linux.vbird.org/linux_server/0370samba.php)
 
 [server-world的samba](https://www.server-world.info/en/note?os=CentOS_7&p=samba&f=1)
+
+## 存储综合
+
+[腾讯云网关,配置iSCSI,VTL磁带，NFSv3v4](https://main.qcloudimg.com/raw/document/product/pdf/581_9479_cn.pdf)
 
 
 ## Centos
