@@ -19,6 +19,8 @@
 
 [一个使用NewSingleHostReverseProxy的反向代理，支持目的地址是dns域名](https://github.com/ilanyu/ReverseProxy)
 
+[http代理模型图，原理和实例NewMultipleHostsReverseProxy](https://cizixs.com/2017/03/21/http-proxy-and-golang-implementation/)
+
 
 [IO模型图](https://mojotv.cn/tutorial/golang-interface-reader-writer)
 
