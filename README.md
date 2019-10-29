@@ -163,6 +163,13 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [腾讯云网关,配置iSCSI,VTL磁带，NFSv3v4](https://main.qcloudimg.com/raw/document/product/pdf/581_9479_cn.pdf)
 
+## Git
+
+[递归克隆所有依赖子项目，如： git clone --recursive https://github.com/rbgirshick/fast-rcnn.git]
+
+[git强制拉取更新](https://blog.csdn.net/haoaiqian/article/details/78284337)
+
+
 
 ## Centos
 
