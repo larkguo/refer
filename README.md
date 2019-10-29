@@ -21,6 +21,8 @@
 
 [http代理模型图，原理和实例NewMultipleHostsReverseProxy](https://cizixs.com/2017/03/21/http-proxy-and-golang-implementation/)
 
+[https转http](https://mojotv.cn/go/hardware-footprint-gui-proxy)
+
 
 [IO模型图](https://mojotv.cn/tutorial/golang-interface-reader-writer)
 
