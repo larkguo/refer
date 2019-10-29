@@ -17,6 +17,8 @@
 
 [TLS完全指南（三）：用Go语言写HTTPS程序](https://zhuanlan.zhihu.com/p/26684081)
 
+[一个使用NewSingleHostReverseProxy的反向代理，支持目的地址是dns域名](https://github.com/ilanyu/ReverseProxy)
+
 
 [IO模型图](https://mojotv.cn/tutorial/golang-interface-reader-writer)
 
