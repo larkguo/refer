@@ -130,9 +130,14 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
   systemctl preset zfs-import-cache zfs-import-scan zfs-import.target zfs-mount zfs-share zfs-zed zfs.target
 [升级到zfs-0.7.4发行版时,建议用户手动重置zfs systemd预设,否则,可能导致重新引导系统时池无法自动导入.](https://github.com/Greek64/zfs/wiki/RHEL-and-CentOS)
 
+[开机启动zfs](https://wiki.archlinux.org/index.php/ZFS#Automatic_Start)
+
+[Centos7安装ZFS文件系统,根据kernel版本安装](https://blog.51cto.com/laoheaifendou/1911152?source=drt)
+
 [zfs日常管理以及替换损坏磁盘](https://blog.csdn.net/dazuiba008/article/details/70808588)
 
 [ZFS故障排除和池恢复,scrub数据清理,status解析](https://docs.oracle.com/cd/E19253-01/819-7065/6n91mt1gr/index.html)
+
 
 ## MegaCli 管理工具
 
