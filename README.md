@@ -132,6 +132,7 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [zfs日常管理以及替换损坏磁盘](https://blog.csdn.net/dazuiba008/article/details/70808588)
 
+[ZFS故障排除和池恢复,scrub数据清理,status解析](https://docs.oracle.com/cd/E19253-01/819-7065/6n91mt1gr/index.html)
 
 ## MegaCli 管理工具
 
