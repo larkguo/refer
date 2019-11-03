@@ -11,6 +11,7 @@
 
 [Go by Example 图解数组](https://zhuanlan.zhihu.com/p/82209614)
 
+[http.NewRequest将请求中转给后端](https://github.com/larkguo/refer/tree/master/go/Http/proxy1)
 
 [100行http(s)代理](https://studygolang.com/articles/11967)
 
@@ -32,6 +33,10 @@
 [IO妙用](https://zhuanlan.zhihu.com/p/26783694)
 
 [自己实现Reader和Writer](https://www.jianshu.com/p/6bda40d003b4)
+
+[Go - http.Client源码分析](https://studygolang.com/articles/23009)
+
+[gopkg.in/mgo.v2 mongoDB操作](https://www.jianshu.com/p/13b7f4630670)
 
 
 [Go文件操作大全](https://colobu.com/2016/10/12/go-file-operations/)
