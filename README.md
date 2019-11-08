@@ -30,6 +30,8 @@
 
 [IO模型图](https://mojotv.cn/tutorial/golang-interface-reader-writer)
 
+[Go中io包的使用方法,含IO模型图](https://mojotv.cn/2019/07/20/golang-io)
+
 [io库分析-rot13Reader-copyBuffer](https://pmlpml.github.io/ServiceComputingOnCloud/oo-thinking-abstract.html)
 
 [IO妙用](https://zhuanlan.zhihu.com/p/26783694)
