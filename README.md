@@ -7,6 +7,8 @@
 
 [书栈网](https://www.bookstack.cn/explore?cid=10&tab=popular)
 
+[golang.google.cn,web执行go](https://golang.google.cn/)
+
 [Go by Example 中文](https://books.studygolang.com/gobyexample/)
 
 [Go by Example 图解数组](https://zhuanlan.zhihu.com/p/82209614)
