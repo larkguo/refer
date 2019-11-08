@@ -64,6 +64,7 @@
 
 [MD5加密,通过翻阅源码可以看到他并不是对data进行校验计算，而是对hash.Hash对象内部存储的内容进行校验和计算然后将其追加到data的后面形成一个新的byte切片](https://studygolang.com/articles/10787)
 
+[使用go自己签发的TLS证书](https://mojotv.cn/2018/12/26/how-to-create-self-signed-and-pinned-certificates-in-go)
 
 ## Glusterfs
 
