@@ -66,6 +66,9 @@
 
 [使用go自己签发的TLS证书](https://mojotv.cn/2018/12/26/how-to-create-self-signed-and-pinned-certificates-in-go)
 
+[只用200行Go代码写一个自己的区块链](https://colobu.com/2018/02/05/code-your-own-blockchain-in-less-than-200-lines-of-go/)
+
+
 ## Glusterfs
 
 [版本](https://github.com/gluster/glusterdocs/blob/master/docs/release-notes/index.md)
