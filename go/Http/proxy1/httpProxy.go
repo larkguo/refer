@@ -1,3 +1,8 @@
+
+/*
+curl --data "hello http proxy"  http://127.0.0.1:8888/?param=test
+*/
+
 package main
 
 import (
@@ -7,10 +12,8 @@ import (
 
 func proxyFunc(response http.ResponseWriter, req *http.Request) {
 	client := &http.Client{}
-
 	path := req.URL.Path
 	query := req.URL.RawQuery
-
 	url := "http://127.0.0.1:8890"
 	url += path
 	if len(query) > 0 {
@@ -28,14 +31,10 @@ func proxyFunc(response http.ResponseWriter, req *http.Request) {
 
 	resp, err := client.Do(proxyReq)
 	defer resp.Body.Close()
-
 	out, _ := ioutil.ReadAll(resp.Body)
 	response.Write(out)
 }
 
-/*
-curl --data "hello http proxy"  http://127.0.0.1:8888/?param=test
-*/
 func main() {
 	http.HandleFunc("/", proxyFunc)
 	http.ListenAndServe(":8888", nil)
