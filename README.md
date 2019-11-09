@@ -276,3 +276,19 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 [Amazon S3 Glacier 入门](https://docs.aws.amazon.com/zh_cn/amazonglacier/latest/dev/amazon-glacier-getting-started.html)
 
 [适用于 Go 的 AWS 开发工具包](https://aws.amazon.com/sdk-for-go/)
+
+
+## Keras
+
+[github keras](https://github.com/keras-team/keras)
+
+[keras官方文档](https://github.com/keras-team/keras-docs-zh/blob/master/sources/index.md)
+
+[Keras 框架搭建](https://keras-cn.readthedocs.io/en/latest/for_beginners/keras_windows/#_6)
+
+
+[用Keras实现手写汉字识别](https://github.com/orange90/HandWrittenChineseRecogntion)
+
+[keras+卷积神经网络HWDB手写汉字识别](https://blog.csdn.net/yql_617540298/article/details/82251994)
+
+[bilibili 卷积神经网络 手写字的识别](https://www.bilibili.com/video/av41745852/)
