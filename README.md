@@ -45,6 +45,7 @@
 
 [Go文件操作大全](https://colobu.com/2016/10/12/go-file-operations/)
 
+[echo文件上传](http://go-echo.org/cookbook/file-upload/)
 
 [全面总结:Golang调用C/C++,例子式教程. Go三种方式调用C](https://cloud.tencent.com/developer/article/1343141)
 
