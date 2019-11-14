@@ -184,7 +184,11 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [鸟哥的Linux私房菜-SAMBA服务器](http://cn.linux.vbird.org/linux_server/0370samba.php)
 
-[server-world的samba](https://www.server-world.info/en/note?os=CentOS_7&p=samba&f=1)
+[server-world的samba:完全访问](https://www.server-world.info/en/note?os=CentOS_7&p=samba&f=1)
+
+[server-world的samba:受限访问](https://www.server-world.info/en/note?os=CentOS_7&p=samba&f=2)
+
+[SMB旧登录凭证/连接缓存/多重连接等问题解决](https://blog.51cto.com/mengix/1895969)
 
 ## 存储综合
 
