@@ -268,6 +268,10 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [MinIO文档库](https://docs.min.io/cn/minio-docker-quickstart-guide.html)
 
+[Rclone结合MinIO Server](https://docs.min.io/cn/rclone-with-minio-server.html)
+
+[为MinIO Server设置Caddy proxy](https://docs.min.io/cn/setup-caddy-proxy-with-minio.html)
+
 [S3存储类型](https://docs.aws.amazon.com/zh_cn/AmazonS3/latest/dev/storage-class-intro.html)
 
 [S3客户端源码及报文](https://github.com/larkguo/refer/blob/master/s3/client/)
