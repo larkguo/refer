@@ -1,4 +1,3 @@
-
 /*
 curl --data "hello http proxy"  http://127.0.0.1:8888/?param=test
 */
@@ -37,5 +36,6 @@ func proxyFunc(response http.ResponseWriter, req *http.Request) {
 
 func main() {
 	http.HandleFunc("/", proxyFunc)
-	http.ListenAndServe(":8888", nil)
+	go http.ListenAndServe(":8888", nil)
+	http.ListenAndServeTLS(":8889", "server.crt", "server.key", nil)
 }
