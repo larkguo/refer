@@ -60,7 +60,7 @@
 
 [How to Install Go](https://go-repo.io/)
 
-
+[URL解析](https://www.bbsmax.com/A/pRdBOKoGzn/)
 
 ## Glusterfs
 
