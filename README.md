@@ -144,6 +144,9 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [ZFS故障排除和池恢复,scrub数据清理,status解析](https://docs.oracle.com/cd/E19253-01/819-7065/6n91mt1gr/index.html)
 
+[zpool创建pool时官方不建议使用/dev/sdx](https://github.com/zfsonlinux/zfs/wiki/FAQ)
+
+[查看ZFS存储池的I/O统计信息zpool iostat -v interval count](https://docs.oracle.com/cd/E19253-01/819-7065/gammt/index.html)
 
 ## MegaCli 管理工具
 
