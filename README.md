@@ -143,9 +143,12 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [ZFS故障排除和池恢复,scrub数据清理,status解析](https://docs.oracle.com/cd/E19253-01/819-7065/6n91mt1gr/index.html)
 
+[修复ZFS存储池内元数据损坏:尝试使用zpool clear -F或zpool import -F命令恢复池.这些命令尝试回滚最后几次池事务,使其回到运行状态.](https://docs.oracle.com/cd/E19253-01/819-7065/gbctt/index.html)
+
 [zpool创建pool时官方不建议使用/dev/sdX](https://github.com/zfsonlinux/zfs/wiki/FAQ)
 
 [查看ZFS存储池的I/O统计信息zpool iostat -v interval count](https://docs.oracle.com/cd/E19253-01/819-7065/gammt/index.html)
+
 
 
 ## MegaCli 管理工具
