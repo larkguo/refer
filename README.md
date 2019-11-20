@@ -212,6 +212,8 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [Linux错误码](https://www.bookstack.cn/read/SwooleDoc/170.md)
 
+[RPM安装包搜索](https://rpmfind.net/linux/rpm2html/search.php)
+
 [Linux C API参考手册](https://www.kancloud.cn/wizardforcel/linux-c-api-ref/98327)
 
 [server-world的CentOS7](https://www.server-world.info/en/note?os=CentOS_7&p=install)
