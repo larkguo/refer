@@ -202,6 +202,8 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [Linux 命令大全](https://www.runoob.com/linux/linux-command-manual.html)
 
+[Linux 命令大全](https://man.linuxde.net/)
+
 [Linux错误码](https://www.bookstack.cn/read/SwooleDoc/170.md)
 
 [Linux C API参考手册](https://www.kancloud.cn/wizardforcel/linux-c-api-ref/98327)
