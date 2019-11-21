@@ -214,6 +214,8 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [RPM安装包搜索](https://rpmfind.net/linux/rpm2html/search.php)
 
+[Linux IO模型](https://commons.wikimedia.org/wiki/File:IO_stack_of_the_Linux_kernel.svg)
+
 [Linux C API参考手册](https://www.kancloud.cn/wizardforcel/linux-c-api-ref/98327)
 
 [server-world的CentOS7](https://www.server-world.info/en/note?os=CentOS_7&p=install)
@@ -228,6 +230,7 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [《SED 单行脚本快速参考》的 awk 实现](https://linuxtoy.org/archives/sed-awk.html)
 
+[Fio 输出内容的解释](https://tobert.github.io/post/2014-04-17-fio-output-explained.html)
 
 ## PKI
 
