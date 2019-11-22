@@ -232,6 +232,9 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [Fio 输出内容的解释](https://tobert.github.io/post/2014-04-17-fio-output-explained.html)
 
+[server-world的SaltStack Install](https://www.server-world.info/en/note?os=CentOS_7&p=salt&f=1)
+
+
 ## PKI
 
 [server-world Create SSL Certificates](https://www.server-world.info/en/note?os=CentOS_7&p=ssl)
