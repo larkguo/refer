@@ -46,6 +46,8 @@
 
 [echo文件上传](http://go-echo.org/cookbook/file-upload/)
 
+[gorilla文件上传并TeeReader校验](https://blog.moguang.me/2017/09/07/golang/golang-simple-uploadsrv/)
+
 [全面总结:Golang调用C/C++,例子式教程. Go三种方式调用C](https://cloud.tencent.com/developer/article/1343141)
 
 [Golang调C的so动态库和a静态库](https://jermine.vdo.pub/go/golang%E4%B8%8Ec%E4%BA%92%E7%9B%B8%E8%B0%83%E7%94%A8%E4%BB%A5%E5%8F%8A%E8%B0%83%E7%94%A8c%E7%9A%84so%E5%8A%A8%E6%80%81%E5%BA%93%E5%92%8Ca%E9%9D%99%E6%80%81%E5%BA%93/)
