@@ -305,4 +305,37 @@ bucket_acl = public-read-write
 upload_cutoff = 200M
 chunk_size = 64M
 
-[root@localhost ~]# 
+[root@localhost ~]# docker run -d --name rclone \
+    --restart=unless-stopped \
+    --cap-add SYS_ADMIN \
+    --device /dev/fuse \
+    --security-opt apparmor:unconfined \
+    -e RemotePath="cache:" \
+    -e MountCommands="--allow-other --allow-non-empty" \
+    -v /root/.config/rclone/rclone.conf:/config/.rclone.conf \
+    -v /10.2.174.223/mount/:/mnt/mediaefs:shared \
+    mumiehub/rclone-mount
+[root@localhost rclone]# docker logs rclone -f
+[s6-init] making user provided files available at /var/run/s6/etc...exited 0.
+[s6-init] ensuring user provided files have correct perms...exited 0.
+[fix-attrs.d] applying ownership & permissions fixes...
+[fix-attrs.d] done.
+[cont-init.d] executing container initialization scripts...
+[cont-init.d] 20-init: executing... 
+[cont-init.d] 20-init: installing system updates
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.10/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.10/community/x86_64/APKINDEX.tar.gz
+(1/2) Upgrading busybox (1.30.1-r2 -> 1.30.1-r3)
+Executing busybox-1.30.1-r3.post-upgrade
+(2/2) Upgrading ssl_client (1.30.1-r2 -> 1.30.1-r3)
+Executing busybox-1.30.1-r3.trigger
+OK: 7 MiB in 19 packages
+[cont-init.d] 20-init: exited 0.
+[cont-init.d] 30-check: executing... 
+[cont-init.d] 30-check: MountPoint /mnt/mediaefs is ready
+[cont-init.d] 30-check: exited 0.
+[cont-init.d] done.
+[services.d] starting services
+[services.d] done.
+[services.d] [rclone-mount]-run: starting rclone mount 2019.11.26-04:03:19
+
