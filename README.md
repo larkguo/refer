@@ -236,6 +236,8 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [server-world的SaltStack Install](https://www.server-world.info/en/note?os=CentOS_7&p=salt&f=1)
 
+[smartd错误信息含义解释及解决方法处理手段一览表](http://blog.chinaunix.net/uid-17015055-id-2190431.html)
+
 
 ## PKI
 
