@@ -236,7 +236,7 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [server-world的SaltStack Install](https://www.server-world.info/en/note?os=CentOS_7&p=salt&f=1)
 
-[smartd错误信息含义解释及解决方法处理手段一览表](http://blog.chinaunix.net/uid-17015055-id-2190431.html)
+[smartd错误信息含义解释及解决方法处理手段一览表](http://blog.sina.com.cn/s/blog_5425edf40102wm9j.html)
 
 [Linux badblocks命令 ](https://www.runoob.com/linux/linux-comm-badblocks.html)
 
