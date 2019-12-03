@@ -238,6 +238,7 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [smartd错误信息含义解释及解决方法处理手段一览表](http://blog.chinaunix.net/uid-17015055-id-2190431.html)
 
+[Linux badblocks命令 ](https://www.runoob.com/linux/linux-comm-badblocks.html)
 
 ## PKI
 
