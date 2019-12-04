@@ -212,6 +212,8 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [Linux 命令大全](https://man.linuxde.net/)
 
+[Linux Performance工具图](http://www.brendangregg.com/linuxperf.html)
+
 [Linux错误码](https://www.bookstack.cn/read/SwooleDoc/170.md)
 
 [RPM安装包搜索](https://rpmfind.net/linux/rpm2html/search.php)
