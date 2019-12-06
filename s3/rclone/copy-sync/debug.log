@@ -1,0 +1,92 @@
+[root@localhost ~]# rclone lsd minio1:bucket1 -vv
+2019/12/06 11:48:51 DEBUG : rclone: Version "v1.50.2" starting with parameters ["rclone" "lsd" "minio1:bucket1" "-vv"]
+2019/12/06 11:48:51 DEBUG : Using config file from "/root/.config/rclone/rclone.conf"
+           0 2019-12-06 11:48:51        -1 dir1
+2019/12/06 11:48:51 DEBUG : 5 go routines active
+2019/12/06 11:48:51 DEBUG : rclone: Version "v1.50.2" finishing with parameters ["rclone" "lsd" "minio1:bucket1" "-vv"]
+[root@localhost ~]# 
+[root@localhost ~]# rclone lsd minio2:bucket2 -vv
+2019/12/06 11:48:58 DEBUG : rclone: Version "v1.50.2" starting with parameters ["rclone" "lsd" "minio2:bucket2" "-vv"]
+2019/12/06 11:48:58 DEBUG : Using config file from "/root/.config/rclone/rclone.conf"
+2019/12/06 11:48:58 DEBUG : 5 go routines active
+2019/12/06 11:48:58 DEBUG : rclone: Version "v1.50.2" finishing with parameters ["rclone" "lsd" "minio2:bucket2" "-vv"]
+[root@localhost ~]# 
+[root@localhost ~]# rclone copy minio1:bucket1/dir1 minio2:bucket2/dir2  -vv 
+2019/12/06 11:49:18 DEBUG : rclone: Version "v1.50.2" starting with parameters ["rclone" "copy" "minio1:bucket1/dir1" "minio2:bucket2/dir2" "-vv"]
+2019/12/06 11:49:18 DEBUG : Using config file from "/root/.config/rclone/rclone.conf"
+2019/12/06 11:49:18 INFO  : S3 bucket bucket2 path dir2: Waiting for checks to finish
+2019/12/06 11:49:18 INFO  : S3 bucket bucket2 path dir2: Waiting for transfers to finish
+2019/12/06 11:49:18 INFO  : gateway.pptx: Copied (new)
+2019/12/06 11:49:18 INFO  : file.PNG: Copied (new)
+2019/12/06 11:49:18 INFO  : 
+Transferred:   	  121.759k / 121.759 kBytes, 100%, 15.656 MBytes/s, ETA 0s
+Errors:                 0
+Checks:                 0 / 0, -
+Transferred:            2 / 2, 100%
+Elapsed time:          0s
+
+2019/12/06 11:49:18 DEBUG : 15 go routines active
+2019/12/06 11:49:18 DEBUG : rclone: Version "v1.50.2" finishing with parameters ["rclone" "copy" "minio1:bucket1/dir1" "minio2:bucket2/dir2" "-vv"]
+[root@localhost ~]# 
+[root@localhost ~]# rclone lsd minio2:bucket2 -vv
+2019/12/06 11:49:24 DEBUG : rclone: Version "v1.50.2" starting with parameters ["rclone" "lsd" "minio2:bucket2" "-vv"]
+2019/12/06 11:49:24 DEBUG : Using config file from "/root/.config/rclone/rclone.conf"
+           0 2019-12-06 11:49:24        -1 dir2
+2019/12/06 11:49:24 DEBUG : 5 go routines active
+2019/12/06 11:49:24 DEBUG : rclone: Version "v1.50.2" finishing with parameters ["rclone" "lsd" "minio2:bucket2" "-vv"]
+[root@localhost ~]# 
+[root@localhost ~]# rclone sync minio2:bucket2/ minio1:bucket1/ -vv
+2019/12/06 11:50:16 DEBUG : rclone: Version "v1.50.2" starting with parameters ["rclone" "sync" "minio2:bucket2/" "minio1:bucket1/" "-vv"]
+2019/12/06 11:50:16 DEBUG : Using config file from "/root/.config/rclone/rclone.conf"
+2019/12/06 11:50:16 INFO  : S3 bucket bucket1: Waiting for checks to finish
+2019/12/06 11:50:16 INFO  : S3 bucket bucket1: Waiting for transfers to finish
+2019/12/06 11:50:16 INFO  : dir2/file.PNG: Copied (new)
+2019/12/06 11:50:16 INFO  : dir2/gateway.pptx: Copied (new)
+2019/12/06 11:50:16 INFO  : Waiting for deletions to finish
+2019/12/06 11:50:16 INFO  : dir1/file.PNG: Deleted
+2019/12/06 11:50:16 INFO  : dir1/gateway.pptx: Deleted
+2019/12/06 11:50:16 INFO  : nginx.conf: Deleted
+2019/12/06 11:50:16 INFO  : 
+Transferred:   	  121.759k / 121.759 kBytes, 100%, 11.206 MBytes/s, ETA 0s
+Errors:                 0
+Checks:                 3 / 3, 100%
+Transferred:            2 / 2, 100%
+Elapsed time:          0s
+
+2019/12/06 11:50:16 DEBUG : 17 go routines active
+2019/12/06 11:50:16 DEBUG : rclone: Version "v1.50.2" finishing with parameters ["rclone" "sync" "minio2:bucket2/" "minio1:bucket1/" "-vv"]
+[root@localhost ~]# 
+[root@localhost ~]# rclone lsd minio1:bucket1 -vv
+2019/12/06 11:50:22 DEBUG : rclone: Version "v1.50.2" starting with parameters ["rclone" "lsd" "minio1:bucket1" "-vv"]
+2019/12/06 11:50:22 DEBUG : Using config file from "/root/.config/rclone/rclone.conf"
+           0 2019-12-06 11:50:22        -1 dir2
+2019/12/06 11:50:22 DEBUG : 5 go routines active
+2019/12/06 11:50:22 DEBUG : rclone: Version "v1.50.2" finishing with parameters ["rclone" "lsd" "minio1:bucket1" "-vv"]
+[root@localhost ~]# 
+[root@localhost ~]# rclone move minio1:bucket1/dir2 minio1:bucket1/dir1 -vv
+2019/12/06 11:50:50 DEBUG : rclone: Version "v1.50.2" starting with parameters ["rclone" "move" "minio1:bucket1/dir2" "minio1:bucket1/dir1" "-vv"]
+2019/12/06 11:50:50 DEBUG : Using config file from "/root/.config/rclone/rclone.conf"
+2019/12/06 11:50:50 INFO  : S3 bucket bucket1 path dir1: Waiting for checks to finish
+2019/12/06 11:50:50 INFO  : S3 bucket bucket1 path dir1: Waiting for transfers to finish
+2019/12/06 11:50:50 INFO  : file.PNG: Copied (server side copy)
+2019/12/06 11:50:50 INFO  : gateway.pptx: Copied (server side copy)
+2019/12/06 11:50:50 INFO  : file.PNG: Deleted
+2019/12/06 11:50:50 INFO  : gateway.pptx: Deleted
+2019/12/06 11:50:50 INFO  : 
+Transferred:   	  121.759k / 121.759 kBytes, 100%, 18.126 MBytes/s, ETA 0s
+Errors:                 0
+Checks:                 4 / 4, 100%
+Transferred:            2 / 2, 100%
+Elapsed time:          0s
+
+2019/12/06 11:50:50 DEBUG : 7 go routines active
+2019/12/06 11:50:50 DEBUG : rclone: Version "v1.50.2" finishing with parameters ["rclone" "move" "minio1:bucket1/dir2" "minio1:bucket1/dir1" "-vv"]
+[root@localhost ~]# 
+[root@localhost ~]# rclone lsd minio1:bucket1 -vv
+2019/12/06 11:50:55 DEBUG : rclone: Version "v1.50.2" starting with parameters ["rclone" "lsd" "minio1:bucket1" "-vv"]
+2019/12/06 11:50:55 DEBUG : Using config file from "/root/.config/rclone/rclone.conf"
+           0 2019-12-06 11:50:55        -1 dir1
+2019/12/06 11:50:55 DEBUG : 5 go routines active
+2019/12/06 11:50:55 DEBUG : rclone: Version "v1.50.2" finishing with parameters ["rclone" "lsd" "minio1:bucket1" "-vv"]
+[root@localhost ~]# 
+[root@localhost ~]# 
