@@ -43,6 +43,10 @@
 
 [Go - http.Client源码分析](https://studygolang.com/articles/23009)
 
+[Go Http包解析:为什么需要response.Body.Close(),roundTrip/readLoop/writeLoop三者关系](https://tyloafer.github.io/posts/33256/)
+
+[golang net/http标准库学习](http://aibenlin.com/golang/2019/06/01/golang-http.html)
+
 [gopkg.in/mgo.v2 mongoDB操作](https://www.jianshu.com/p/13b7f4630670)
 
 
