@@ -7,6 +7,10 @@
 
 [书栈网](https://www.bookstack.cn/explore?cid=10&tab=popular)
 
+[How to Install Go](https://go-repo.io/)
+
+[Golang环境配置](https://www.cnblogs.com/liuweida/p/11814210.html)
+
 [golang.google.cn,web执行go](https://golang.google.cn/)
 
 [Go by Example 中文](https://books.studygolang.com/gobyexample/)
@@ -60,9 +64,9 @@
 
 [Go并发调度器解析之实现一个高性能协程池, 含Goroutine Pool模型图](https://zhuanlan.zhihu.com/p/37754274)
 
-[How to Install Go](https://go-repo.io/)
 
 [URL解析](https://www.bbsmax.com/A/pRdBOKoGzn/)
+
 
 ## Glusterfs
 
