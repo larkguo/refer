@@ -5,6 +5,8 @@
 
 [Go语言中文网——Go语言标准库](https://books.studygolang.com/The-Golang-Standard-Library-by-Example/)
 
+[Go语言圣经](https://books.studygolang.com/gopl-zh/index.html)
+
 [书栈网](https://www.bookstack.cn/explore?cid=10&tab=popular)
 
 [How to Install Go](https://go-repo.io/)
