@@ -207,17 +207,13 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 ## Git
 
 
-递归克隆所有依赖子项目,如：
-git clone --recursive https://github.com/rbgirshick/fast-rcnn.git
+	递归克隆所有依赖子项目,如：
+	git clone --recursive https://github.com/rbgirshick/fast-rcnn.git
 
 
-
-git强制拉取更新:
-git fetch --all
-
-git reset --hard origin/master
-
-
+	git强制拉取更新:
+	git fetch --all
+	git reset --hard origin/master
 
 
 ## Centos
