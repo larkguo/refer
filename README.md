@@ -51,6 +51,7 @@
 
 [gopkg.in/mgo.v2 mongoDB操作](https://www.jianshu.com/p/13b7f4630670)
 
+[文件路径filepath文件夹遍历](https://mojotv.cn/tutorial/golang-file-path)
 
 [Go文件操作大全](https://colobu.com/2016/10/12/go-file-operations/)
 
