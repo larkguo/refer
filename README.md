@@ -211,7 +211,7 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 
 	递归克隆所有依赖子项目,如：
-	git clone --recursive https://github.com/rclone/rclone.git -b 0.90
+	git clone --recursive https://github.com/rclone/rclone.git -b v0.90
 
 	git强制拉取更新:
 	git fetch --all
