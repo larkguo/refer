@@ -7,6 +7,8 @@
 
 [Go语言圣经](https://books.studygolang.com/gopl-zh/index.html)
 
+[Go语言圣经源码](https://github.com/happyfire/gostudy/tree/f73802601596891ff5a9047d3a6b7a453a858ebb)
+
 [书栈网](https://www.bookstack.cn/explore?cid=10&tab=popular)
 
 [How to Install Go](https://go-repo.io/)
