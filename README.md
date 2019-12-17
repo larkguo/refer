@@ -15,6 +15,8 @@
 
 [Golang环境配置](https://www.cnblogs.com/liuweida/p/11814210.html)
 
+[vscode菜单栏、工具栏不见了](https://www.cnblogs.com/hwubin5/p/10458339.html)
+
 [golang.google.cn,web执行go](https://golang.google.cn/)
 
 [Go by Example 中文](https://books.studygolang.com/gobyexample/)
