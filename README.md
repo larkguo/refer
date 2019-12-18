@@ -346,6 +346,8 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [rclone mount](https://hub.docker.com/r/mumiehub/rclone-mount/)
 
+[rclone在freeNas上的配置](https://ixsystems.com/documentation/freenas/11.3-RC1/tasks.html#cloud-sync-example)
+
 ## Blockchain
 
 [只用200行Go代码写一个自己的区块链](https://colobu.com/2018/02/05/code-your-own-blockchain-in-less-than-200-lines-of-go/)
