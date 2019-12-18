@@ -348,6 +348,11 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [rclone在freeNas上的配置](https://ixsystems.com/documentation/freenas/11.3-RC1/tasks.html#cloud-sync-example)
 
+[rclone报文](https://github.com/larkguo/refer/tree/master/s3/rclone/copy-sync)
+
+[Rclone - 从不同的云存储同步文件目录](https://www.howtoing.com/rclone-sync-files-from-cloud-storage)
+
+
 ## Blockchain
 
 [只用200行Go代码写一个自己的区块链](https://colobu.com/2018/02/05/code-your-own-blockchain-in-less-than-200-lines-of-go/)
