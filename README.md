@@ -81,6 +81,7 @@
 ## Golang advance
 
 [nano极简微服务框架](https://github.com/pasztorpisti/nano)
+	
 	nano的实际代码不会超过 200 行,如果算上注释也只有 400 多行.
 	你只需要几行代码就可以构建一个微服务——只包含处理请求所需的业务逻辑.
 	这个框架还有一些其他不错的特性,例如与语言无关的API结构,这样你的Go代码就可以与使用其他语言开发的服务发生交互.
@@ -267,6 +268,7 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 [smartd错误信息含义解释及解决方法处理手段一览表](http://blog.sina.com.cn/s/blog_5425edf40102wm9j.html)
 
 [Linux badblocks命令 ](https://www.runoob.com/linux/linux-comm-badblocks.html)
+
 
 ## PKI
 
