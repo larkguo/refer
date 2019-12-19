@@ -350,6 +350,11 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [适用于 Go 的 AWS 开发工具包](https://aws.amazon.com/sdk-for-go/)
 
+
+## Rclone
+
+[rclone Install](https://rclone.org/install/)
+
 [Rclone结合MinIO Server](https://docs.min.io/cn/rclone-with-minio-server.html)
 
 [rclone docker安装](https://github.com/rclone/rclone/wiki/Docker-images)
