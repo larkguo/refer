@@ -11,6 +11,8 @@
 
 [书栈网](https://www.bookstack.cn/explore?cid=10&tab=popular)
 
+[浅谈 Go 语言实现原理](https://draveness.me/golang/)
+
 [How to Install Go](https://go-repo.io/)
 
 [Golang环境配置](https://www.cnblogs.com/liuweida/p/11814210.html)
