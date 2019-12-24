@@ -96,6 +96,9 @@
 
 [总结了才知道，原来channel有这么多用法](http://lessisbetter.site/2019/01/20/golang-channel-all-usage/)
 
+[go模式](https://github.com/zhumengyifang/GolangDesignPatterns)
+
+
 ## Glusterfs
 
 [版本](https://github.com/gluster/glusterdocs/blob/master/docs/release-notes/index.md)
