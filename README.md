@@ -11,6 +11,8 @@
 
 [书栈网](https://www.bookstack.cn/explore?cid=10&tab=popular)
 
+[GO知识图谱] (https://www.processon.com/view/link/5a9ba4c8e4b0a9d22eb3bdf0#map)
+
 [浅谈 Go 语言实现原理](https://draveness.me/golang/)
 
 [How to Install Go](https://go-repo.io/)
@@ -96,7 +98,9 @@
 
 [总结了才知道，原来channel有这么多用法](http://lessisbetter.site/2019/01/20/golang-channel-all-usage/)
 
-[go模式](https://github.com/zhumengyifang/GolangDesignPatterns)
+[GolangDesignPatterns](https://github.com/zhumengyifang/GolangDesignPatterns)
+
+[go-patterns](https://github.com/jbuberel/go-patterns)
 
 
 ## Glusterfs
