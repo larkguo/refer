@@ -11,7 +11,7 @@
 
 [书栈网](https://www.bookstack.cn/explore?cid=10&tab=popular)
 
-[GO知识图谱] (https://www.processon.com/view/link/5a9ba4c8e4b0a9d22eb3bdf0#map)
+[GO知识图谱](https://www.processon.com/view/link/5a9ba4c8e4b0a9d22eb3bdf0#map)
 
 [浅谈 Go 语言实现原理](https://draveness.me/golang/)
 
