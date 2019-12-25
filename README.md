@@ -365,6 +365,11 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [适用于 Go 的 AWS 开发工具包](https://aws.amazon.com/sdk-for-go/)
 
+	S3Proxy
+
+	https://github.com/gaul/s3proxy
+	https://www.microsoft.com/developerblog/2016/05/22/access-azure-blob-storage-from-your-apps-using-s3-api/
+	
 
 ## Rclone
 
