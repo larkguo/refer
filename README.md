@@ -7,7 +7,7 @@
 
 [Go语言圣经](https://books.studygolang.com/gopl-zh/index.html)
 
-[Go语言圣经源码](https://github.com/happyfire/gostudy/tree/f73802601596891ff5a9047d3a6b7a453a858ebb)
+[Go语言圣经源码](https://github.com/JaveCai/gopl-solutions/tree/81985f36f89b7e408fbdc3191eab388fe9e7bb19)
 
 [书栈网](https://www.bookstack.cn/explore?cid=10&tab=popular)
 
