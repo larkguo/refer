@@ -9,6 +9,7 @@ import (
 	"time"
 )
 
+// context方式取消
 func cancelled(ctx context.Context) bool {
 	select {
 	case <-ctx.Done():
@@ -25,7 +26,7 @@ func main() {
 		roots = []string{"."}
 	}
 
-	go func() { // ����ȡ��
+	go func() { //触发取消
 		os.Stdin.Read(make([]byte, 1)) // read a single byte
 		cancelfunc()
 	}()
@@ -73,30 +74,30 @@ func printDiskUsage(nfiles, nbytes int64) {
 // and sends the size of each found file on fileSizes.
 func walkDir(ctx context.Context, dir string, n *sync.WaitGroup, fileSizes chan<- int64) {
 	defer n.Done()
-	if cancelled(ctx) { //��ȡ��
-		return
+	if cancelled(ctx) {
+		return // 已经取消
 	}
 	for _, entry := range dirents(ctx, dir) {
 		if entry.IsDir() {
 			n.Add(1)
 			subdir := filepath.Join(dir, entry.Name())
-			go walkDir(ctx, subdir, n, fileSizes) //�ݹ����
+			go walkDir(ctx, subdir, n, fileSizes) // 递归遍历
 		} else {
-			fileSizes <- entry.Size() // �ݹ鷵��
+			fileSizes <- entry.Size() // 递归返回
 		}
 	}
 }
 
-var sema = make(chan struct{}, 20) //concurrency-limiting counting semaphore,����20
+var sema = make(chan struct{}, 20) //concurrency-limiting counting semaphore,并发限制计数
 
 // dirents returns the entries of directory dir.
 func dirents(ctx context.Context, dir string) []os.FileInfo {
 	select {
-	case sema <- struct{}{}: // acquire token
-	case <-ctx.Done():
+	case sema <- struct{}{}: // acquire token,大于并发限制则阻塞等待
+	case <-ctx.Done(): //取消判断
 		return nil // cancelled
 	}
-	defer func() { <-sema }() // release token
+	defer func() { <-sema }() // release token, 释放一个并发计数
 
 	// ...read directory...
 	f, err := os.Open(dir)

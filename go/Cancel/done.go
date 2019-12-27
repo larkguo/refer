@@ -8,7 +8,8 @@ import (
 	"time"
 )
 
-var done = make(chan struct{}) // channel��ʽȡ��
+// channel方式取消
+var done = make(chan struct{})
 
 func cancelled() bool {
 	select {
@@ -25,9 +26,9 @@ func main() {
 		roots = []string{"."}
 	}
 
-	go func() { // ����ȡ��
+	go func() {
 		os.Stdin.Read(make([]byte, 1)) // read a single byte
-		close(done)
+		close(done)                    // 触发取消
 	}()
 
 	// Traverse each root of the file tree in parallel.
@@ -46,7 +47,7 @@ func main() {
 loop:
 	for {
 		select {
-		case <-done: // �յ�ȡ��
+		case <-done: // 收到取消通知
 			// Drain fileSizes to allow existing goroutines to finish.
 			for range fileSizes {
 				// Do nothing.
@@ -73,30 +74,30 @@ func printDiskUsage(nfiles, nbytes int64) {
 // and sends the size of each found file on fileSizes.
 func walkDir(dir string, n *sync.WaitGroup, fileSizes chan<- int64) {
 	defer n.Done()
-	if cancelled() { //��ȡ��
-		return
+	if cancelled() {
+		return // 已经取消
 	}
 	for _, entry := range dirents(dir) {
 		if entry.IsDir() {
 			n.Add(1)
 			subdir := filepath.Join(dir, entry.Name())
-			go walkDir(subdir, n, fileSizes) //�ݹ����
+			go walkDir(subdir, n, fileSizes) // 递归遍历
 		} else {
-			fileSizes <- entry.Size() // �ݹ鷵��
+			fileSizes <- entry.Size() // 递归返回
 		}
 	}
 }
 
-var sema = make(chan struct{}, 20) //concurrency-limiting counting semaphore,����20
+var sema = make(chan struct{}, 20) //concurrency-limiting counting semaphore,并发限制计数
 
 // dirents returns the entries of directory dir.
 func dirents(dir string) []os.FileInfo {
 	select {
-	case sema <- struct{}{}: // acquire token
-	case <-done:
-		return nil // cancelled
+	case sema <- struct{}{}: // acquire token,申请一个并发计数
+	case <-done: // 已经取消
+		return nil
 	}
-	defer func() { <-sema }() // release token
+	defer func() { <-sema }() // release token,释放一个并发计数
 
 	// ...read directory...
 	f, err := os.Open(dir)
