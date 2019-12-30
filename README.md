@@ -320,6 +320,7 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [Apache httpd:Enable Basic Authentication(server-world)](https://www.server-world.info/en/note?os=CentOS_7&p=httpd&f=8)
 
+[Apache反向代理与Nginx对比](https://www.nginx.com/resources/wiki/start/topics/examples/likeapache/)
 
 
 ## ElasticSearch
