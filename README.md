@@ -310,6 +310,18 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 [server-world的Nginx,反向代理+负载均衡](https://www.server-world.info/en/note?os=CentOS_7&p=nginx&f=8)
 
 
+## Apache httpd
+
+[Apache httpd:Install httpd(server-world)](https://www.server-world.info/en/note?os=CentOS_7&p=httpd&f=1)
+
+[Apache httpd:Virtual Hostings(server-world)](https://www.server-world.info/en/note?os=CentOS_7&p=httpd&f=6)
+
+[Apache httpd:Configure SSL/TLS且80永久重定向到443 (server-world)](https://www.server-world.info/en/note?os=CentOS_7&p=httpd&f=7)
+
+[Apache httpd:Enable Basic Authentication(server-world)](https://www.server-world.info/en/note?os=CentOS_7&p=httpd&f=8)
+
+
+
 ## ElasticSearch
 
 [scroll方式多字段,分页,不区分大小写的组合查询](https://github.com/larkguo/refer/blob/master/elasticsearch/scroll%E7%BB%84%E5%90%88%E6%9F%A5%E8%AF%A2.txt)
