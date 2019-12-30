@@ -20,12 +20,10 @@ func cancelled(ctx context.Context) bool {
 }
 func main() {
 	ctx, cancelfunc := context.WithCancel(context.Background())
-	// Determine the initial directories.
 	roots := os.Args[1:]
 	if len(roots) == 0 {
 		roots = []string{"."}
 	}
-
 	go func() { //触发取消
 		os.Stdin.Read(make([]byte, 1)) // read a single byte
 		cancelfunc()
@@ -94,8 +92,8 @@ var sema = make(chan struct{}, 20) //concurrency-limiting counting semaphore,并
 func dirents(ctx context.Context, dir string) []os.FileInfo {
 	select {
 	case sema <- struct{}{}: // acquire token,大于并发限制则阻塞等待
-	case <-ctx.Done(): //取消判断
-		return nil // cancelled
+	case <-ctx.Done(): 
+		return nil // cancelled,已经取消
 	}
 	defer func() { <-sema }() // release token, 释放一个并发计数
 

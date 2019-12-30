@@ -94,7 +94,7 @@
 	这个框架还有一些其他不错的特性,例如与语言无关的API结构,这样你的Go代码就可以与使用其他语言开发的服务发生交互.
 	它还提供了一个测试过程来,可以嵌入你的本地测试例程.
 
-[用Go语言实现一个简单的EventBus模型](https://www.bangbangde.com/post/go_event_bus.html)
+[用Go语言实现一个简单的EventBus模型](https://juejin.im/post/5d215728e51d454f72302578)
 
 [总结了才知道，原来channel有这么多用法](http://lessisbetter.site/2019/01/20/golang-channel-all-usage/)
 
