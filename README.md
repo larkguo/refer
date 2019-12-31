@@ -324,6 +324,8 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [Reverse Proxy Guide](https://httpd.apache.org/docs/2.4/howto/reverse_proxy.html)
 
+[nginx/apache/caddy反向代理](https://docs.gitea.io/zh-cn/reverse-proxies/)
+
 
 ## ElasticSearch
 
