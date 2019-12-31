@@ -322,6 +322,8 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [Apache反向代理与Nginx对比](https://www.nginx.com/resources/wiki/start/topics/examples/likeapache/)
 
+[Reverse Proxy Guide](https://httpd.apache.org/docs/2.4/howto/reverse_proxy.html)
+
 
 ## ElasticSearch
 
