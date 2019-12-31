@@ -326,6 +326,10 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [nginx/apache/caddy反向代理](https://docs.gitea.io/zh-cn/reverse-proxies/)
 
+[Apache正向代理(server-world)](https://www.server-world.info/en/note?os=CentOS_7&p=httpd2&f=1)
+
+[Apache反向代理(server-world)](https://www.server-world.info/en/note?os=CentOS_7&p=httpd2&f=2)
+
 
 ## ElasticSearch
 
