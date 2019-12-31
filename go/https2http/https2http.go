@@ -1,7 +1,7 @@
 package main
 
 import (
-	"log"
+	"fmt"
 	"net/http"
 	"net/http/httputil"
 	"net/url"
@@ -11,7 +11,7 @@ func proxyLogin(w http.ResponseWriter, r *http.Request) {
 	trueServer := "http://127.0.0.1:8003"
 	url, err := url.Parse(trueServer)
 	if err != nil {
-		log.Println(err)
+		fmt.Println(err)
 		return
 	}
 	proxy := httputil.NewSingleHostReverseProxy(url)
@@ -21,7 +21,7 @@ func proxyDefault(w http.ResponseWriter, r *http.Request) {
 	trueServer := "http://127.0.0.1:8890"
 	url, err := url.Parse(trueServer)
 	if err != nil {
-		log.Println(err)
+		fmt.Println(err)
 		return
 	}
 	proxy := httputil.NewSingleHostReverseProxy(url)
@@ -34,5 +34,8 @@ func proxyDefault(w http.ResponseWriter, r *http.Request) {
 func main() {
 	http.HandleFunc("/login", proxyLogin)
 	http.HandleFunc("/", proxyDefault)
-	http.ListenAndServeTLS(":8889", "server.crt", "server.key", nil)
+	err := http.ListenAndServeTLS(":8889", "server.crt", "server.key", nil)
+	if err != nil {
+		fmt.Println(err)
+	}
 }
