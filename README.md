@@ -192,6 +192,12 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 	 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-zfsonlinux
 	 
 	yum install --downloadonly --downloaddir=/root/zfs zfs
+	cd /root/zfs 
+	rpm -ivh *.rpm
+	modprobe zfs
+	systemctl preset zfs-import-cache zfs-import-scan zfs-import.target zfs-mount zfs-share zfs-zed zfs.target
+	reboot
+	systemctl status zfs-mount
 
 
 [Quick Start Guide](https://www.freebsd.org/doc/handbook/zfs-quickstart.html)
