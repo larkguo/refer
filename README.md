@@ -168,8 +168,30 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 ## Zfs
 
 [CentOS 7.7 ZFS install](https://github.com/zfsonlinux/zfs/wiki/RHEL-and-CentOS)
+
 	sudo yum install http://download.zfsonlinux.org/epel/zfs-release.el7_7.noarch.rpm
-	yum install --downloadonly --downloaddir=/root/zfs
+	gpg --quiet --with-fingerprint /etc/pki/rpm-gpg/RPM-GPG-KEY-zfsonlinux
+	
+	# /etc/yum.repos.d/zfs.repo
+	 [zfs]
+	 name=ZFS on Linux for EL 7 - dkms
+	 baseurl=http://download.zfsonlinux.org/epel/7/$basearch/
+	-enabled=1
+	+enabled=0
+	 metadata_expire=7d
+	 gpgcheck=1
+	 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-zfsonlinux
+	@@ -9,7 +9,7 @@
+	 [zfs-kmod]
+	 name=ZFS on Linux for EL 7 - kmod
+	 baseurl=http://download.zfsonlinux.org/epel/7/kmod/$basearch/
+	-enabled=0
+	+enabled=1
+	 metadata_expire=7d
+	 gpgcheck=1
+	 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-zfsonlinux
+	 
+	yum install --downloadonly --downloaddir=/root/zfs zfs
 
 
 [Quick Start Guide](https://www.freebsd.org/doc/handbook/zfs-quickstart.html)
