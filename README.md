@@ -196,7 +196,7 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 	rpm -ivh *.rpm
 	modprobe zfs
 	systemctl preset zfs-import-cache zfs-import-scan zfs-import.target zfs-mount zfs-share zfs-zed zfs.target
-	reboot
+	systemctl start zfs-import-cache zfs-import-scan zfs-import.target zfs-mount zfs-share zfs-zed zfs.target
 	systemctl status zfs-mount
 
 
