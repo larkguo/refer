@@ -363,6 +363,7 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [Apache反向代理(server-world)](https://www.server-world.info/en/note?os=CentOS_7&p=httpd2&f=2)
 
+[Apache从源码升级到2.4.41](https://www.cnblogs.com/ysuwangqiang/p/11445487.html)
 
 ## ElasticSearch
 
