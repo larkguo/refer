@@ -424,6 +424,10 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 	https://github.com/gaul/s3proxy
 	https://www.microsoft.com/developerblog/2016/05/22/access-azure-blob-storage-from-your-apps-using-s3-api/
 	
+[S3 bucket version](https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetBucketVersioning.html)
+
+[amazon-s3-versioning](https://s3browser.com/amazon-s3-versioning.aspx)
+
 
 ## Rclone
 
