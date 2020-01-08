@@ -365,9 +365,34 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [Apache从源码升级到2.4.41](https://www.cnblogs.com/ysuwangqiang/p/11445487.html)
 
+
 ## ElasticSearch
 
 [scroll方式多字段,分页,不区分大小写的组合查询](https://github.com/larkguo/refer/blob/master/elasticsearch/scroll%E7%BB%84%E5%90%88%E6%9F%A5%E8%AF%A2.txt)
+
+
+## MongoDB
+
+[redhat rpm安装包](https://repo.mongodb.org/yum/redhat/7/mongodb-org/4.2/x86_64/RPMS/)
+
+[centos 7 MongoDB 4.2.0安装配置(rpm方式)](https://zhuanlan.zhihu.com/p/81496897)
+
+[Presentation: Intro to MongoDB - The Next-Generation Database](https://twiki.org/cgi-bin/view/Codev/TWikiPresentation2016x07x14MongoDB)
+
+
+## FireWall
+
+		firewall-cmd --permanent --direct --add-rule ipv4 filter INPUT 0 -p ICMP --icmp-type timestamp-request -m comment --comment "deny ICMP timestamp" -j DROP
+		firewall-cmd --permanent --direct --add-rule ipv4 filter INPUT 0 -p ICMP --icmp-type timestamp-reply -m comment --comment "deny ICMP timestamp" -j DROP
+		firewall-cmd --reload
+
+
+		firewall-cmd --zone=public --add-port=27017/tcp --permanent
+		firewall-cmd --zone=public --add-port=9000/tcp --permanent
+		firewall-cmd --add-service=https --permanent
+		firewall-cmd --add-service=https --permanent
+
+		firewall-cmd --reload
 
 
 ## Docker
