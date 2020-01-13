@@ -293,7 +293,9 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [RPM安装包搜索](https://rpmfind.net/linux/rpm2html/search.php)
 
-[kernel rpm]http://www.rpmfind.net/linux/rpm2html/search.php?query=kernel-x86_64
+[kernel rpm](http://www.rpmfind.net/linux/rpm2html/search.php?query=kernel-x86_64)
+
+[centos7 update rpm](http://mirror.sohu.com/centos/7/updates/x86_64/Packages/)
 
 [Linux IO模型](https://commons.wikimedia.org/wiki/File:IO_stack_of_the_Linux_kernel.svg)
 
@@ -499,6 +501,13 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 [keras+卷积神经网络HWDB手写汉字识别](https://blog.csdn.net/yql_617540298/article/details/82251994)
 
 [bilibili 卷积神经网络 手写字的识别](https://www.bilibili.com/video/av41745852/)
+
+
+# 安全
+
+在Centos7上安装漏洞扫描软件Nessus(https://www.cnblogs.com/kylinlin/p/5279973.html)
+
+使用Nessus进行漏洞扫描的过程(https://blog.51cto.com/chenx1242/1975305)
 
 
 ## 其他
