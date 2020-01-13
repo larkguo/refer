@@ -293,6 +293,8 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [RPM安装包搜索](https://rpmfind.net/linux/rpm2html/search.php)
 
+[kernel rpm]http://www.rpmfind.net/linux/rpm2html/search.php?query=kernel-x86_64
+
 [Linux IO模型](https://commons.wikimedia.org/wiki/File:IO_stack_of_the_Linux_kernel.svg)
 
 [Linux C API参考手册](https://www.kancloud.cn/wizardforcel/linux-c-api-ref/98327)
