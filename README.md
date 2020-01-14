@@ -338,6 +338,7 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [使用go自己签发的TLS证书](https://mojotv.cn/2018/12/26/how-to-create-self-signed-and-pinned-certificates-in-go)
 
+[Go 1.12 TLS 1.3 简单测试](https://zhuanlan.zhihu.com/p/58151490)
 
 
 ## Nginx
@@ -508,6 +509,8 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 在Centos7上安装漏洞扫描软件Nessus(https://www.cnblogs.com/kylinlin/p/5279973.html)
 
 使用Nessus进行漏洞扫描的过程(https://blog.51cto.com/chenx1242/1975305)
+
+
 
 
 ## 其他
