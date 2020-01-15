@@ -321,6 +321,7 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [Linux badblocks命令 ](https://www.runoob.com/linux/linux-comm-badblocks.html)
 
+[CENTOS7服务器系统备份与恢复的方法 CENTOS系统备份与还原](https://www.bnxb.com/linuxserver/27580.html)
 
 ## PKI
 
