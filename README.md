@@ -323,6 +323,8 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [CENTOS7服务器系统备份与恢复的方法 CENTOS系统备份与还原](https://www.bnxb.com/linuxserver/27580.html)
 
+[linux中校验文件完整性(md5,sha1)](https://www.cnblogs.com/magic-zero/p/6361337.html)
+
 ## PKI
 
 [server-world Create SSL Certificates](https://www.server-world.info/en/note?os=CentOS_7&p=ssl)
