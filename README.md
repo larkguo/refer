@@ -376,6 +376,8 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 ## ElasticSearch
 
+[官方文档Install Elasticsearch with Docker](https://www.elastic.co/guide/en/elasticsearch/reference/7.5/docker.html)
+
 [scroll方式多字段,分页,不区分大小写的组合查询](https://github.com/larkguo/refer/blob/master/elasticsearch/scroll%E7%BB%84%E5%90%88%E6%9F%A5%E8%AF%A2.txt)
 
 
