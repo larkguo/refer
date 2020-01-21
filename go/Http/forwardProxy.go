@@ -32,13 +32,11 @@ func main() {
 func (p *Proxy) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	// 1.build channel
 	timeoutCh := make(chan struct{})
-	defer func() {
-		close(timeoutCh)
-	}()
+	doneCh := make(chan struct{})
 
 	// 2.timing
 	go func() {
-		time.Sleep(32 * time.Second) // RoundTrip timeout
+		time.Sleep(30 * time.Second) // RoundTrip timeout
 		timeoutCh <- struct{}{}
 	}()
 
@@ -46,17 +44,19 @@ func (p *Proxy) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	if r.Method == http.MethodConnect {
 		go proxyHttps(w, r)
 	} else {
-		go proxyHttp(w, r)
+		go proxyHttp(doneCh, w, r)
 	}
 
 	// 4.wait
 	select {
 	case <-timeoutCh: // timeout
 		return
+	case <-doneCh: //httpproxy done
+		return
 	}
 }
 
-func proxyHttp(w http.ResponseWriter, r *http.Request) {
+func proxyHttp(doneCh chan struct{}, w http.ResponseWriter, r *http.Request) {
 	// 1.build proxyRequest
 	proxyReq := new(http.Request)
 	proxyReq = r
@@ -85,10 +85,11 @@ func proxyHttp(w http.ResponseWriter, r *http.Request) {
 	}
 	w.WriteHeader(resp.StatusCode)
 	io.Copy(w, resp.Body) // stream copy
+	doneCh <- struct{}{} // copy exit
 }
 
 func proxyHttps(w http.ResponseWriter, r *http.Request) {
-	dest_conn, err := net.Dial("tcp", r.Host) // net.DialTimeout
+	dest_conn, err := net.DialTimeout("tcp", r.Host, 10*time.Second)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusServiceUnavailable)
 		return
