@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-type Proxy struct {
+type Proxy struct { // inherit  Handler.ServeHTTP
 }
 
 func main() {
@@ -24,20 +24,52 @@ func main() {
 	// proxy start
 	server := &http.Server{
 		Addr:    ":8888",
-		Handler: &Proxy{},
+		Handler: &Proxy{}, //  start goroutine for every request
 	}
 	fmt.Println(server.ListenAndServe())
 }
 
 func (p *Proxy) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	// 1.build channel
+	doneCh := make(chan struct{})
+	timeoutCh := make(chan struct{})
+	defer func() {
+		close(doneCh)
+		close(timeoutCh)
+	}()
+
+	// 2.timing
+	go func() {
+		time.Sleep(32 * time.Second) // RoundTrip timeout
+		timeoutCh <- struct{}{}
+	}()
+
+	// 3.proxy request
 	if r.Method == http.MethodConnect {
-		handleTunneling(w, r)
+		go proxyHttps(doneCh, w, r)
 	} else {
-		handleHttp(w, r)
+		go proxyHttp(doneCh, w, r)
+	}
+
+	// 4.wait
+	ctx := r.Context()
+	select {
+	case <-doneCh: // proxy done
+		return
+	case <-timeoutCh: // timeout
+		return
+	case <-ctx.Done(): // client cancel
+		err := ctx.Err()
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
 	}
 }
 
-func handleHttp(w http.ResponseWriter, r *http.Request) {
+func proxyHttp(doneCh chan<- struct{}, w http.ResponseWriter, r *http.Request) {
+	defer func() {
+		doneCh <- struct{}{}
+	}()
+
 	// 1.build proxyRequest
 	proxyReq := new(http.Request)
 	proxyReq = r
@@ -51,7 +83,7 @@ func handleHttp(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// 2.transfer request
-	resp, err := http.DefaultTransport.RoundTrip(proxyReq)
+	resp, err := http.DefaultTransport.RoundTrip(proxyReq) // proxyReq.Context().Done()
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusServiceUnavailable)
 		return
@@ -68,8 +100,12 @@ func handleHttp(w http.ResponseWriter, r *http.Request) {
 	io.Copy(w, resp.Body) // stream copy
 }
 
-func handleTunneling(w http.ResponseWriter, r *http.Request) {
-	dest_conn, err := net.DialTimeout("tcp", r.Host, 10*time.Second)
+func proxyHttps(doneCh chan<- struct{}, w http.ResponseWriter, r *http.Request) {
+	defer func() {
+		doneCh <- struct{}{}
+	}()
+
+	dest_conn, err := net.Dial("tcp", r.Host) // net.DialTimeout
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusServiceUnavailable)
 		return
