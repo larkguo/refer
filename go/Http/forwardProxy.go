@@ -31,10 +31,8 @@ func main() {
 
 func (p *Proxy) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	// 1.build channel
-	doneCh := make(chan struct{})
 	timeoutCh := make(chan struct{})
 	defer func() {
-		close(doneCh)
 		close(timeoutCh)
 	}()
 
@@ -46,30 +44,19 @@ func (p *Proxy) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 	// 3.proxy request
 	if r.Method == http.MethodConnect {
-		go proxyHttps(doneCh, w, r)
+		go proxyHttps(w, r)
 	} else {
-		go proxyHttp(doneCh, w, r)
+		go proxyHttp(w, r)
 	}
 
 	// 4.wait
-	ctx := r.Context()
 	select {
-	case <-doneCh: // proxy done
-		return
 	case <-timeoutCh: // timeout
-		return
-	case <-ctx.Done(): // client cancel
-		err := ctx.Err()
-		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 }
 
-func proxyHttp(doneCh chan<- struct{}, w http.ResponseWriter, r *http.Request) {
-	defer func() {
-		doneCh <- struct{}{}
-	}()
-
+func proxyHttp(w http.ResponseWriter, r *http.Request) {
 	// 1.build proxyRequest
 	proxyReq := new(http.Request)
 	proxyReq = r
@@ -100,11 +87,7 @@ func proxyHttp(doneCh chan<- struct{}, w http.ResponseWriter, r *http.Request) {
 	io.Copy(w, resp.Body) // stream copy
 }
 
-func proxyHttps(doneCh chan<- struct{}, w http.ResponseWriter, r *http.Request) {
-	defer func() {
-		doneCh <- struct{}{}
-	}()
-
+func proxyHttps(w http.ResponseWriter, r *http.Request) {
 	dest_conn, err := net.Dial("tcp", r.Host) // net.DialTimeout
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusServiceUnavailable)
