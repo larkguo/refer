@@ -382,6 +382,9 @@ app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [Elasticsearch Docker配置SSL/TLS](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/configuring-tls-docker.html)
 
+[配置SSL、TLS以及HTTPS来确保Elasticsearch、Kibana、Beats 和 Logstash 的安全](https://www.elastic.co/cn/blog/configuring-ssl-tls-and-https-to-secure-elasticsearch-kibana-beats-and-logstash)
+
+[Elasticsearch Security: Configure TLS/SSL & PKI Authentication](https://www.elastic.co/cn/blog/elasticsearch-security-configure-tls-ssl-pki-authentication)
 
 
 ## MongoDB
