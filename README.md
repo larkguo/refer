@@ -10,8 +10,8 @@
 [gluster glusterfs glusterd glusterfsd区别](https://www.jianshu.com/p/a33ff57f32df)
 
 	cli(gluster) -> server(glusterd->glusterfsd)
-        client(glusterfs) -> server(glusterd->glusterfsd)
-        app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
+	client(glusterfs) -> server(glusterd->glusterfsd)
+	app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
 
 [几个translator中继功能](https://www.tuicool.com/articles/neIVJf)
 
