@@ -107,7 +107,9 @@
 
 [版本](https://github.com/gluster/glusterdocs/blob/master/docs/release-notes/index.md)
 
-[gluster docker](https://hub.docker.com/search?q=gluster&type=image)
+[docker-hub gluster镜像](https://hub.docker.com/search?q=gluster&type=image)
+
+[github gluster容器](https://github.com/gluster/gluster-containers)
 
 [gluster glusterfs glusterd glusterfsd区别](https://www.jianshu.com/p/a33ff57f32df)
 cli(gluster) -> server(glusterd->glusterfsd)
