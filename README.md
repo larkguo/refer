@@ -1,4 +1,68 @@
 
+## Glusterfs
+
+[版本](https://github.com/gluster/glusterdocs/blob/master/docs/release-notes/index.md)
+
+[docker-hub gluster镜像](https://hub.docker.com/search?q=gluster&type=image)
+
+[github gluster镜像源码](https://github.com/gluster/gluster-containers)
+
+[gluster glusterfs glusterd glusterfsd区别](https://www.jianshu.com/p/a33ff57f32df)
+cli(gluster) -> server(glusterd->glusterfsd)
+client(glusterfs) -> server(glusterd->glusterfsd)
+app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
+
+[几个translator中继功能](https://www.tuicool.com/articles/neIVJf)
+
+[glusterfs编译](https://github.com/gluster/glusterdocs/blob/master/docs/Developer-guide/Building-GlusterFS.md)
+
+[4.1.10编译日志](https://github.com/larkguo/refer/blob/master/glusterfs/build/build.log)
+
+
+[server-world安装使用](https://www.server-world.info/en/note?os=CentOS_7&p=glusterfs&f=1)
+
+[volume修复-迁移-均衡](https://github.com/meetbill/op_practice_book/blob/master/doc/store/glusterfs.md)
+
+[TStor Samba-NFS-iSCSI](https://github.com/maqingqing/TStor/wiki)
+
+
+[gluster命令行日志](https://github.com/larkguo/refer/blob/master/glusterfs/log/var-log-glusterfs/cli.log-20190828)
+
+[glusterd管理模块日志](https://github.com/larkguo/refer/blob/master/glusterfs/log/var-log-glusterfs/glusterd.log)
+
+[glusterfs客户端distributed日志](https://github.com/larkguo/refer/blob/master/glusterfs/log/var-log-glusterfs/glusterfs-mnt.log-20190828)
+
+[glusterfs客户端replica日志](https://github.com/larkguo/refer/blob/master/glusterfs/log/var-log-glusterfs/glusterfs-replica.log-20190828)
+
+[glusterfsd服务端distributed日志](https://github.com/larkguo/refer/blob/master/glusterfs/log/var-log-glusterfs/bricks/glusterfs-distributed.log.1566439506)
+
+[glusterfsd服务端replica日志](https://github.com/larkguo/refer/blob/master/glusterfs/log/var-log-glusterfs/bricks/glusterfs-replica.log-20190903)
+
+
+[架构图](https://github.com/gluster/glusterdocs/tree/master/docs/images)
+
+
+[故障处理](https://github.com/gluster/glusterdocs/tree/master/docs/Troubleshooting)
+
+[故障处理-zh](https://gluster-cn.readthedocs.io/zh_CN/latest/Administrator%20Guide/Troubleshooting/)
+
+[Peer Rejected (Connected)故障处理](https://gluster-documentations.readthedocs.io/en/master/Administrator%20Guide/Resolving%20Peer%20Rejected/)
+
+
+[gogfapi源码](https://github.com/gluster/gogfapi)
+
+[gogfapi编译及实例](https://github.com/larkguo/refer/blob/master/glusterfs/build/build.log)
+
+[Gluster libgfapi接口和应用实例](https://blog.csdn.net/liuaigui/article/details/38443357)
+
+[gogfapi的一个封装](https://github.com/prashanthpai/antbird)
+
+
+[x-Archive智能云归档](http://www.taocloudx.com/index.php?a=shows&catid=4&id=112)
+
+[glusterfs资源](https://blog.csdn.net/liuaigui/article/details/17331557)
+
+
 ## Golang
 
 [Golang标准库文档](https://studygolang.com/pkgdoc)
@@ -101,70 +165,6 @@
 [GolangDesignPatterns](https://github.com/zhumengyifang/GolangDesignPatterns)
 
 [go-patterns](https://github.com/jbuberel/go-patterns)
-
-
-## Glusterfs
-
-[版本](https://github.com/gluster/glusterdocs/blob/master/docs/release-notes/index.md)
-
-[docker-hub gluster镜像](https://hub.docker.com/search?q=gluster&type=image)
-
-[github gluster容器](https://github.com/gluster/gluster-containers)
-
-[gluster glusterfs glusterd glusterfsd区别](https://www.jianshu.com/p/a33ff57f32df)
-cli(gluster) -> server(glusterd->glusterfsd)
-client(glusterfs) -> server(glusterd->glusterfsd)
-app/nfs/smba client(libgfapi) -> server(glusterd->glusterfsd)
-
-[几个translator中继功能](https://www.tuicool.com/articles/neIVJf)
-
-[glusterfs编译](https://github.com/gluster/glusterdocs/blob/master/docs/Developer-guide/Building-GlusterFS.md)
-
-[4.1.10编译日志](https://github.com/larkguo/refer/blob/master/glusterfs/build/build.log)
-
-
-[server-world安装使用](https://www.server-world.info/en/note?os=CentOS_7&p=glusterfs&f=1)
-
-[volume修复-迁移-均衡](https://github.com/meetbill/op_practice_book/blob/master/doc/store/glusterfs.md)
-
-[TStor Samba-NFS-iSCSI](https://github.com/maqingqing/TStor/wiki)
-
-
-[gluster命令行日志](https://github.com/larkguo/refer/blob/master/glusterfs/log/var-log-glusterfs/cli.log-20190828)
-
-[glusterd管理模块日志](https://github.com/larkguo/refer/blob/master/glusterfs/log/var-log-glusterfs/glusterd.log)
-
-[glusterfs客户端distributed日志](https://github.com/larkguo/refer/blob/master/glusterfs/log/var-log-glusterfs/glusterfs-mnt.log-20190828)
-
-[glusterfs客户端replica日志](https://github.com/larkguo/refer/blob/master/glusterfs/log/var-log-glusterfs/glusterfs-replica.log-20190828)
-
-[glusterfsd服务端distributed日志](https://github.com/larkguo/refer/blob/master/glusterfs/log/var-log-glusterfs/bricks/glusterfs-distributed.log.1566439506)
-
-[glusterfsd服务端replica日志](https://github.com/larkguo/refer/blob/master/glusterfs/log/var-log-glusterfs/bricks/glusterfs-replica.log-20190903)
-
-
-[架构图](https://github.com/gluster/glusterdocs/tree/master/docs/images)
-
-
-[故障处理](https://github.com/gluster/glusterdocs/tree/master/docs/Troubleshooting)
-
-[故障处理-zh](https://gluster-cn.readthedocs.io/zh_CN/latest/Administrator%20Guide/Troubleshooting/)
-
-[Peer Rejected (Connected)故障处理](https://gluster-documentations.readthedocs.io/en/master/Administrator%20Guide/Resolving%20Peer%20Rejected/)
-
-
-[gogfapi源码](https://github.com/gluster/gogfapi)
-
-[gogfapi编译及实例](https://github.com/larkguo/refer/blob/master/glusterfs/build/build.log)
-
-[Gluster libgfapi接口和应用实例](https://blog.csdn.net/liuaigui/article/details/38443357)
-
-[gogfapi的一个封装](https://github.com/prashanthpai/antbird)
-
-
-[x-Archive智能云归档](http://www.taocloudx.com/index.php?a=shows&catid=4&id=112)
-
-[glusterfs资源](https://blog.csdn.net/liuaigui/article/details/17331557)
 
 
 
