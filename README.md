@@ -7,6 +7,8 @@
 
 [github gluster镜像源码](https://github.com/gluster/gluster-containers)
 
+[Gluster S3 object storage as native app. on OpenShift](https://github.com/gluster/gluster-kubernetes/tree/master/docs/examples/gluster-s3-storage-template)
+
 [gluster glusterfs glusterd glusterfsd区别](https://www.jianshu.com/p/a33ff57f32df)
 
 	cli(gluster) -> server(glusterd->glusterfsd)
