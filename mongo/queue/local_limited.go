@@ -18,11 +18,14 @@ func main() {
 	queue := queue.NewLocalLimitedSize(1, 2)
 	ctx, cancel := context.WithCancel(context.Background())
 	queue.Start(ctx)
+	
+	// producer
 	producer := &JobProducer{
 		lim: rate.NewLimiter(1, 1),
 		q:   queue,
 	}
 	producer.Start(ctx)
+	
 	interrupter := &Interrupter{cancel}
 	interrupter.Watch()
 }
@@ -35,6 +38,7 @@ func (job *TimeJob) ID() string {
 	return time.Now().Format(time.RFC3339)
 }
 func (job *TimeJob) Run(ctx context.Context) {
+        // customer 
 	fmt.Printf("Time is %s\n", time.Now().Format(time.RFC3339))
 	job.MarkComplete()
 }
