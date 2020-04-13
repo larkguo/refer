@@ -1,0 +1,60 @@
+[root@node11 queue]# go mod init queue
+go mod init: go.mod already exists
+[root@node11 queue]# cat go.mod 
+module queue
+
+replace (
+	github.com/Sirupsen/logrus v1.5.0 => github.com/sirupsen/logrus v1.5.0
+	github.com/sirupsen/logrus v1.5.0 => github.com/Sirupsen/logrus v1.5.0
+)
+
+go 1.14
+
+require (
+	github.com/Sirupsen/logrus v1.5.0 // indirect
+	github.com/VividCortex/ewma v1.1.1 // indirect
+	github.com/andygrunwald/go-jira v1.12.0 // indirect
+	github.com/aws/aws-sdk-go v1.30.7 // indirect
+	github.com/bluele/slack v0.0.0-20180528010058-b4b4d354a079 // indirect
+	github.com/coreos/go-systemd v0.0.0-20191104093116-d3cd4ed1dbcf // indirect
+	github.com/dghubble/oauth1 v0.6.0 // indirect
+	github.com/fuyufjh/splunk-hec-go v0.3.3 // indirect
+	github.com/google/go-github v17.0.0+incompatible // indirect
+	github.com/google/uuid v1.1.1 // indirect
+	github.com/mattn/go-xmpp v0.0.0-20200309091041-899ef71e80d2 // indirect
+	github.com/mongodb/amboy v0.0.0-20200410172512-84c5dbf2c92c
+	github.com/mongodb/grip v0.0.0-20200402174029-d95fa8b035ae // indirect
+	github.com/nutmegdevelopment/sumologic v0.0.0-20160817160817-42ed9b372fa3 // indirect
+	github.com/satori/go.uuid v1.2.0 // indirect
+	github.com/shirou/gopsutil v2.20.3+incompatible // indirect
+	github.com/trivago/tgo v1.0.7 // indirect
+	go.mongodb.org/mongo-driver v1.3.2 // indirect
+	golang.org/x/oauth2 v0.0.0-20200107190931-bf48bf16ab8d // indirect
+	golang.org/x/time v0.0.0-20191024005414-555d28b269f0
+	gonum.org/v1/gonum v0.7.0 // indirect
+	gopkg.in/mgo.v2 v2.0.0-20190816093944-a6b53ec6cb22 // indirect
+	gopkg.in/yaml.v2 v2.2.8 // indirect
+)
+[root@node11 queue]# 
+[root@node11 queue]# go build
+[root@node11 queue]# ll
+total 20492
+-rw-r--r-- 1 root root     1494 Apr 13 15:30 go.mod
+-rw-r--r-- 1 root root    17902 Apr 13 15:30 go.sum
+-rw-r--r-- 1 root root     1376 Apr 13 14:47 local_limited.go
+-rwxr-xr-x 1 root root 20954966 Apr 13 15:31 queue
+[root@node11 queue]# ./queue 
+[queue] 2020/04/13 15:32:03 [p=debug]: started worker 1 of 1 waiting for jobs
+[queue] 2020/04/13 15:32:03 [p=debug]: running 1 workers
+[queue] 2020/04/13 15:32:03 [p=info]: job server running
+Put TimeJob
+Time is 2020-04-13T15:32:03+08:00
+[queue] 2020/04/13 15:32:03 [p=debug]: [duration_secs='4.5211e-05' job='2020-04-13T15:32:03+08:00' job_type='' max_time_secs='0' pool='local' queue_type='*queue.limitedSizeLocal' stat='{ queue.local.unordered.fixed.0ab461a0-f00b-4910-8b53-c8ede43ef3c9 true false 2020-04-13 15:32:03.905639081 +0800 CST m=+0.009052002 2 0 []}']
+Put TimeJob
+Time is 2020-04-13T15:32:04+08:00
+[queue] 2020/04/13 15:32:04 [p=debug]: [duration_secs='3.203e-05' job='2020-04-13T15:32:04+08:00' job_type='' max_time_secs='0' pool='local' queue_type='*queue.limitedSizeLocal' stat='{ queue.local.unordered.fixed.0ab461a0-f00b-4910-8b53-c8ede43ef3c9 true false 2020-04-13 15:32:04.90474263 +0800 CST m=+1.008155545 2 0 []}']
+Put TimeJob
+Time is 2020-04-13T15:32:05+08:00
+[queue] 2020/04/13 15:32:05 [p=debug]: [duration_secs='1.8045e-05' job='2020-04-13T15:32:05+08:00' job_type='' max_time_secs='0' pool='local' queue_type='*queue.limitedSizeLocal' stat='{ queue.local.unordered.fixed.0ab461a0-f00b-4910-8b53-c8ede43ef3c9 true false 2020-04-13 15:32:05.904321005 +0800 CST m=+2.007733919 2 0 []}']
+^CCtrl-C ...
+[root@node11 queue]# 
