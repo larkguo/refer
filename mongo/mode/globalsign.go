@@ -14,6 +14,7 @@ type Person struct {
 }
 
 func getNewSession() (session *mgo.Session, err error) {
+	//mongoURL := "mongodb://user1:'passwowd1'@node1:27017,node2:27017,node3:27017/?replicaSet=rs_gdas&maxIdleTimeMS=50000"
 	mongoURL := "mongodb://localhost:27017/?maxPoolSize=3&maxIdleTimeMS=50000"
 	dailInfo, err := mgo.ParseURL(mongoURL)
 	if err != nil {
