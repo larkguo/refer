@@ -1,5 +1,16 @@
-// https://github.com/tfogo/mongodb-go-tutorial/blob/master/main.go
-
+/*
+refer 
+	https://github.com/tfogo/mongodb-go-tutorial/blob/master/main.go
+run
+	Connected to MongoDB(mongodb://10.2.174.220:27017/)
+	Insert: Person({Name:John Phone:13510987645},{Name:Tom Phone:13973521568})
+	Found:  &{Tom 13973521568}
+	-------------------------
+	Insert: Person({Name:John Phone:13510987645},{Name:Tom Phone:13973521568})	
+	Found:  &{Tom 13973521568}
+	-------------------------
+	......
+*/
 package main
 
 import (
