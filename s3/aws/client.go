@@ -392,13 +392,13 @@ func GetObject2(ctx aws.Context, sess *session.Session, bucket *string, filename
 	return err
 }
 
-func main1() {
+func main() {
 	var err error
 	handle := flag.String("h", "list", "The handle of up|down|get|get2|del|head|list|res|md5|zip")
 	bucket := flag.String("b", "ehlbucket01", "Bucket ")
 	filename := flag.String("f", "", "The name of the file")
-	accesskey := flag.String("a", "LTAI4GFBJd1WwEMAjx3C1ZtS", "AccessKey")
-	secretkey := flag.String("s", "97KS9V5PjX7pQJJqQLiFK3sRS8MW06", "SecretKey")
+	accesskey := flag.String("a", "LTAI4GFBJd1WwEMAjx3C1ZtS0", "AccessKey")
+	secretkey := flag.String("s", "97KS9V5PjX7pQJJqQLiFK3sRS8MW060", "SecretKey")
 	endpoint := flag.String("e", "http://oss-cn-beijing.aliyuncs.com:80", "Endpoint( http(s):// )")
 	region := flag.String("r", "us-east-1", "Region ")
 	pathstyle := flag.Bool("v", false, "The Path-Style(1) or Virtual-Hosted-Style(0) ")
