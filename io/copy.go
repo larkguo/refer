@@ -59,7 +59,7 @@ func myReaderCopy(fw io.Writer, fr io.Reader) (written int64, err error) {
 	return io.Copy(fw, mr.r) //回调mr.r.Read()读取byte并回调fw.Write()把读的byte写入
 }
 
-func main_copy() {
+func main() {
 	fr, err := os.Open("copy.go")
 	if err != nil {
 		fmt.Println(err)
