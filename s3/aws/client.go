@@ -32,7 +32,8 @@ type FakeWriterAt struct {
 func (fw FakeWriterAt) WriteAt(p []byte, offset int64) (n int, err error) {
 	return fw.w.Write(p) // ignore 'offset' because we forced sequential downloads
 }
-func PutZipFile(ctx aws.Context, sess *session.Session, file *s3.GetObjectInput, result *s3manager.UploadInput) error {
+
+func PutZipFile(ctx aws.Context, sess *session.Session, writer *s3.GetObjectInput, reader *s3manager.UploadInput) error {
 	downloader := s3manager.NewDownloader(sess)
 	uploader := s3manager.NewUploader(sess)
 	pr, pw := io.Pipe()
@@ -50,11 +51,11 @@ func PutZipFile(ctx aws.Context, sess *session.Session, file *s3.GetObjectInput,
 			pw.Close()
 		}()
 		// Sequantially downloads each file to writer from zip.Writer
-		w, err := zipWriter.Create(path.Base(*file.Key))
+		w, err := zipWriter.Create(path.Base(*writer.Key))
 		if err != nil {
 			fmt.Println(err)
 		}
-		_, err = downloader.DownloadWithContext(ctx, FakeWriterAt{w}, file,
+		_, err = downloader.DownloadWithContext(ctx, FakeWriterAt{w}, writer,
 			func(d *s3manager.Downloader) {
 				d.Concurrency = 1
 			})
@@ -65,8 +66,8 @@ func PutZipFile(ctx aws.Context, sess *session.Session, file *s3.GetObjectInput,
 	go func() { // Run uploader
 		defer wg.Done()
 		// Upload the file, body is `io.Reader` from pipe
-		result.Body = pr
-		_, err := uploader.UploadWithContext(ctx, result)
+		reader.Body = pr
+		_, err := uploader.UploadWithContext(ctx, reader)
 		if err != nil {
 			fmt.Println(err)
 		}
@@ -397,8 +398,8 @@ func main() {
 	handle := flag.String("h", "list", "The handle of up|down|get|get2|del|head|list|res|md5|zip")
 	bucket := flag.String("b", "ehlbucket01", "Bucket ")
 	filename := flag.String("f", "", "The name of the file")
-	accesskey := flag.String("a", "LTAI4GFBJd1WwEMAjx=3C1ZtS", "AccessKey")
-	secretkey := flag.String("s", "97KS9V5PjX7pQJJqQLiFK=3sRS8MW06", "SecretKey")
+	accesskey := flag.String("a", "LTAI4GFBJd1Ww==EMAjx3C1ZtS", "AccessKey")
+	secretkey := flag.String("s", "97KS9V5PjX7pQJJqQ==LiFK3sRS8MW06", "SecretKey")
 	endpoint := flag.String("e", "http://oss-cn-beijing.aliyuncs.com:80", "Endpoint( http(s):// )")
 	region := flag.String("r", "us-east-1", "Region ")
 	pathstyle := flag.Bool("v", false, "The Path-Style(1) or Virtual-Hosted-Style(0) ")
