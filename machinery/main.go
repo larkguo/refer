@@ -64,9 +64,9 @@ func Concat(strs []string) (string, error) {
 
 func startServer() (*machinery.Server, error) {
 	cnf := &config.Config{
-		Broker:          "amqp://guest:guest@10.2.174.243:5672/",
+		Broker:          "amqp://guest:guest@localhost:5672/",
 		DefaultQueue:    "task_queue",
-		ResultBackend:   "mongodb://10.2.174.243:27017",
+		ResultBackend:   "mongodb://localhost:27017",
 		ResultsExpireIn: 3600,
 		AMQP: &config.AMQPConfig{
 			Exchange:      "task_exchange",
