@@ -30,11 +30,10 @@ func main() {
 	r.Run(":8000")
 }
 
-func Concat(strs []string) (string, error) {
+func Concat(p1, p2 string) (string, error) {
 	var res string
-	for _, s := range strs {
-		res += s
-	}
+	res += p1
+	res += p2
 	return res, nil
 }
 
@@ -101,14 +100,8 @@ func ProcessConcat(c *gin.Context) error {
 		concatTask = tasks.Signature{
 			Name: "concat",
 			Args: []tasks.Arg{
-				{
-					Type:  "string",
-					Value: c.Query("name"),
-				},
-				{
-					Type:  "string",
-					Value: c.Query("value"),
-				},
+				{Type: "string", Value: c.Query("p1")},
+				{Type: "string", Value: c.Query("p2")},
 			},
 		}
 	}
@@ -125,7 +118,7 @@ func ProcessConcat(c *gin.Context) error {
 		c.String(http.StatusInternalServerError, err.Error())
 		return err
 	}
-	log.INFO.Printf("concat([\"foo\", \"bar\"]) = %v\n", tasks.HumanReadableResults(results))
+	log.INFO.Printf("result = %v\n", tasks.HumanReadableResults(results))
 
 	c.String(http.StatusOK, tasks.HumanReadableResults(results))
 
